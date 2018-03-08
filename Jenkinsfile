@@ -1,4 +1,4 @@
-node {
+node('docker') {
   git url: 'git@github.com:jpuli/pqvp.git'
   def mvnHome = tool 'M3.5.2'
   try {
