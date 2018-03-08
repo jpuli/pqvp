@@ -2,11 +2,6 @@ node {
   git url: 'git@github.com:jpuli/pqvp.git'
   def mvnHome = tool 'M3.5.2'
   try {
-    stage('Clean Target Folder') {
-      dir('target') {
-        deleteDir()
-      }
-    }
     stage('Image Build') {
       sh "docker build -t pqvp ."
     }
