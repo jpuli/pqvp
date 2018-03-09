@@ -1,6 +1,6 @@
 node {
   git url: 'git@github.com:jpuli/pqvp.git'
-  def mvnHome = tool 'M3.5.2'
+  /* def mvnHome = tool 'M3.5.2' */
   try {
     def gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
     def shortCommit = gitCommit.take(6)
@@ -17,7 +17,8 @@ node {
       sh "rm pqvp-${shortCommit}.img"
       sh "ssh ec2-user@ec2-54-245-38-51.us-west-2.compute.amazonaws.com docker load -i pqvp-${shortCommit}.img"
       sh "ssh ec2-user@ec2-54-245-38-51.us-west-2.compute.amazonaws.com rm pqvp-${shortCommit}.img"
-      sh "ssh ec2-user@ec2-54-245-38-51.us-west-2.compute.amazonaws.com docker run --rm -p 80:8080 pqvp:${shortCommit} java -jar target/pqvp-0.0.1-SNAPSHOT.jar"
+      sh "ssh ec2-user@ec2-54-245-38-51.us-west-2.compute.amazonaws.com docker stop pqvp || true"
+      sh "ssh ec2-user@ec2-54-245-38-51.us-west-2.compute.amazonaws.com docker run --rm -d -p 80:8080 --name pqvp pqvp:${shortCommit} java -jar target/pqvp-0.0.1-SNAPSHOT.jar"
     }
   } finally {
     stage('Reports') {
