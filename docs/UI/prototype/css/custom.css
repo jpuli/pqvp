@@ -1,5 +1,7 @@
 
-
+body {
+  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+}
 .no-padding {
   padding:0;
 }
@@ -167,14 +169,34 @@ ul.article-feed li:last-child {
 
 h4.article-title a {
   color:#333;
-  font-size:20px;
+  font-size:18px;
   font-weight:600;
   margin-bottom:0;
 }
+
 
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
   color: #FF9800;
   background-color: transparent;;
   border: none;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link {
+  color: #888;
+}
+
+.nav-tabs .nav-link {
+  border: none;
+}
+.nav-tabs .nav-link {
+  display:flex;
+  align-items:center;
+}
+.nav-tabs .nav-link svg {
+  height:16px;
+  width: 16px;
+  margin-right:.2em;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  border-bottom:2px solid #FF9800;
 }
