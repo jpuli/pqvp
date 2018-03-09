@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>Knowledgebase Application - Prototype</title>
+
+</head>
+
+<body>
+<!--Application Top Bar (Includes App Name, Top User Navigation, Mobile Main Navigation)-->
+<div class="application-bar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <!--Application Name-->
+        <a class="navbar-brand" href="#"><i data-feather="book-open" class="app-icon"></i>Knowledgebase Application</a>
+
+        <!--Top Navigation-->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">Jony Mark</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Sign out</a>
+                </div>
+            </li>
+        </ul>
+
+        <!--Sidebar Navigation Control-->
+        <div class="row">
+            <div class="col-lg-12">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-side-nav"
+                        aria-controls="main-side-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+<!--Main Outer Container -->
+<div class="container-fluid no-gutters">
+    <div class="row">
+
+        <!--Left Sidebar (Includes main user menu) -->
+        <div class="col-lg-2 bg-light sidebar">
+            <nav class="collapse bd-links" id="main-side-nav">
+                <div class="sidebar-sticky">
+                    <h6 class="sidebar-heading px-3 mt-4 mb-1"><i data-feather="eye" class="sidebar-section-icon"></i>Recently
+                        Viewed</h6>
+                    <ul class="nav flex-column recently-opened">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Setup/Configuration of Canon APLX Printer</a>
+                        </li>
+
+                    </ul>
+                    <h6 class="sidebar-heading px-3 mt-4 mb-1"><i data-feather="list" class="sidebar-section-icon"></i>Categories
+                    </h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">All</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Health</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Lifestyle</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Fitness</a>
+                        </li>
+                    </ul>
+                    <h6 class="sidebar-heading px-3 mt-4 mb-1"><i data-feather="settings"
+                                                                  class="sidebar-section-icon"></i>Your Account</h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Create New Article</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My Submissions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Favorites</a>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+            </nav>
+        </div>
+
+        <!--Main Content -->
+        <main role="main" class="col-lg-10 no-padding">
+            <div class="hero-area welcome no-gutters">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1>Welcome back, Jony</h1>
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-10 col-lg-12" type="search"
+                                   placeholder="Search Knowledgebase"
+                                   aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" hidden>Search
+                            </button>
+                        </form>
+
+
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="welcome-svg">
+                            <img src="assets/knowledgebase_welcome.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid content-area home-split-feed">
+                <h2 class="section-title">Activity</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-title"><i data-feather="clock"></i>Recent</div>
+                            <div class="card-body">
+                                <ul class="article-feed">
+                                    <li>
+
+                                        <div class="article-type">
+                                            <span class="article-type-link"><i data-feather="link"></i></span>
+                                            <span class="article-type-parargraph"><i
+                                                    data-feather="file-text"></i></span>
+                                            <span class="article-type-attatchments"><i
+                                                    data-feather="paperclip"></i></span>
+                                        </div>
+                                        <h4 class="article-title"><a href="#">Setup/Configuration of Canon APLX
+                                            Printer</a></h4>
+                                        <p class="article-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Vestibulum nec accumsan elit. Quisque purus felis, gravida tincidunt
+                                            venenatis et, aliquam quis sem. Ut facilisis, mauris ut condimentum
+                                            tincidunt, libero diam imperdiet enim, nec placerat leo odio eget ante. </p>
+                                        <div class="article-tags"><span class="article-tag">Food</span><span
+                                                class="article-tag">Lifestyle</span></div>
+
+                                    </li>
+                                    <li>
+
+                                        <div class="article-type">
+                                            <span class="article-type-link"></span>
+                                            <span class="article-type-parargraph"></span>
+                                            <span class="article-type-attatchments"></span>
+                                        </div>
+                                        <h4 class="article-title"><a href="#">I am getting below message when I am about
+                                            to start my PC</a></h4>
+                                        <p class="article-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Vestibulum nec accumsan elit. Quisque purus felis, gravida tincidunt
+                                            venenatis et, aliquam quis sem. Ut facilisis, mauris ut condimentum
+                                            tincidunt, libero diam imperdiet enim, nec placerat leo odio eget ante. </p>
+                                        <div class="article-tags"><span class="article-tag">Food</span><span
+                                                class="article-tag">Lifestyle</span></div>
+
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-title"><i data-feather="zap"></i>Popular</div>
+                            <div class="card-body">
+                                <ul class="article-feed">
+                                    <li>
+
+                                        <div class="article-type">
+                                            <span class="article-type-link"></span>
+                                            <span class="article-type-parargraph"></span>
+                                            <span class="article-type-attatchments"></span>
+                                        </div>
+                                        <h4 class="article-title"><a href="#">I am getting below message when I am about
+                                            to start my PC</a></h4>
+                                        <p class="article-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Vestibulum nec accumsan elit. Quisque purus felis, gravida tincidunt
+                                            venenatis et, aliquam quis sem. Ut facilisis, mauris ut condimentum
+                                            tincidunt, libero diam imperdiet enim, nec placerat leo odio eget ante. </p>
+                                        <div class="article-tags"><span class="article-tag">Food</span><span
+                                                class="article-tag">Lifestyle</span></div>
+
+                                    </li>
+                                    <li>
+
+                                        <div class="article-type">
+                                            <span class="article-type-link"><i data-feather="link"></i></span>
+                                            <span class="article-type-parargraph"><i
+                                                    data-feather="file-text"></i></span>
+                                            <span class="article-type-attatchments"><i
+                                                    data-feather="paperclip"></i></span>
+                                        </div>
+                                        <h4 class="article-title"><a href="#">Setup/Configuration of Canon APLX
+                                            Printer</a></h4>
+                                        <p class="article-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                            Vestibulum nec accumsan elit. Quisque purus felis, gravida tincidunt
+                                            venenatis et, aliquam quis sem. Ut facilisis, mauris ut condimentum
+                                            tincidunt, libero diam imperdiet enim, nec placerat leo odio eget ante. </p>
+                                        <div class="article-tags"><span class="article-tag">Food</span><span
+                                                class="article-tag">Lifestyle</span></div>
+
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+</div>
+
+
+<!-- JavaScript -->
+<script src="js/jquery-3.2.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/feather.min.js"></script>
+
+
+<script>
+    feather.replace();
+</script>
+</body>
+</html>

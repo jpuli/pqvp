@@ -152,8 +152,8 @@ p.article-desc {
 }
 ul.article-feed li {
   border-bottom: 1px solid #bdbdbd;
-  margin-bottom: 1em;
   padding-bottom: 1em;
+  padding-top: 1em;
 }
 ul.article-feed li:last-child {
   border-bottom: none;
@@ -170,4 +170,11 @@ h4.article-title a {
   font-size:20px;
   font-weight:600;
   margin-bottom:0;
+}
+
+
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #FF9800;
+  background-color: transparent;;
+  border: none;
 }
