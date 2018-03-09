@@ -1,6 +1,6 @@
 node {
   git url: 'git@github.com:jpuli/pqvp.git'
-  def mvnHome = tool 'M3.5.2'
+  /* def mvnHome = tool 'M3.5.2' */
   try {
     def gitCommit = sh(returnStdout: true, script: 'git rev-parse HEAD').trim()
     def shortCommit = gitCommit.take(6)
