@@ -4,30 +4,20 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-
     <!-- Plex Font -->
     <link rel="stylesheet" href="css/ibm-plex.css">
-
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css">
-
-
     <title>Knowledgebase Application - Prototype</title>
-
 </head>
-
 <body>
 <!--Application Top Bar (Includes App Name, Top User Navigation, Mobile Main Navigation)-->
 <div class="application-bar">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
         <!--Application Name-->
         <a class="navbar-brand" href="#"><i data-feather="book-open" class="app-icon"></i>Knowledgebase Application</a>
-
         <!--Top Navigation-->
         <ul class="navbar-nav ml-auto">
             <li class="nav-item dropdown">
@@ -38,7 +28,6 @@
                 </div>
             </li>
         </ul>
-
         <!--Sidebar Navigation Control-->
         <div class="row">
             <div class="col-lg-12">
@@ -50,24 +39,26 @@
         </div>
     </nav>
 </div>
-
-
 <!--Main Outer Container -->
 <div class="container-fluid no-gutters">
     <div class="row">
-
         <!--Left Sidebar (Includes main user menu) -->
         <div class="col-lg-2 bg-light sidebar">
             <nav class="collapse bd-links" id="main-side-nav">
                 <div class="sidebar-sticky">
+                    <ul class="nav flex-column left-side-nav-main-items">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#"><i data-feather="home" class="sidebar-section-icon"></i>Home</a>
+                        </li>
+                    </ul>
                     <h6 class="sidebar-heading px-3 mt-4 mb-1">
                         <!--<i data-feather="eye" class="sidebar-section-icon"></i>-->
-                        Recently Viewed</h6>
+                        Recently Viewed
+                    </h6>
                     <ul class="nav flex-column recently-opened">
                         <li class="nav-item">
                             <a class="nav-link" href="#">Setup/Configuration of Canon APLX Printer</a>
                         </li>
-
                     </ul>
                     <h6 class="sidebar-heading px-3 mt-4 mb-1">
                         <!--<i data-feather="list" class="sidebar-section-icon"></i>-->
@@ -89,7 +80,8 @@
                     </ul>
                     <h6 class="sidebar-heading px-3 mt-4 mb-1">
                         <!--<i data-feather="settings" class="sidebar-section-icon"></i>-->
-                        Your Account</h6>
+                        My Account
+                    </h6>
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link" href="add-new.html">Create New Article</a>
@@ -98,20 +90,15 @@
                             <a class="nav-link" href="#">My Submissions</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Favorites</a>
+                            <a class="nav-link" href="#">My Bookmarks</a>
                         </li>
-
                     </ul>
-
-
                 </div>
             </nav>
         </div>
-
         <!--Main Content -->
         <main role="main" class="col-lg-10 no-padding">
             <div class="hero-area welcome no-gutters">
-
                 <h1>Welcome back, John</h1>
                 <form class="form-inline search-input offset-lg-3 offset-md-2 col-lg-6 col-md-8 col-12">
                     <i data-feather="search" class="sidebar-section-icon"></i>
@@ -121,8 +108,6 @@
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit" hidden>Search
                     </button>
                 </form>
-
-
             </div>
             <div class="container-fluid content-area home-split-feed">
                 <h2 class="section-title">Activity</h2>
@@ -141,117 +126,88 @@
                         <div class="tab-content" id="tabsContent">
                             <div class="tab-pane fade show active" id="recent" role="tabpanel"
                                  aria-labelledby="recent-tab">
-
                                 <ul class="article-feed">
                                     <li>
-
-                                        <div class="article-type">
-                                            <span class="article-type-link"><i data-feather="link"></i></span>
-                                            <span class="article-type-parargraph"><i
-                                                    data-feather="file-text"></i></span>
-
-                                        </div>
                                         <h4 class="article-title"><a href="#">I am getting below message when I am about
-                                            to start my PC</a></h4>
+                                            to start my PC</a>
+                                        </h4>
                                         <p class="article-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                             Vestibulum nec accumsan elit. Quisque purus felis, gravida tincidunt
                                             venenatis et, aliquam quis sem. Ut facilisis, mauris ut condimentum
-                                            tincidunt, libero diam imperdiet enim, nec placerat... </p>
+                                            tincidunt, libero diam imperdiet enim, nec placerat...
+                                        </p>
+                                        <div class="article-meta">
+                                            <a href="#"><span class="user-info"><i data-feather="user"></i>John Appleseed</span></a>
+                                            <a href="#"> <span class="clock"><i
+                                                    data-feather="clock"></i>Yesterday</span></a>
+                                            <a href="#"><span class="user-info"><i
+                                                    data-feather="tag"></i>Tutorials</span></a>
+                                        </div>
                                         <div class="article-tags"><a href="#"><span class="article-tag">Printers</span></a><a
                                                 href="#"><span
                                                 class="article-tag">How-to</span></a></div>
-                                        <div class="article-meta">
-                                            <span class="user-info"><i data-feather="user"></i>John Appleseed</span>
-                                            <span class="clock"><i data-feather="clock"></i>Yesterday</span>
-                                            <span class="user-info"><i data-feather="user"></i>John Appleseed</span></div>
-
                                     </li>
                                     <li>
-
-                                        <div class="article-type">
-                                            <span class="article-type-link"><i data-feather="link"></i></span>
-                                            <span class="article-type-parargraph"><i
-                                                    data-feather="file-text"></i></span>
-                                            <span class="article-type-attatchments"><i
-                                                    data-feather="paperclip"></i></span>
-                                        </div>
                                         <h4 class="article-title"><a href="#">Setup/Configuration of Canon APLX
-                                            Printer</a></h4>
+                                            Printer</a>
+                                        </h4>
                                         <p class="article-desc">Quisque purus felis, gravida tincidunt
                                             venenatis et, aliquam quis sem. Ut facilisis, mauris ut condimentum
-                                            tincidunt. </p>
+                                            tincidunt.
+                                        </p>
+                                        <div class="article-meta">
+                                            <a href="#"><span class="user-info"><i data-feather="user"></i>John Appleseed</span></a>
+                                            <a href="#"> <span class="clock"><i
+                                                    data-feather="clock"></i>February 17, 2018</span></a>
+                                            <a href="#"><span class="user-info"><i
+                                                    data-feather="tag"></i>Fitness</span></a>
+                                        </div>
                                         <div class="article-tags"><a href="#"><span class="article-tag">Printers</span></a><a
                                                 href="#"><span
                                                 class="article-tag">How-to</span></a></div>
-
                                     </li>
-
-
                                 </ul>
                             </div>
                             <div class="tab-pane fade" id="popular" role="tabpanel" aria-labelledby="popular-tab">
                                 <ul class="article-feed">
                                     <li>
-
-                                        <div class="article-type">
-                                            <span class="article-type-link"><i data-feather="link"></i></span>
-                                            <span class="article-type-parargraph"><i
-                                                    data-feather="file-text"></i></span>
-                                            <span class="article-type-attatchments"><i
-                                                    data-feather="paperclip"></i></span>
-                                        </div>
                                         <h4 class="article-title"><a href="#">Setup/Configuration of Canon APLX
-                                            Printer</a></h4>
+                                            Printer</a>
+                                        </h4>
                                         <p class="article-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                             Vestibulum nec accumsan elit. Quisque purus felis, gravida tincidunt
                                             venenatis et, aliquam quis sem. Ut facilisis, mauris ut condimentum
-                                            tincidunt, libero diam imperdiet enim, nec placerat leo odio eget ante. </p>
+                                            tincidunt, libero diam imperdiet enim, nec placerat leo odio eget ante.
+                                        </p>
                                         <div class="article-tags"><span class="article-tag">Food</span><span
                                                 class="article-tag">Lifestyle</span></div>
-
                                     </li>
                                     <li>
-
-                                        <div class="article-type">
-                                            <span class="article-type-link"></span>
-                                            <span class="article-type-parargraph"></span>
-                                            <span class="article-type-attatchments"></span>
-                                        </div>
                                         <h4 class="article-title"><a href="#">I am getting below message when I am about
-                                            to start my PC</a></h4>
+                                            to start my PC</a>
+                                        </h4>
                                         <p class="article-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                             Vestibulum nec accumsan elit. Quisque purus felis, gravida tincidunt
                                             venenatis et, aliquam quis sem. Ut facilisis, mauris ut condimentum
-                                            tincidunt, libero diam imperdiet enim, nec placerat leo odio eget ante. </p>
+                                            tincidunt, libero diam imperdiet enim, nec placerat leo odio eget ante.
+                                        </p>
                                         <div class="article-tags"><span class="article-tag">Food</span><span
                                                 class="article-tag">Lifestyle</span></div>
-
-
                                     </li>
-
-
                                 </ul>
-
                             </div>
-
                         </div>
                     </div>
-
                 </div>
             </div>
         </main>
-
     </div>
 </div>
-
-
 <!-- JavaScript -->
 <script src="js/jquery-3.2.1.slim.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/feather.min.js"></script>
-
-
 <script>
     feather.replace();
 </script>

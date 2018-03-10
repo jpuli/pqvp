@@ -1,6 +1,6 @@
 
 body {
-  font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 .no-padding {
   padding:0;
@@ -36,17 +36,23 @@ body {
   align-items:center;
   font-size:1em;
   color:#333;
-  padding: .25rem 1rem;
+  padding: .5rem 1rem;
 }
 .sidebar li.nav-item a.nav-link:hover {
-  text-decoration:underline;
+  background: #EEF1F6;
+  border-left: 3px solid #EEF1F6;
+  color: #333;
 }
 
-
+.sidebar li.nav-item a.nav-link.active {
+  background: #F0F8FC;
+  border-left: 3px solid #0070D2;
+  color: #0070D2;
+}
 
 .bg-dark {
     background-color: #24292e!important;
-  background-color: #0874D9!important
+  background-color: #1e355a!important
 
 }
 .navbar-brand {
@@ -69,12 +75,28 @@ body {
     position: sticky;
     top: 56px; /* Height of navbar */
     height: calc(100vh - 56px);
-    padding-top: .5rem;
+    padding-top: 3rem;
     overflow-x: hidden;
     overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
     padding-left:10px;
-  }}
+  }
+  .sidebar li.nav-item a.nav-link:hover {
+    margin-left: -10px;
+    padding-left: 23px;
+  }
 
+  .sidebar li.nav-item a.nav-link.active {
+    margin-left: -10px;
+    padding-left: 23px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  body {
+   font-size: .85rem;
+  }
+}
 
 
 .hero-area.welcome.no-gutters {
@@ -92,7 +114,7 @@ body {
   top: -15px;
 }
 .welcome h1 {
-  color:#444;
+  color:#1f3559;
   font-weight:700;
   font-size:2em;
   margin-bottom:.5em;
@@ -148,6 +170,25 @@ ul.article-feed li {
 .article-tags a:hover {
   text-decoration:none;
 }
+.article-meta a {
+  color:#757575;
+  font-weight:400;
+  font-size:.9em;
+}
+.article-meta {
+  display:flex;
+  margin-bottom:.5em;
+}
+.article-meta span {
+  display:flex;
+  align-items:center;
+  margin-right:.75em;
+}
+.article-meta span svg {
+  height:16px;
+  width:16px;
+  margin-right:.2em;
+}
 
 .content-area {
   padding:2em 3em;
@@ -176,7 +217,7 @@ ul.article-feed li:last-child {
 
 h4.article-title a {
   color:#333;
-  font-size:18px;
+  font-size:.95em;
   font-weight:600;
   margin-bottom:0;
 }
@@ -210,11 +251,21 @@ h4.article-title {
   width: 16px;
   margin-right:.2em;
 }
+
+
+
+
+
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
   border-bottom:2px solid #FF9800;
 }
 
 
+.left-side-nav-main-items svg {
+  margin-right:.2em;
+  height:19px;
+  width:19px;
+}
 
 .search-input input.form-control {
   padding-left:40px;
