@@ -118,6 +118,13 @@ body {
   border-bottom: 1px solid #e9ebec;
 }
 
+.col-lg-6.left svg{
+  float:left;
+}
+.col-lg-6.right svg{
+  float:right;
+}
+
 .welcome-svg {
   position: absolute;
   top: -15px;
@@ -800,4 +807,62 @@ div#bookmark-this:hover {
 
 .article-content .article-link a {
   color:#333;
+}
+
+
+
+/*li Table */
+.li-table ul {
+    list-style-type: none;
+    border:1px solid #dee2e6;
+    padding: 0;
+}
+.li-table .row {
+    margin-left:0;
+    margin-right: 0;
+}
+.li-table ul li p{
+  margin-bottom: 0;
+}
+.li-table ul li .col {
+    border-right: 1px solid #dee2e6;
+    padding: 1em;
+}
+.li-table ul li {
+    border-bottom: 1px solid #dee2e6;
+}
+.li-table ul a:last-child li {
+    border-bottom: none;
+}
+
+.li-table ul a li {
+    border-bottom: 1px solid #dee2e6;
+}
+.li-table ul a:last-child li {
+    border-bottom: none;
+}
+
+
+.li-table-sorting {
+    padding: 1em 0;
+    border: 1px solid #dee2e6;
+    border-bottom: 0;
+    margin-top: 15px;
+    border-radius: .5em .5em 0 0;
+    font-size: 1em;
+    background: #fbfbfb;
+    color: #000000!important;
+    font-weight: 600;
+    font-size: .9em;
+}
+
+.li-table ul a {
+    color:#333;
+}
+.li-table ul a:hover {
+    color:#111;
+    text-decoration: none;
+}
+.li-table ul a li:hover {
+    background: #f9f9f9;
 }
