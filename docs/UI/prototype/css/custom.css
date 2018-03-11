@@ -102,6 +102,9 @@ body {
   body {
    font-size: .85rem;
   }
+  .h1, h1 {
+    font-size:1.5em;
+  }
 }
 
 
@@ -765,3 +768,36 @@ Radio button animation
 
 
 
+
+
+
+
+/*ARTICLE VIEW PAGE*/
+
+div#bookmark-this:hover {
+  cursor: pointer;
+}
+.filled {
+  fill:#333;
+}
+.article-view-header h1 {
+  font-weight:700;
+}
+.article-view-header {
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 1em;
+}
+
+.article-content {
+  padding-top:1em;
+}
+.article-content .article-link {
+  background: #f7f7f7;
+  margin-bottom: 1em;
+  padding: .5em;
+  border-radius: .5em;
+}
+
+.article-content .article-link a {
+  color:#333;
+}
