@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -63,7 +62,8 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column left-side-nav-main-items">
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i data-feather="home" class="sidebar-section-icon"></i>Home</a>
+                            <a class="nav-link" href="index.html"><i data-feather="home"
+                                                                     class="sidebar-section-icon"></i>Home</a>
                         </li>
 
                     </ul>
@@ -121,29 +121,42 @@
 
 
             <div class="container-fluid content-area">
-                <div class="go-back"><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-left"><polyline points="15 18 9 12 15 6"></polyline></svg></a></div>
+                <!--Back to previous page -->
+                <a class="go-back" href="javascript:history.back()" title="Return to previous page">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="feather feather-chevron-left">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </span>
+                </a>
                 <h1 class="page-title" id="pageTitle">Add New Article</h1>
 
                 <form>
                     <div class="form-group">
                         <label for="articleTitle">Title</label>
-                        <input type="text" class="form-control" id="articleTitle" aria-describedby="article-title-help" placeholder="Article Title">
-                        <small id="article-title-help" class="form-text text-muted">Descriptive questions help other users discover and understand your post</small>
+                        <input type="text" class="form-control" id="articleTitle" aria-describedby="article-title-help"
+                               placeholder="Article Title">
+                        <small id="article-title-help" class="form-text text-muted">Descriptive questions help other
+                            users discover and understand your post
+                        </small>
                     </div>
 
                     <div class="form-group">
                         <label>Type</label>
 
-                            <div class="radio-article-type">
-                            <input class="form-check-input" type="radio" name="articleType" id="inlineRadio1" value="option1">
+                        <div class="radio-article-type">
+                            <input class="form-check-input" type="radio" name="articleType" id="inlineRadio1"
+                                   value="option1">
                             <label class="form-check-label" for="inlineRadio1">Technical</label>
-                            </div>
-                            <div class="radio-article-type">
-                            <input class="form-check-input" type="radio" name="articleType" id="inlineRadio2" value="option2">
+                        </div>
+                        <div class="radio-article-type">
+                            <input class="form-check-input" type="radio" name="articleType" id="inlineRadio2"
+                                   value="option2">
                             <label class="form-check-label" for="inlineRadio2">Non-technical</label>
-                            </div>
+                        </div>
                     </div>
-
 
 
                     <div class="form-group">
@@ -158,8 +171,11 @@
                         <!--To get tags input as comma delimited:-->
                         <!--$("#articleTags").val()-->
 
-                        <input type="text" class="form-control" id="articleTags" data-role="tagsinput" placeholder="Add tags" aria-describedby="article-tags-help">
-                        <small id="article-tags-help" class="form-text text-muted">Tagging content helps you reach the right audience for your question</small>
+                        <input type="text" class="form-control" id="articleTags" data-role="tagsinput"
+                               placeholder="Add tags" aria-describedby="article-tags-help">
+                        <small id="article-tags-help" class="form-text text-muted">Tagging content helps you reach the
+                            right audience for your question
+                        </small>
                     </div>
 
                     <div class="form-group">
@@ -181,17 +197,25 @@
                         <label for="articleTags">Visibility</label>
                         <!--To get tags input as comma delimited:-->
                         <!--$("#articleVisibility").val()-->
-                        <input type="text" class="form-control" id="articleVisibility" data-role="tagsinput" placeholder="Add tags" aria-describedby="article-visibility">
-                        <small id="article-visibility" class="form-text text-muted">Visibility help text goes here.</small>
+                        <input type="text" class="form-control" id="articleVisibility" data-role="tagsinput"
+                               placeholder="Add tags" aria-describedby="article-visibility">
+                        <small id="article-visibility" class="form-text text-muted">Visibility help text goes here.
+                        </small>
                     </div>
 
 
-                <div class="actions">
-                    <ul>
-                        <li><button type="button" class="btn btn-link">Cancel</button></li>
-                        <li><button class="btn btn-primary" type="submit" name="submit" value="Submit">Submit for approval</button></li>
-                    </ul>
-                </div>
+                    <div class="actions">
+                        <ul>
+                            <li>
+                                <button type="button" class="btn btn-link">Cancel</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-primary" type="submit" name="submit" value="Submit">Submit for
+                                    approval
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
 
 
                 </form>
@@ -223,8 +247,8 @@
 <script>
     feather.replace();
 
-//    Categories
-    $(function() {
+    //    Categories
+    $(function () {
         var articleCategories = [
             "Health",
             "How-to's",
@@ -250,8 +274,8 @@
     });
 
 
-//change page title as user types article title
-    $('#articleTitle').keyup(function() {
+    //change page title as user types article title
+    $('#articleTitle').keyup(function () {
         var titleInput = this.value;
         $('#pageTitle').html(titleInput);
 
@@ -261,11 +285,9 @@
     });
 
 
-    $('.checkAll').on('click', function() {
+    $('.checkAll').on('click', function () {
         $(this).siblings().prop('checked', $(this).is(':checked'));
     })
-
-
 
 
 </script>
