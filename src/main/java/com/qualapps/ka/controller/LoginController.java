@@ -1,4 +1,4 @@
-package com.qualapps.pqvp;
+package com.qualapps.ka.controller;
 
 import com.qualapps.ka.common.PqvpException;
 import com.qualapps.ka.common.Utils;

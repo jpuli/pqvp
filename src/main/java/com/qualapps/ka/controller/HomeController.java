@@ -1,4 +1,4 @@
-package com.qualapps.pqvp;
+package com.qualapps.ka.controller;
 
 import com.qualapps.ka.data.UserProfileData;
 import org.springframework.stereotype.Controller;

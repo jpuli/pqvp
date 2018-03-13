@@ -1,9 +1,7 @@
-package com.qualapps.pqvp;
+package com.qualapps.ka;
 
 import java.util.Arrays;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -21,11 +19,9 @@ import org.springframework.context.annotation.Configuration;
         "com.qualapps.ka.service"})
 @SpringBootApplication
 @EnableAutoConfiguration
-public class PqvpApplication {
-  private static final Logger log = LoggerFactory.getLogger(PqvpApplication.class);
-
+public class DaasApplication {
   public static void main(String[] args) {
-    SpringApplication.run(PqvpApplication.class, args);
+    SpringApplication.run(DaasApplication.class, args);
   }
 
   @Bean
