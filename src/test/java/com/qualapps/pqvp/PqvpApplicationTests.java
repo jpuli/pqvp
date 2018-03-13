@@ -1,4 +1,4 @@
-package com.qualapps.ka.article;
+package com.qualapps.pqvp;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,7 +7,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class ArticleApplicationTests {
+public class PqvpApplicationTests {
 
 	@Test
 	public void contextLoads() {
