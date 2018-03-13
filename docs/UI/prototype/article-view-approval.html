@@ -69,11 +69,15 @@
                     </ul>
 
                     <h6 class="sidebar-heading px-3 mt-4 mb-1">
-                        <!--<i data-feather="eye" class="sidebar-section-icon"></i>-->
-                        Recently Viewed</h6>
-                    <ul class="nav flex-column recently-opened">
+                        <!--<i data-feather="list" class="sidebar-section-icon"></i>-->
+                        Administration
+                    </h6>
+                    <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Setup/Configuration of Canon APLX Printer</a>
+                            <a class="nav-link" href="#">Approval Queue<span class="action-count">3</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Approved by me</a>
                         </li>
 
                     </ul>
@@ -103,7 +107,7 @@
                             <a class="nav-link" href="add-new.html">Create New Article</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">My Submissions</a>
+                            <a class="nav-link" href="#">My Submissions</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">My Bookmarks</a>
@@ -116,11 +120,44 @@
             </nav>
         </div>
 
+
+
+
+
         <!--Main Content -->
         <main role="main" class="col-lg-10 no-padding">
 
 
-            <div class="container-fluid content-area">
+            <!--Article Approval -->
+            <div class="col-lg-12 article-approval content-area">
+                <div class="container">
+                    <div class="approval-actions">
+                        <h3>This article is awaiting approval</h3>
+                        <ul>
+                            <li>
+                                <button type="button" id="rejectArticleBtn" class="btn btn-link"><i data-feather="x"></i> Reject</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-success" type="submit" name="submit" value="Submit"><i data-feather="check"></i> Approve & Publish</button>
+                            </li>
+                        </ul>
+
+                        <form class="reject-article hidden">
+                            <div class="form-group col-lg-6 offset-lg-3 reject">
+                                <label for="rejectReason">Reason for rejection</label>
+                                <textarea class="form-control" id="rejectReason" rows="3"></textarea>
+                                <button class="btn btn-danger btn-sm float-right" type="submit" name="submit" value="Submit">Reject</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="container-fluid offset-lg-1 col-lg-10 no-padding content-area">
                 <!--Back to previous page -->
                 <a class="go-back" href="javascript:history.back()" title="Return to previous page">
                     <span>
@@ -131,64 +168,56 @@
                         </svg>
                     </span>
                 </a>
-                <h1 class="page-title" id="pageTitle">My Submissions</h1>
 
-                <div id="table">
 
-                  <div class="row">
+                <div class="article-view-header">
 
-                  <div class="col-md-4">
-                  <div class="input-group-input">
-                  <input class="search form-control" placeholder="Search" type="search">
-                  </div>
-                  </div>
-                    <div class="offset-5 col-md-3">
-                      <a class="btn btn-primary float-right" href="add-new.html" role="button"><i data-feather="plus-circle" class="button-icon"></i> Add New</a>
+                            <h1>13 Health Benefits of Coffee, Based on Science</h1>
+
+
+                    <div id="bookmark-this" data-toggle="tooltip" data-placement="bottom" class="float-right" title="Bookmark this">
+                        <i class="bookmarkIcon" data-feather="bookmark"></i>
                     </div>
-                  </div>
-
-                  <div class="li-table">
-                    <div class="li-table-sorting">
-                      <div class="row">
-                              <div class="col col-lg-1 sort" data-sort="id">ID</div>
-                              <div class="col col-lg-5 sort" data-sort="title">Title</div>
-                          <div class="col col-lg-2 sort" data-sort="category">Category</div>
-                              <div class="col col-lg-2 sort" data-sort="status">Status</div>
-                              <div class="col col-lg-2 sort" data-sort="date">Date</div>
-
-                      </div>
-
+                    <div class="article-meta">
+                        <a href="#"><span class="user-info"><i data-feather="user"></i>Tina Redee</span></a>
+                        <a href="#"> <span class="clock"><i
+                                data-feather="clock"></i>12 minutes ago</span></a>
+                        <a href="#"><span class="user-info"><i
+                                data-feather="tag"></i>Health</span></a>
                     </div>
+                    <div class="article-tags"><a href="#"><span class="article-tag">Coffee</span></a><a
+                            href="#"><span
+                            class="article-tag">Productivity</span></a></div>
 
-                    <ul class="list">
-                      <a href="article-view.html"><li>
-                        <div class="row">
-                          <div class="col-lg-1 col-xs-12"><p class="id">8491</p></div>
-                          <div class="col-lg-5 col-xs-12"><p class="title">13 Health Benefits of Coffee, Based on Science</p></div>
-                            <div class="col-lg-2 col-xs-12"><p class="category">Category</p></div>
-                          <div class="col-lg-2 col-xs-12"><p class="status">Published</p></div>
-                          <div class="col-lg-2 col-xs-12"><p class="date">02/01/2018</p></div>
-
-                        </div>
-                      </li>
-                      </a>
-                      <a href="#"><li>
-                          <div class="row">
-                              <div class="col-lg-1 col-xs-12"><p class="id">7592</p></div>
-                              <div class="col-lg-5 col-xs-12"><p class="title">Setup/Configuration of Canon APLX Printer</p></div>
-                              <div class="col-lg-2 col-xs-12"><p class="category">Category</p></div>
-                              <div class="col-lg-2 col-xs-12"><p class="status">Awaiting approval</p></div>
-                              <div class="col-lg-2 col-xs-12"><p class="date">01/31/2018</p></div>
-
-                          </div>
-                      </li>
-                      </a>
-
-
-
-                    </ul>
-                  </div>
                 </div>
+
+
+
+                <div class="article-content">
+                    <label for="articleUrl">URL</label>
+                    <div id="articleUrl" class="article-link">
+                        <a href="https://www.healthline.com/nutrition/top-13-evidence-based-health-benefits-of-coffee#section7">https://www.healthline.com/nutrition/top-13-evidence-based-health-benefits-of-coffee#section7</a>
+                    </div>
+                    <label for="articleDescription">Description</label>
+                    <div id="articleDescription" class="article-description">
+                        <p>Donec sed fringilla diam. Fusce in tincidunt justo. Vestibulum efficitur blandit consectetur.</p>
+                        <p>Nunc convallis fermentum nunc, non mollis orci finibus sed. Cras vehicula mauris at mauris aliquet faucibus. Quisque convallis egestas mauris, ut ultricies mauris convallis non. Etiam quis dui mauris. Cras dignissim mollis dolor, consectetur tempor neque consectetur ac. Sed mi neque, mattis vitae magna ut, fringilla vehicula ipsum. Mauris augue lectus, varius vitae eros at, scelerisque viverra nulla. Phasellus a feugiat urna, ac fringilla augue. Sed a est fringilla, lobortis magna a, placerat nibh. Mauris mattis viverra lorem, sed accumsan nisl finibus et.</p>
+
+
+                    </div>
+                    <label for="articleAttachments">Attachments</label>
+                    <div id="articleAttachments" class="article-attachments">
+                        <ul class="attatchments">
+                            <div class="row">
+                                <a href="#"><li><span>pdf.pdf</span><span class="attachment-size">12KB</span></li></a>
+                                <a href="#"><li><span>pdf.pdf</span><span class="attachment-size">12KB</span></li></a>
+                            </div>
+
+                        </ul>
+                    </div>
+                </div>
+
+
 
             </div>
         </main>
@@ -200,39 +229,26 @@
 <!-- JavaScript -->
 <!--Bootstrap Defaults-->
 <script src="js/jquery-3.3.1.min.js"></script>
-
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/tether.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/list.min.js"></script>
-
 <!--Feather Icons-->
 <script src="js/feather.min.js"></script>
-<!--Tags-->
-<script src="js/tagsinput.js"></script>
-<!--Text editor-->
-<link href="css/summernote-bs4.css" rel="stylesheet">
-<script src="js/summernote-bs4.js"></script>
 
 
 <script>
     feather.replace();
 
+    $("#bookmark-this").on('click', function() {
+        $(".bookmarkIcon").toggleClass('filled');
+    })
 
-    var options = {
-        valueNames: ['id', 'title', 'status', 'date', 'submitter'],
-        page: 10,
-        pagination: true
-    };
-
-    var mylist = new List('table', options);
-
-
-
-
-
-
+    $("#rejectArticleBtn").on('click', function(){
+        $(".reject-article").toggleClass('hidden');
+    })
 </script>
+
 
 
 </body>
