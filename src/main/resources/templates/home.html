@@ -21,7 +21,7 @@
     <!--Main Content -->
     <main role="main" class="col-lg-10 no-padding">
       <div class="hero-area welcome no-gutters">
-        <h1>Welcome back, John</h1>
+        <h1 th:text="'Welcome back, ' + ${user.getUsrName()}">Welcome back, John</h1>
         <form class="form-inline search-input offset-lg-3 offset-md-2 col-lg-6 col-md-8 col-12">
           <i data-feather="search" class="sidebar-section-icon"></i>
           <input class="form-control" type="search"
