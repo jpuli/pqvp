@@ -32,11 +32,12 @@ Sprint Zero
 Sprint 1
 Sprint 2
 
-5.	User-Centered Design
-6.	Technical Approach
+## User-Centered Design
+# ## Narrative for the Technical Approach
 a.	Technology stack
 b.	Logical and physical architecture
 c.	User interactions
+
 7.	Response to RFI Requirements
 8.	Conformance to the US Digital Services Playbook
 9.	RFI Requirements 
