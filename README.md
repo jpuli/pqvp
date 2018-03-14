@@ -2,6 +2,7 @@
 # Request for Information (RFI) # CDT–PQVP–0118 
 # Pre-Qualified Vendor Pool for Agile Development – Digital Services
 ![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/QualApps%2C%20Inc.png)
+
 QualApps’s Approach to Building the Working Prototype
 QualApps convened a multidisciplinary team of highly experienced Information Technology (IT) professionals from within our internal staffing network to work on this Prototype. Everyone on our team is currently working on other projects, and our team members have worked with one another. This allowed us to coalesce quickly as a team and assign work based on each team member’s strengths. 
 
