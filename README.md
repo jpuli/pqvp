@@ -40,7 +40,7 @@ Component interactions
 # Response to RFI Requirements
 
 ## Conformance to the US Digital Services Playbook
-At the beginning of the project, for each Play the team went through each item on the checklist and reviewed and answered key questions. We found that the questions were particularlly helpfu in terms of us establish a context for product development and sparking ideas about Epics and User Stories.  We made use of the checklists alghouth in some cases the project's short timeframe made them impracticable.  For example, we did not have sufficient time to use metrics to determine how well we met user needs (Play 1) or establish and manage to a budget (Play 5).  
+At the beginning of the project, for each Play the team went through each item on the checklist and reviewed and answered key questions. We found that the questions were particularlly helpful in establishing a context for product development and sparking ideas about Epics and User Stories.  We made use of the checklists alghouth in some cases the project's short timeframe made them impracticable.  For example, we did not have sufficient time to use metrics to determine how well we met user needs (Play 1) or establish and manage to a budget (Play 5).  
 
 Below, we outline how we addressed each Play in the Playbook We provide a brief narrative explaining how we addressed questions, and then a checkbox for each item in the checklist that we completed. For brevity, we sometimes abbreviate or summarize checklist items. 
 
