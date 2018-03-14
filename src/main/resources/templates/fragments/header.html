@@ -1,3 +1,19 @@
+
+<!doctype html>
+<html lang="en">
+<head th:fragment="kaHeader (title)">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Plex Font -->
+  <link rel="stylesheet" href="css/ibm-plex.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <title th:text="'Knowledgebase Application - ' + ${title}">Knowledgebase Application - Prototype</title>
+</head>
+<body>
 <!--Application Top Bar (Includes App Name, Top User Navigation, Mobile Main Navigation)-->
 <div th:fragment="signedIn (username)" class="application-bar">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -45,4 +61,5 @@
     </div>
   </nav>
 </div>
-
+</body>
+</html>
