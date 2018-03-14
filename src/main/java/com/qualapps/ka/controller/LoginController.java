@@ -22,15 +22,14 @@ public class LoginController {
   public LoginController(UserProfileService service) { this.service = service; }
 
   @GetMapping("/")
-  public String index(Model model, @RequestParam(value="name", required=false, defaultValue="John Appleseed") String name) {
-    model.addAttribute("name", name);
-    String[] userNames = new String[]{"JohnAppleseed", "JanePublic"};
-    model.addAttribute("userNames", userNames);
+  public String index(Model model) {
+    String[] usernames = new String[]{"JohnAppleseed"};
+    model.addAttribute("usernames", usernames);
     return "index";
   }
 
   @PostMapping("/login")
-  public String login(HttpSession session, @RequestParam("userName") String userName) {
+  public String login(HttpSession session, @RequestParam("username") String userName) {
     try {
       UserProfileData user = service.getUserByName(userName);
       session.setAttribute("user", user);
