@@ -25,7 +25,11 @@ public class HomeController {
 
   @GetMapping("/home")
   public String home(HttpSession session, ModelMap modelMap) {
-    UserProfileData user = (UserProfileData) session.getAttribute("user");
+    UserProfileData user = loadCurrentUser(session);
+    if (user == null) {
+      return "redirect:logout";
+    }
+
     modelMap.put("user", user);
 
     try {
@@ -53,7 +57,11 @@ public class HomeController {
 
   @GetMapping("/search")
   public String search(HttpSession session, ModelMap modelMap, @RequestParam(name = "query", required = false, defaultValue = "") String query) {
-    UserProfileData user = (UserProfileData) session.getAttribute("user");
+    UserProfileData user = loadCurrentUser(session);
+    if (user == null) {
+      return "redirect:logout";
+    }
+
     modelMap.put("user", user);
     modelMap.put("query", query);
 
@@ -71,6 +79,15 @@ public class HomeController {
       modelMap.put("results", new ArrayList<Article>());
     }
     return "search";
+  }
+
+  private UserProfileData loadCurrentUser(HttpSession session) {
+    UserProfileData user = null;
+    Object sessionData = session.getAttribute("user");
+    if (sessionData != null && sessionData instanceof UserProfileData) {
+      user = (UserProfileData)sessionData;
+    }
+    return user;
   }
 
 
