@@ -33,12 +33,13 @@ Sprint 1
 Sprint 2
 
 ## User-Centered Design
-# ## Narrative for the Technical Approach
-a.	Technology stack
-b.	Logical and physical architecture
-c.	User interactions
 
-7.	Response to RFI Requirements
+# ## Narrative for the Technical Approach
+Technology stack
+Logical and physical architecture
+Component interactions
+
+# Response to RFI Requirements
 8.	Conformance to the US Digital Services Playbook
 9.	RFI Requirements 
 a.	Assigned one (1) leader and gave that person authority and responsibility and held that person accountable for the quality of the prototype submitted; 
