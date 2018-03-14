@@ -1,6 +1,6 @@
 package com.qualapps.ka.data;
 
-import com.qualapps.pqvp.PqvpApplication;
+import com.qualapps.ka.DaasApplication;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +22,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Rollback(true)
 @SpringBootTest(classes = JunitDaoConfig.class)
 @TestPropertySource(locations = "classpath:application.properties")
-@ContextConfiguration(classes = {PqvpApplication.class})
+@ContextConfiguration(classes = {DaasApplication.class})
 public class PqvpDaoTest {
     @Autowired
     JdbcTemplate pqvpDB;
