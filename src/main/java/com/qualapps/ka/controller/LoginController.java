@@ -22,10 +22,15 @@ public class LoginController {
   public LoginController(UserProfileService service) { this.service = service; }
 
   @GetMapping("/")
-  public String index(Model model) {
-    String[] usernames = new String[]{"JohnAppleseed"};
-    model.addAttribute("usernames", usernames);
-    return "index";
+  public String index(Model model, HttpSession session) {
+    Object user = session.getAttribute("user");
+    if (user != null && user instanceof UserProfileData) {
+      return "redirect:home";
+    } else {
+      String[] usernames = new String[]{"JohnAppleseed"};
+      model.addAttribute("usernames", usernames);
+      return "index";
+    }
   }
 
   @GetMapping("/logout")
