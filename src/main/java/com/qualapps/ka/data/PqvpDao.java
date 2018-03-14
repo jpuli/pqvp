@@ -18,14 +18,19 @@ public class PqvpDao {
         return usr;
     }
 
-    public UserProfileData getUserByUserName(String usrName) {
-        UserProfileData usr = pqvpDb.queryForObject(PqvpSql.getUserByUsrName, new Object[]{usrName}, new UserprofileDataMapper());
+    public UserProfileData getUser(String usrName) {
+        UserProfileData usr = pqvpDb.queryForObject(PqvpSql.getUserByUserName, new Object[]{usrName}, new UserprofileDataMapper());
         return usr;
     }
 
     public UserProfileData getUser(String usrName, String usrPwd) {
         UserProfileData usr = pqvpDb.queryForObject(PqvpSql.getUser, new Object[]{usrName, usrPwd}, new UserprofileDataMapper());
         return usr;
+    }
+
+    public List<UserProfileData> getUser() {
+        List<UserProfileData> usrs = pqvpDb.query(PqvpSql.getAllUsers, new UserprofileDataMapper());
+        return usrs;
     }
 
     public List<ArticleData> getArticles() {
@@ -55,7 +60,7 @@ public class PqvpDao {
 
     public ArticleData addArticle(ArticleData art) {
         pqvpDb.update(PqvpSql.addArticle, art.getArtId(), art.getArtTile(), art.getArtContent(), art.getArtViews(),
-                art.getArtStatus(), new Date(), "I", art.getChngUser());
+                art.getArtStatus(), art.getArtRating(), new Date(), "I", art.getChngUser());
         return art;
     }
 
