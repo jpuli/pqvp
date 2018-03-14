@@ -1,8 +1,10 @@
 package com.qualapps.ka.controller;
 
 import com.qualapps.ka.common.PqvpException;
+import com.qualapps.ka.data.ArticleData;
 import com.qualapps.ka.data.CategoryData;
 import com.qualapps.ka.data.UserProfileData;
+import com.qualapps.ka.display.Article;
 import com.qualapps.ka.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,6 +30,8 @@ public class HomeController {
     try {
       List<CategoryData> categories = articleService.getCategories();
       modelMap.put("categories", categories);
+      List<Article> recentArticles = articleService.getRecentArticles();
+      modelMap.put("recentArticles", recentArticles);
       return "home";
     } catch (PqvpException e) {
       return "index";
