@@ -34,14 +34,29 @@ Sprint 2
 
 ## User-Centered Design
 
-# ## Narrative for the Technical Approach
+# Narrative for the Technical Approach
 Technology stack
 Logical and physical architecture
 Component interactions
 
 # Response to RFI Requirements
-8.	Conformance to the US Digital Services Playbook
-9.	RFI Requirements 
+
+## Conformance to the US Digital Services Playbook
+Play 1 Understand what people need
+Play 2 Address the whole experience, from start to finish
+Play 3 Make it simple and intuitive
+Play 4 Build the service using agile and iterative practices
+Play 5 Structure budgets and contracts to support delivery
+Play 6 Assign one leader and hold that person accountable
+Play 7 Bring in experienced teams
+Play 8 Choose a modern technology stack
+Play 9 Deploy in a flexible hosting environment
+Play 10 Automate testing and deployments
+Play 11 Manage security and privacy through reusable processes
+Play 12 Use data to drive decisions
+Play 13 Default to open
+
+## RFI Requirements 
 a.	Assigned one (1) leader and gave that person authority and responsibility and held that person accountable for the quality of the prototype submitted; 
 b.	Assembled a multidisciplinary and collaborative team that includes, at a minimum, five (5) of the labor categories as identified in Attachment B: PQVP AD-DS Labor Category Descriptions; 
 i.	Labor Category 1. Product Manager - 
