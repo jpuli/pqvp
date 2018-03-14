@@ -8,5 +8,6 @@ QualApps convened a multidisciplinary team of highly experienced Information Tec
 Staff names and roles
 Highlight who has authority over the product
 
+![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/QualApps%2C%20Inc.png)
 
 ### AThe team adopted a Scrum-based approach to development and identified the high level scope necessary to meet the Minimal Value Plan (MVP) for the Working Prototype in a compressed, two-week time frame. Sprint planning included translating the MVP into two epics, creating high level user stories and determining how the Prototype architecture and infrastructure would be built to support the Prototype plan. Our technical team chose modern tools and techniques with which they were already familiar reducing ramp up time. The team determined that the work could be completed during two sprints over 10 days (five days per sprint). This Planning effort was completed within two days of receipt of the RFI and development began immediately.
