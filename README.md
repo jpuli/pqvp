@@ -111,20 +111,37 @@ vii.	The QualApps team reviewed and prioritized user stories and determined the 
 viii.	Using the minimal viable product (MVP) approach, the Product Manager identified user stories belonging in backlog and assigned work to the team based on the most critical elements needed to provide a working prototype.
 ix.	Once the prototype was tangible enough to produce a response, the team, including the end user, implemented role play. This included testing within our team in order to gain realistic and effective feedback for improvements.
 x.	After receiving prototype feedback based on the role play, the team began integrating the feedback into the backlog as part of the next iteration of the prototype. Some of the identified user stories were created as icebox items to demonstrate that we are taking a MVP approach.
-**Requirement D: Used at least a minimum of three (3) “user-centric design” techniques and/or tools;**
-**Requirement E: Used GitHub to document code commits;**
-**Requirement F: Used Swagger to document the RESTful API, and provided a link to the Swagger API;**
-**Requirement G: Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0;**
-**Requirement H: Created or used a design style guide and/or a pattern library; 
-**Requirement I: Performed usability tests with people;**
-**Requirement J: Used an iterative approach, where feedback informed subsequent work or versions of the prototype; **
-**Requirement K: Created a prototype that works on multiple devices, and presents a responsive design;** 
-**Requirement L: Used at least five (5) modern and open-source technologies, regardless of architectural ayer (frontend, backend, etc.);  **
-**Requirement M: Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as Service (PaaS) provider, and indicated which provider they used; **
-**Requirement N: Developed automated unit tests for their code;**
-**Requirement O: Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider;**
-**Requirement P: Setup or used configuration management; **
-**Requirement Q: Setup or used continuous monitoring; **
-**Requirement R: Deployed their software in an open source container, such as Docker (i.e., utilized operating-system-level virtualization); **
-**Requirement S: Provided sufficient documentation to install and run their prototype on another machine; and**
-**Requirement T: Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge.**
+
+**Requirement D: Used at least a minimum of three (3) “user-centric design” techniques and/or tools**
+
+**Requirement E: Used GitHub to document code commits**
+
+**Requirement F: Used Swagger to document the RESTful API, and provided a link to the Swagger API**
+
+**Requirement G: Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0**
+
+**Requirement H: Created or used a design style guide and/or a pattern library**
+
+**Requirement I: Performed usability tests with people**
+
+**Requirement J: Used an iterative approach, where feedback informed subsequent work or versions of the prototype **
+
+**Requirement K: Created a prototype that works on multiple devices, and presents a responsive design** 
+
+**Requirement L: Used at least five (5) modern and open-source technologies, regardless of architectural ayer (frontend, backend, etc.)  **
+
+**Requirement M: Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as Service (PaaS) provider, and indicated which provider they used**
+
+**Requirement N: Developed automated unit tests for their code**
+
+**Requirement O: Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider**
+
+**Requirement P: Setup or used configuration management **
+
+**Requirement Q: Setup or used continuous monitoring **
+
+**Requirement R: Deployed their software in an open source container, such as Docker (i.e., utilized operating-system-level virtualization) **
+
+**Requirement S: Provided sufficient documentation to install and run their prototype on another machine**
+
+**Requirement T: Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge**
