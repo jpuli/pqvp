@@ -13,22 +13,25 @@ The team adopted a Scrum-based approach to development and identified the high l
 
 ## QualApps’ ADPQ Submission
 
-a.	QualApps is pleased to respond to… 
-b.	Requirements 
-2.	Link to the web application
-a.	This application is fully responsive and complies with ADA guidelines
-b.	It is best viewed in Chrome or FireFox, but will function in Edge or IE
-c.	Username and password to access the application
-3.	User Stories
-a.	Link to JIRA
-b.	Read only Username and Password
-4.	Approach
-a.	Team members
-b.	Roles and responsibilities
-c.	Given the compressed timeframe of this effort, the team organized the work around three separate sprints:
-i.	Sprint Zero
-ii.	Sprint 1
-iii.	Sprint 2
+QualApps is pleased to respond to… address requirements
+
+## Link to the web application
+This application is fully responsive and complies with ADA guidelines
+It is best viewed in Chrome or FireFox, but will function in Edge or IE
+Username and password to access the application
+
+## Managing Product Development
+Link to JIRA
+Read only Username and Password
+
+## Approach
+Team members
+Roles and responsibilities
+Given the compressed timeframe of this effort, the team organized the work around three separate sprints:
+Sprint Zero
+Sprint 1
+Sprint 2
+
 5.	User-Centered Design
 6.	Technical Approach
 a.	Technology stack
