@@ -5,7 +5,7 @@
 ![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/QualApps%2C%20Inc.png)
 
 ## QualApps’ ADPQ Submission
-QualApps is pleased to respond to… address requirements
+QualApps is thankful for the opportunity to submit a rsponse to RFI# CDT–PQVP–0118.  In a short timeframe, QualApps mobilized a multi-disciplinary team to review this RFI and rapidly respond. We are pleased with the outcome and hope that the Department of Technollogy is equally pleased with our Working Prototype and Technical Approach.  
 
 ## Link to the Web Application
 This application is fully responsive and complies with ADA guidelines
