@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
@@ -49,6 +50,29 @@ public class HomeController {
     }
     return "home";
   }
+
+  @GetMapping("/search")
+  public String search(HttpSession session, ModelMap modelMap, @RequestParam(name = "query", required = false, defaultValue = "") String query) {
+    UserProfileData user = (UserProfileData) session.getAttribute("user");
+    modelMap.put("user", user);
+    modelMap.put("query", query);
+
+    try {
+      List<CategoryData> categories = articleService.getCategories();
+      modelMap.put("categories", categories);
+    } catch (PqvpException e) {
+      modelMap.put("categories", new ArrayList<CategoryData>());
+    }
+
+    try {
+      List<Article> recentArticles = prepareArticleDataForDisplay(articleService.searchArticles(query));
+      modelMap.put("results", recentArticles);
+    } catch (PqvpException e) {
+      modelMap.put("results", new ArrayList<Article>());
+    }
+    return "search";
+  }
+
 
   private List<Article> prepareArticleDataForDisplay(List<ArticleData> articleDataList) {
     List<Article> articles = new ArrayList<>();
