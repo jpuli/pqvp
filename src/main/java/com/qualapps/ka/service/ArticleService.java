@@ -117,4 +117,25 @@ public class ArticleService {
         }
         return arts;
     }
+
+    /**
+     * Gets articles based on query
+     *
+     * @return List of Articles
+     * @throws PqvpException Article not found exception
+     */
+    public List<ArticleData> searchArticles(String query) throws PqvpException {
+        List<ArticleData> arts;
+        try {
+            arts = pqvpdao.getArticlesByContent(query);
+            if (arts == null || arts.isEmpty()) {
+                String[] params = new String[]{};
+                throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
+            }
+        } catch (Exception e) {
+            String[] params = new String[]{};
+            throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
+        }
+        return arts;
+    }
 }
