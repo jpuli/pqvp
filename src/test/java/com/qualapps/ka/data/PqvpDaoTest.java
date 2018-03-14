@@ -1,5 +1,6 @@
 package com.qualapps.ka.data;
 
+
 import com.qualapps.pqvp.PqvpApplication;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,6 +15,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Calendar;
+import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -31,6 +33,7 @@ public class PqvpDaoTest {
     private PqvpDao dao;
 
     private UserProfileData user;
+    private ArticleData article;
 
     @Before
     public void setupMock() {
@@ -43,12 +46,25 @@ public class PqvpDaoTest {
         user.setChngDate(Calendar.getInstance().getTime());
         user.setChngType("I");
         user.setChngUser("testUser");
+
+        // new article
+        article = new ArticleData();
+        article.setArtId(9999);
+        article.setArtTile("New Test Article");
+        article.setArtContent("this is a new article to test the ....");
+        article.setArtStatus("Initial");
+        article.setCatId(1);
+        article.setArtViews(1);
+        article.setArtRating(1);
+        article.setChngDate(Calendar.getInstance().getTime());
+        article.setChngType("I");
+        article.setChngUser("testUser");
     }
 
     @Test
     public void testGetUserByUsrName() throws Exception {
         dao.addUser(user);
-        UserProfileData newUsr = dao.getUserByUserName("testUser");
+        UserProfileData newUsr = dao.getUser("testUser");
         assertThat(user.getUsrRole().equals(newUsr.getUsrRole()));
     }
 
@@ -57,6 +73,21 @@ public class PqvpDaoTest {
         dao.addUser(user);
         UserProfileData newUsr = dao.getUser("testUser", "pwd1");
         assertThat(user.getUsrRole().equals(newUsr.getUsrRole()));
+    }
+
+    @Test
+    public void testGetAllUsers() throws Exception {
+        dao.addUser(user);
+        List<UserProfileData> usrs = dao.getUser();
+        assertThat(usrs.size() == 1);
+        assertThat(usrs.get(0).getUsrRole().equals(user.getUsrRole()));
+    }
+
+    @Test
+    public void testCreateArticle() throws Exception {
+        dao.addArticle(article);
+        List<ArticleData> arts = dao.getArticles(9999);
+        assertThat(arts.get(0).getArtId() == article.getArtId());
     }
 
 }

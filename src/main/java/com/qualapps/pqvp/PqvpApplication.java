@@ -15,7 +15,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @ComponentScan(basePackages = {"com.qualapps.ka.data",
-        "com.qualapps.ka.article",
+        "com.qualapps.ka.data",
         "com.qualapps.ka.controller",
         "com.qualapps.pqvp",
         "com.qualapps.ka.service"})
