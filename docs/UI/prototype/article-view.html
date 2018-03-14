@@ -23,10 +23,18 @@
 <body>
 <!--Application Top Bar (Includes App Name, Top User Navigation, Mobile Main Navigation)-->
 <div class="application-bar">
+
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
         <!--Application Name-->
         <a class="navbar-brand" href="#"><i data-feather="book-open" class="app-icon"></i>Knowledgebase Application</a>
+
+        <!--Top Search-->
+        <form class="form-inline col-lg-4 mx-auto top-search">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn" hidden type="submit">Search</button>
+        </form>
 
         <!--Top Navigation-->
         <ul class="navbar-nav ml-auto">
@@ -137,7 +145,9 @@
 
 
                     <div id="bookmark-this" data-toggle="tooltip" data-placement="bottom" class="float-right" title="Bookmark this">
-                        <i class="bookmarkIcon" data-feather="bookmark"></i>
+                        <button class="btn btn-secondary btn-sm flex-align-center"><i class="bookmarkIcon" data-feather="bookmark"></i> Bookmark</button>
+
+
                     </div>
                     <div class="article-meta">
                         <a href="#"><span class="user-info"><i data-feather="user"></i>Tina Redsee</span></a>
@@ -174,6 +184,35 @@
                         </ul>
                     </div>
                 </div>
+                <div class="article-feedback">
+                    <!--<div class="card">-->
+                        <!--<div class="card-title">Did you find this article helpful?</div>-->
+                        <!--<div class="card-body"><div class="feedback-indicators">-->
+                            <!--<a class="thumbs-up" href="#/"><i data-feather="thumbs-up"></i></a><a class="thumbs-down" href="#/"><i data-feather="thumbs-down"></i></a>-->
+                        <!--</div>-->
+                            <!--<button class="btn btn-secondary btn-sm flex-align-center archiveArticle"><i data-feather="edit"></i>Provide additional feedback</button></div>-->
+                    <!--</div>-->
+
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <h3>Help improve this article</h3>
+                            <h4>Did you find this article useful?</h4>
+                            </div>
+
+
+                        <div class="col-lg-6">
+                            <div class="feedback-indicators">
+                                <a class="thumbs-up" href="#/"><i data-feather="thumbs-up"></i>Yes</a><a class="thumbs-down" href="#/"><i data-feather="thumbs-down"></i>No</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    </div>
+
+
+
+                </div>
 
 
 
@@ -200,6 +239,10 @@
 
     $("#bookmark-this").on('click', function() {
         $(".bookmarkIcon").toggleClass('filled');
+    })
+
+    $(".thumbs-up").on('click', function() {
+        $(".thumbs-up").toggleClass('selected')
     })
 </script>
 
