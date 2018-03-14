@@ -99,31 +99,32 @@ Labor Category 11. Agile Coach –
 
 Labor Category 12. Business Analyst – 
 
-**Requirement B: Understood what people needed, by including people in the prototype development and design process;** 
-The QualApps Project Director and Agile Coach reviewed the working prototype statement from the RFI to better understand and deconstruct the requirements of the prototype into epics.
-The QualApps Project Director coalesced a team of technical professionals to discuss how the identified epics would be architected based on the RFI requirements for simplicity, ease of use and open source.
-iii.	QualApps asked Izzie Litman, a Senior Business Analyst and QualApps associate, to assist the team as an end user.
-iv.	The QualApps Project Director added additional analyst resources to the Scrum team to work with Izzie in establishing end user stories defining emergency and non-emergency notification needs.
-v.	The QualApps Researcher and Business analyst conducted internet-based research on the concepts for establishing an emergency notification network looking at the business needs of the individuals requesting notification as well as the technologies supporting such systems. Additional questions resulted from this research were posed to the end user to refine user stories and establish acceptance criteria.
-vi.	A project was created in Pivotal Tracker and the epics and user stories were added.
+**Requirement C: Understood what people needed, by including people in the prototype development and design process;** 
+The QualApps Project Director and Agile Coach reviewed the working prototype statement from the RFI to better understand and deconstruct the requirements of the prototype into epics. The QualApps Project Director coalesced a team of technical professionals to discuss how the identified epics would be architected based on the RFI requirements for simplicity, ease of use and open source.
+
+The QualApps Project Director added additional analyst resources to the Scrum team to work with Izzie in establishing end user stories defining emergency and non-emergency notification needs.
+
+The QualApps Researcher and Business analyst conducted internet-based research on the concepts for establishing an emergency notification network looking at the business needs of the individuals requesting notification as well as the technologies supporting such systems. Additional questions resulted from this research were posed to the end user to refine user stories and establish acceptance criteria.
+
+vi.	A project was created in Jira  and the epics and user stories were added.
 vii.	The QualApps team reviewed and prioritized user stories and determined the design of the prototype using agreed upon technologies.
 viii.	Using the minimal viable product (MVP) approach, the Product Manager identified user stories belonging in backlog and assigned work to the team based on the most critical elements needed to provide a working prototype.
 ix.	Once the prototype was tangible enough to produce a response, the team, including the end user, implemented role play. This included testing within our team in order to gain realistic and effective feedback for improvements.
 x.	After receiving prototype feedback based on the role play, the team began integrating the feedback into the backlog as part of the next iteration of the prototype. Some of the identified user stories were created as icebox items to demonstrate that we are taking a MVP approach.
-d.	Used at least a minimum of three (3) “user-centric design” techniques and/or tools;
-e.	Used GitHub to document code commits;
-f.	Used Swagger to document the RESTful API, and provided a link to the Swagger API;
-g.	Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0;
-h.	Created or used a design style guide and/or a pattern library; 
-i.	Performed usability tests with people; 
-j.	Used an iterative approach, where feedback informed subsequent work or versions of the prototype; 
-k.	Created a prototype that works on multiple devices, and presents a responsive design; 
-l.	Used at least five (5) modern and open-source technologies, regardless of architectural ayer (frontend, backend, etc.);  
-m.	Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as Service (PaaS) provider, and indicated which provider they used; 
-n.	Developed automated unit tests for their code;
-o.	Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider;
-p.	Setup or used configuration management; 
-q.	Setup or used continuous monitoring; 
-r.	Deployed their software in an open source container, such as Docker (i.e., utilized operating-system-level virtualization); 
-s.	Provided sufficient documentation to install and run their prototype on another machine; and
-t.	Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge.
+**Requirement D: Used at least a minimum of three (3) “user-centric design” techniques and/or tools;**
+**Requirement E: Used GitHub to document code commits;**
+**Requirement F: Used Swagger to document the RESTful API, and provided a link to the Swagger API;**
+**Requirement G: Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0;**
+**Requirement H: Created or used a design style guide and/or a pattern library; 
+**Requirement I: Performed usability tests with people;**
+**Requirement J: Used an iterative approach, where feedback informed subsequent work or versions of the prototype; **
+**Requirement K: Created a prototype that works on multiple devices, and presents a responsive design;** 
+**Requirement L: Used at least five (5) modern and open-source technologies, regardless of architectural ayer (frontend, backend, etc.);  **
+**Requirement M: Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as Service (PaaS) provider, and indicated which provider they used; **
+**Requirement N: Developed automated unit tests for their code;**
+**Requirement O: Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider;**
+**Requirement P: Setup or used configuration management; **
+**Requirement Q: Setup or used continuous monitoring; **
+**Requirement R: Deployed their software in an open source container, such as Docker (i.e., utilized operating-system-level virtualization); **
+**Requirement S: Provided sufficient documentation to install and run their prototype on another machine; and**
+**Requirement T: Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge.**
