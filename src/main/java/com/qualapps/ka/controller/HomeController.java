@@ -1,8 +1,10 @@
 package com.qualapps.ka.controller;
 
 import com.qualapps.ka.common.PqvpException;
+import com.qualapps.ka.data.ArticleData;
 import com.qualapps.ka.data.CategoryData;
 import com.qualapps.ka.data.UserProfileData;
+import com.qualapps.ka.display.Article;
 import com.qualapps.ka.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,9 +30,38 @@ public class HomeController {
     try {
       List<CategoryData> categories = articleService.getCategories();
       modelMap.put("categories", categories);
-      return "home";
     } catch (PqvpException e) {
-      return "index";
+      modelMap.put("categories", new ArrayList<CategoryData>());
     }
+
+    try {
+      List<Article> recentArticles = prepareArticleDataForDisplay(articleService.getRecentArticles());
+      modelMap.put("recentArticles", recentArticles);
+    } catch (PqvpException e) {
+      modelMap.put("recentArticles", new ArrayList<Article>());
+    }
+
+    try {
+      List<Article> popularArticles = prepareArticleDataForDisplay(articleService.getArticlesByRating());
+      modelMap.put("popularArticles", popularArticles);
+    } catch (PqvpException e) {
+      modelMap.put("popularArticles", new ArrayList<Article>());
+    }
+    return "home";
+  }
+
+  private List<Article> prepareArticleDataForDisplay(List<ArticleData> articleDataList) {
+    List<Article> articles = new ArrayList<>();
+    for (ArticleData articleData : articleDataList) {
+      Article article = new Article();
+      article.setId(articleData.getArtId());
+      article.setTitle(articleData.getArtTile());
+      article.setChanged(articleData.getChngDate());
+      article.setChangeUser(articleData.getChngUser());
+      article.setSummary(articleData.getArtContent().substring(0, 300) + "...");
+      //article.setCategory(StringUtils.capitalize(pqvpdao.getCategory(articleData.getCatId()).getCatName()));
+      articles.add(article);
+    }
+    return articles;
   }
 }
