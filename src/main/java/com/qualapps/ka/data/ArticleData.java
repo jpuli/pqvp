@@ -62,7 +62,7 @@ public class ArticleData {
 	public void setChngUser(String chngUser) {
 		this.chngUser = chngUser;
 	}
-	public long getartRating() {
+	public long getArtRating() {
 		return artRating;
 	}
 	public void setArtRating(long artRating) {
