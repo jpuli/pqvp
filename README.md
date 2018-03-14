@@ -8,9 +8,11 @@
 QualApps is thankful for the opportunity to submit a rsponse to RFI# CDT–PQVP–0118.  In a short timeframe, QualApps mobilized a multi-disciplinary team to review this RFI and rapidly respond. We are pleased with the outcome and hope that the Department of Technollogy is equally pleased with our Working Prototype and Technical Approach.  
 
 ## Link to the Web Application
-This application is fully responsive and complies with ADA guidelines
-It is best viewed in Chrome or FireFox, but will function in Edge or IE
-Username and password to access the application
+This application is fully responsive and complies with ADA guidelines.  It is best viewed in Chrome or FireFox, but will function in Edge or IE.
+
+Username
+  
+Password
 
 ## Managing Product Development
 Link to JIRA
