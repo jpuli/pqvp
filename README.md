@@ -71,23 +71,35 @@ Component interactions
 
 
 ## RFI Requirements 
-a.	Assigned one (1) leader and gave that person authority and responsibility and held that person accountable for the quality of the prototype submitted;
+The README.md file should also make reference to the following:
 
-b.	Assembled a multidisciplinary and collaborative team that includes, at a minimum, five (5) of the labor categories as identified in Attachment B: PQVP AD-DS Labor Category Descriptions; 
+**Requirement A: Assigned one (1) leader and gave that person authority and responsibility and held that person accountable for the quality of the prototype submitted;**
+
+**Requirement B: Assembled a multidisciplinary and collaborative team that includes, at a minimum, five (5) of the labor categories as identified in Attachment B: PQVP AD-DS Labor Category Descriptions;**
 
 Labor Category 1. Product Manager - 
+
 Labor Category 2. Technical Architect - 
+
 Labor Category 3. Interaction Designer/User Researcher/Usability Tester - 
+
 Labor Category 4. Writer/Content Designer/Content Strategist –
+
 Labor Category 6. Front End Web Developer - 
+
 Labor Category 7. Backend Web Developer – 
+
 vabor Category 8. DevOps Engineer – 
+
 Labor Category 9. Security Engineer - 
+
 Labor Category 10. Delivery Manager – 
+
 Labor Category 11. Agile Coach – 
+
 Labor Category 12. Business Analyst – 
 
-Understood what people needed, by including people in the prototype development and design process;  
+**Requirement B: Understood what people needed, by including people in the prototype development and design process;** 
 The QualApps Project Director and Agile Coach reviewed the working prototype statement from the RFI to better understand and deconstruct the requirements of the prototype into epics.
 The QualApps Project Director coalesced a team of technical professionals to discuss how the identified epics would be architected based on the RFI requirements for simplicity, ease of use and open source.
 iii.	QualApps asked Izzie Litman, a Senior Business Analyst and QualApps associate, to assist the team as an end user.
