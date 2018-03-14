@@ -13,11 +13,11 @@
   <title>Knowledgebase Application - Prototype</title>
 </head>
 <body>
-<div th:replace="header :: signedIn (username=${user.getUsrName()})" class="application-bar"></div>
+<div th:replace="fragments/header :: signedIn (username=${user.getUsrName()})" class="application-bar"></div>
 <!--Main Outer Container -->
 <div class="container-fluid no-gutters">
   <div class="row">
-    <div th:replace="sidebar :: signedIn (categories=${categories})" class="col-lg-2 bg-light sidebar"></div>
+    <div th:replace="fragments/sidebar :: signedIn (categories=${categories})" class="col-lg-2 bg-light sidebar"></div>
     <!--Main Content -->
     <main role="main" class="col-lg-10 no-padding">
       <div class="hero-area welcome no-gutters">
