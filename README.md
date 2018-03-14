@@ -40,11 +40,18 @@ Component interactions
 # Response to RFI Requirements
 
 ## Conformance to the US Digital Services Playbook
-At the beginning of the project, for each Play the team went through each item on the checklist and reviewed and answered key questions. We found that the questions were particularlly helpfu in terms of us establish a context for product development and sparking ideas about Epics and User Stories.  We made use of the checklists alghouth in some cases the project's short timeframe made them impracticable.  For example, we did not have sufficient time to use metrics to determine how well we met user needs (Play 1) or establish and manage to a budget (Play 5).  Below, we outline how we addressed each Play in the Playbook. 
+At the beginning of the project, for each Play the team went through each item on the checklist and reviewed and answered key questions. We found that the questions were particularlly helpfu in terms of us establish a context for product development and sparking ideas about Epics and User Stories.  We made use of the checklists alghouth in some cases the project's short timeframe made them impracticable.  For example, we did not have sufficient time to use metrics to determine how well we met user needs (Play 1) or establish and manage to a budget (Play 5).  
+
+Below, we outline how we addressed each Play in the Playbook We provide a brief narrative explaining how we addressed questions, and then a checkbox for each item in the checklist that we completed. For brevity, we sometimes abbreviate or summarize checklist items. 
 
 **Play 1 Understand what people need**
 
 Regarding Key Questions: We considered (based on the RFI) that the primary users are State departments and agencies.  We thought about various applications for a knowledge sharing application.  For example, we considered tailoring it to assist with workforce development, in particular providing a platform wherein seasoned employees and millenials could collaborate on knowledge transfer.  Another consideration was developing a knowledg-sharing platform for trouble-shooting technical issues.  In the end, we decided we could develop a feature-rich platform that would suppot any subject area, wich could be tagged by topics. Quesions helped us establish our initial backlog, e.g., "As a user I want to be able to search knowledge based on key-words/topics".  
+
+- [x] Early in the project, spend time with current and prospective users of the service
+- [x] Use a range of qualitative and quantitative research methods (This was done minimally; see survey.)
+- [x] Test prototypes of solutions with real people
+- [x] As the digital service is being built, regularly test it
 
 **Play 2 Address the whole experience, from start to finish**
 
