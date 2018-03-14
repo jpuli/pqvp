@@ -1,6 +1,7 @@
 # California Department of Technology 
 # Request for Information (RFI) # CDT–PQVP–0118 
 # Pre-Qualified Vendor Pool for Agile Development – Digital Services
+
 ![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/QualApps%2C%20Inc.png)
 
 ## QualApps’ ADPQ Submission
