@@ -1,17 +1,6 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- Plex Font -->
-  <link rel="stylesheet" href="css/ibm-plex.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/custom.css">
-  <title>Knowledgebase Application - Prototype</title>
-</head>
+<head th:replace="fragments/header :: kaHeader (title='Home')" />
 <body>
 <div th:replace="fragments/header :: signedIn (username=${user.getUsrName()})" class="application-bar"></div>
 <!--Main Outer Container -->
