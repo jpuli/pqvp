@@ -22,6 +22,8 @@
         </div>
       </div>
       <div class="col-lg-6">
+        <div th:if="${logout} == true" class="alert alert-success margin-bottom-2" role="alert"><span class="alert-icon-danger">
+                    <i data-feather="check"  width="18" height="18" ></i></span>You have been successfully logged out!</div>
         <h1>Knowledge Management Tool</h1>
 
         <div class="login-non-sso ">

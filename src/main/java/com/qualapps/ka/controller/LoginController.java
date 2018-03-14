@@ -28,6 +28,13 @@ public class LoginController {
     return "index";
   }
 
+  @GetMapping("/logout")
+  public String logout(Model model, HttpSession session) {
+    session.removeAttribute("user");
+    model.addAttribute("logout", true);
+    return "index";
+  }
+
   @PostMapping("/login")
   public String login(HttpSession session, @RequestParam("username") String userName) {
     try {
