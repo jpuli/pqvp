@@ -43,6 +43,7 @@ Component interactions
 
 ## Conformance to the US Digital Services Playbook
 Play 1 Understand what people need
+
 Play 2 Address the whole experience, from start to finish
 Play 3 Make it simple and intuitive
 Play 4 Build the service using agile and iterative practices
