@@ -23,6 +23,8 @@ public class PqvpSql {
 
 	public static final String getArticlesByRating = "select art_id, art_title, art_content, art_views, art_status, art_rating, change_date, change_type, change_user from article order by art_views, change_date desc limit 10";
 
+	public static final String getRecentArticles = "select art_id, art_title, art_content, art_views, art_status, art_rating, change_date, change_type, change_user from article order by change_date desc limit 10";
+
 	public static final String getArticleForId = "select art_id, art_title, art_content, art_views, art_status, art_rating, change_date, change_type, change_user from article where art_id = ?";
 
 	public static final String addArticle = "insert into article ( " +
