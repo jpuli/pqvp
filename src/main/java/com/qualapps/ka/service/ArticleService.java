@@ -103,4 +103,18 @@ public class ArticleService {
         return arts;
     }
 
+    public List<ArticleData> getArticlesByViews() throws PqvpException {
+        List<ArticleData> arts;
+        try {
+            arts = pqvpdao.getArticlesByViews();
+            if (arts == null || arts.isEmpty()) {
+                String[] params = new String[]{};
+                throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
+            }
+        } catch (Exception e) {
+            String[] params = new String[]{};
+            throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
+        }
+        return arts;
+    }
 }

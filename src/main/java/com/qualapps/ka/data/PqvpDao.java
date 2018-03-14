@@ -43,6 +43,11 @@ public class PqvpDao {
         return artiLst;
     }
 
+    public List<ArticleData> getArticlesByViews() {
+        List<ArticleData> artiLst = pqvpDb.query(PqvpSql.getArticlesByViews, new ArticleDataMapper());
+        return artiLst;
+    }
+
     public List<ArticleData> getRecentArticles() {
         List<ArticleData> artiLst = pqvpDb.query(PqvpSql.getRecentArticles, new ArticleDataMapper());
         return artiLst;

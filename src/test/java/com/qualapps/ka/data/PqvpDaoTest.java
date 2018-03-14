@@ -21,7 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @Transactional
-@Rollback(true)
+@Rollback()
 @SpringBootTest(classes = JunitDaoConfig.class)
 @TestPropertySource(locations = "classpath:application.properties")
 @ContextConfiguration(classes = {DaasApplication.class})
@@ -90,4 +90,33 @@ public class PqvpDaoTest {
         assertThat(arts.get(0).getArtId() == article.getArtId());
     }
 
+    @Test
+    public void testGetRecentArticles() throws Exception {
+        dao.addArticle(article);
+        article.setArtId(245);
+        article.setArtViews(110);
+        dao.addArticle(article);
+        List<ArticleData> arts = dao.getRecentArticles();
+        assertThat(arts.get(0).getArtId() == 245);
+    }
+
+    @Test
+    public void testGetArticlesByViews() throws Exception {
+        dao.addArticle(article);
+        article.setArtId(245);
+        article.setArtViews(110);
+        dao.addArticle(article);
+        List<ArticleData> arts = dao.getArticlesByViews();
+        assertThat(arts.get(0).getArtId() == 245);
+    }
+
+    @Test
+    public void testGetArticlesByRating() throws Exception {
+        dao.addArticle(article);
+        article.setArtId(533);
+        article.setArtRating(10);
+        dao.addArticle(article);
+        List<ArticleData> arts = dao.getArticlesByRating();
+        assertThat(arts.get(0).getArtId() == 533);
+    }
 }
