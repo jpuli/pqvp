@@ -59,7 +59,7 @@ Component interactions
 
 **Play 8 Choose a modern technology stack**
 
-**Play 9 Deploy in a flexible hosting environment
+**Play 9 Deploy in a flexible hosting environment**
 
 **Play 10 Automate testing and deployments**
 
@@ -71,22 +71,25 @@ Component interactions
 
 
 ## RFI Requirements 
-a.	Assigned one (1) leader and gave that person authority and responsibility and held that person accountable for the quality of the prototype submitted; 
+a.	Assigned one (1) leader and gave that person authority and responsibility and held that person accountable for the quality of the prototype submitted;
+
 b.	Assembled a multidisciplinary and collaborative team that includes, at a minimum, five (5) of the labor categories as identified in Attachment B: PQVP AD-DS Labor Category Descriptions; 
-i.	Labor Category 1. Product Manager - 
-ii.	Labor Category 2. Technical Architect - 
-iii.	Labor Category 3. Interaction Designer/User Researcher/Usability Tester - 
-iv.	Labor Category 4. Writer/Content Designer/Content Strategist –
-v.	Labor Category 6. Front End Web Developer - 
-vi.	Labor Category 7. Backend Web Developer – 
-vii.	Labor Category 8. DevOps Engineer – 
-viii.	Labor Category 9. Security Engineer - 
-ix.	Labor Category 10. Delivery Manager – 
-x.	Labor Category 11. Agile Coach – 
-xi.	Labor Category 12. Business Analyst – 
-c.	Understood what people needed, by including people in the prototype development and design process;  
-i.	The QualApps Project Director and Agile Coach reviewed the working prototype statement from the RFI to better understand and deconstruct the requirements of the prototype into epics.
-ii.	The QualApps Project Director coalesced a team of technical professionals to discuss how the identified epics would be architected based on the RFI requirements for simplicity, ease of use and open source.
+
+Labor Category 1. Product Manager - 
+Labor Category 2. Technical Architect - 
+Labor Category 3. Interaction Designer/User Researcher/Usability Tester - 
+Labor Category 4. Writer/Content Designer/Content Strategist –
+Labor Category 6. Front End Web Developer - 
+Labor Category 7. Backend Web Developer – 
+vabor Category 8. DevOps Engineer – 
+Labor Category 9. Security Engineer - 
+Labor Category 10. Delivery Manager – 
+Labor Category 11. Agile Coach – 
+Labor Category 12. Business Analyst – 
+
+Understood what people needed, by including people in the prototype development and design process;  
+The QualApps Project Director and Agile Coach reviewed the working prototype statement from the RFI to better understand and deconstruct the requirements of the prototype into epics.
+The QualApps Project Director coalesced a team of technical professionals to discuss how the identified epics would be architected based on the RFI requirements for simplicity, ease of use and open source.
 iii.	QualApps asked Izzie Litman, a Senior Business Analyst and QualApps associate, to assist the team as an end user.
 iv.	The QualApps Project Director added additional analyst resources to the Scrum team to work with Izzie in establishing end user stories defining emergency and non-emergency notification needs.
 v.	The QualApps Researcher and Business analyst conducted internet-based research on the concepts for establishing an emergency notification network looking at the business needs of the individuals requesting notification as well as the technologies supporting such systems. Additional questions resulted from this research were posed to the end user to refine user stories and establish acceptance criteria.
