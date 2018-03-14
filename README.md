@@ -15,7 +15,7 @@ The team adopted a Scrum-based approach to development and identified the high l
 
 QualApps is pleased to respond to… address requirements
 
-## Link to the web application
+## Link to the Web Application
 This application is fully responsive and complies with ADA guidelines
 It is best viewed in Chrome or FireFox, but will function in Edge or IE
 Username and password to access the application
