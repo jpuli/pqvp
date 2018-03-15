@@ -160,6 +160,10 @@ public class PqvpDao {
         pqvpDb.update(PqvpSql.addCatArt, artId, catId);
     }
 
+    public void updateCatArt(long artId, long catId) {
+        pqvpDb.update(PqvpSql.addCatArt, catId, artId);
+    }
+
     public void deleteCatArtForArt(long artId) {
         pqvpDb.update(PqvpSql.deleteCatArtForArt, artId);
     }
@@ -176,6 +180,11 @@ public class PqvpDao {
     public List<CategoryData> getCatArt(long artId) {
         List<CategoryData> catLst = pqvpDb.query(PqvpSql.getCatArt, new Object[]{artId}, new CategoryDataMapper());
         return catLst;
+    }
+
+    public void addArticleVersion(ArticleData art, String articleVersion) {
+        pqvpDb.update(PqvpSql.addArticleVersion, articleVersion, new Date(), new Date(), "I", art.getChngUser(), art.getArtId(), art.getArtTile(), art.getArtContent());
+        return;
     }
 
 }

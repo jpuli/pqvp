@@ -36,8 +36,8 @@ public class PqvpSql {
 	public static final String getArticleForId = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, change_date, change_type, change_user from article where art_id = ?";
 
 	public static final String addArticle = "insert into article ( " +
-			"art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, change_date, change_type, change_user ) " +
-			"values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			"art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, change_date, change_type, change_user ) " +
+			"values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 	public static final String updateArticle = "update article " +
 			"set art_title=?, art_content=?, art_views=?, art_status=?, art_rating=?, art_creator=?, change_date=?, change_type=?, change_user=? " +
@@ -80,6 +80,8 @@ public class PqvpSql {
 
 	public static final String addCatArt = "insert into article_category ( article_art_id, category_cat_id ) values ( ?, ? )";
 
+	public static final String updateCatArt = "update article_category set  category_cat_id = ? where article_art_id = ? ";
+
 	public static final String deleteCatArtForArt = "delete article_category where article_art_id = ?";
 
 	public static final String deleteCatForCat = "delete article_category where category_cat_id = ?";
@@ -89,5 +91,9 @@ public class PqvpSql {
 
 	public static final String getCatArt = "select a.cat_id, a.cat_name, a.cat_descr, a.change_date, a.change_type, a.change_user, b.article_art_id " +
 			"from category a, article_category b where a.cat_id = b.category_cat_id and b.article_art_id = ?";
+
+	public static final String addArticleVersion = "insert into article_version ( " +
+			"art_ver, change_date, change_type, change_user, art_id, art_title, art_content ) " +
+			"values ( ?, ?, ?, ?, ?, ?, ?)";
 
 }
