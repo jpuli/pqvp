@@ -62,10 +62,20 @@ The team discussed the key questions for Play 2 and identified a number of commo
 We discussed a couple of metrics for ways to evaluate the effectiveness of the DAAS solution: after interacting with the solution, users would be asked to rank satisfaction with a handful of features (e.g., ability to add knowledge, modify existing knowledge artifact, comment on an artifact, find answers to questions).  Users would assign up to five stars to rank satisfaction level. In talking to stakeholders, we determined that this option should be used sparingly to avoid undermining the user experience.   
 
 - [x] Understand the different points at which people will interact with the service – both online and in person
-- [x] Identify pain points in the current way users interact with the service
-- [x] Develop metrics that will measure [how well] the service is meeting user needs at each step of the service
+- [x] Identify pain points in the current way users interact with [similar] service[s]
+- [x] Develop metrics that will measure how well the service is meeting user needs at each step of the service
 
 **Play 3 Make it simple and intuitive**
+
+The team focused on developing a tool that provides an easy-to-understand flow of operations based on what users want to accomplish: search the knowledge database, search information based on categories, create knowledge content, bookmark relavant information, and contribute to existing content.  We focused on ease-of-navigation and acknowledged that furnishing multi-language capabilities would remain in the backlog given the timeframe of the project.
+
+- [x] Use a simple and flexible design style guide for the service. Use the U.S. Web Design Standards as a default
+- [x] Use the design style guide consistently for related digital services
+- [x] Give users clear information about where they are in each step of the process
+- [x] Follow accessibility best practices to ensure all people can use the service
+- [x] Provide users with a way to exit and return later to complete the process
+- [x] Use language that is familiar to the user and easy to understand
+- [x] Use language and design consistently throughout the service, including online and offline touch points
 
 **Play 4 Build the service using agile and iterative practices**
 
