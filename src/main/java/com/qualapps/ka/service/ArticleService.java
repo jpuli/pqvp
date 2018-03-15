@@ -103,6 +103,11 @@ public class ArticleService {
         return arts;
     }
 
+    /**
+     * Gets articles by view
+     * @return LIst of Articles
+     * @throws PqvpException Article not found exception
+     */
     public List<ArticleData> getArticlesByViews() throws PqvpException {
         List<ArticleData> arts;
         try {
@@ -128,6 +133,69 @@ public class ArticleService {
         List<ArticleData> arts;
         try {
             arts = pqvpdao.getArticlesByContent(query);
+            if (arts == null || arts.isEmpty()) {
+                String[] params = new String[]{};
+                throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
+            }
+        } catch (Exception e) {
+            String[] params = new String[]{};
+            throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
+        }
+        return arts;
+    }
+
+    /**
+     * Gets Articles by User
+     * @param query User Id
+     * @return List of articles
+     * @throws PqvpException Articel not found exception
+     */
+    public List<ArticleData> getArticlesByUser(long query) throws PqvpException {
+        List<ArticleData> arts;
+        try {
+            arts = pqvpdao.getArticlesByUser(query);
+            if (arts == null || arts.isEmpty()) {
+                String[] params = new String[]{};
+                throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
+            }
+        } catch (Exception e) {
+            String[] params = new String[]{};
+            throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
+        }
+        return arts;
+    }
+
+    /**
+     * Gets Articles by status
+     * @param query Status criteria
+     * @return LIst of Articles
+     * @throws PqvpException  Article not found exception
+     */
+    public List<ArticleData> getArticlesByStatus(String query) throws PqvpException {
+        List<ArticleData> arts;
+        try {
+            arts = pqvpdao.getArticlesByStatus(query);
+            if (arts == null || arts.isEmpty()) {
+                String[] params = new String[]{};
+                throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
+            }
+        } catch (Exception e) {
+            String[] params = new String[]{};
+            throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
+        }
+        return arts;
+    }
+
+    /**
+     * Gets articles by category
+     * @param query Category criteria
+     * @return List of Articles
+     * @throws PqvpException Article not found exception
+     */
+    public List<ArticleData> getArticlesByCategory(long query) throws PqvpException {
+        List<ArticleData> arts;
+        try {
+            arts = pqvpdao.getArticlesByCategory(query);
             if (arts == null || arts.isEmpty()) {
                 String[] params = new String[]{};
                 throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
