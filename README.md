@@ -24,6 +24,10 @@ Link to JIRA: https://qualappsinc.atlassian.net/secure/RapidBoard.jspa?rapidView
 Read only Username and Password
 
 # Technical Approach to Building DAAS
+The team adopted a Scrum-based approach to development and identified a high-level scope to build a Working Prototype in a short timeframe. We identified three Sprints: Sprint 0 wherein we addressed high-level planning, product scope, product backlog and high-level user stories, development tools, and the architecture. In During this Sprint we also established our development environments.  In Sprint 1 we focused on User Stories that emphasized eas-of-use and on building a first Minimum Viable Product (MVP) furnished basic DAAS functionality.  In the final Sprint, Sprint 2, we elaborated on DAAS to increase and enhance functionality and identified User Stories that would remain in the backlog.   
+
+User-centered design
+
 Our team chose modern tools and techniques to manage this effort and to build the DAAS solution. The team used a "default to open" approach, leveraging many of the tools our company is familiar with thus accelerating delivery time. We used the following tools which we've catagorized as 
 1) "Design-Time", meaning that we employed them for management and design activities, and 
 
@@ -74,19 +78,6 @@ Our team chose modern tools and techniques to manage this effort and to build th
 
 ![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/LogicalModel.png "DAAS Logical")
 
-
-## Approach 
-The team adopted a Scrum-based approach to development and identified the high level scope necessary to meet the Minimal Value Plan (MVP) for the Working Prototype in a compressed, two-week time frame. Sprint planning included translating the MVP into two epics, creating high level user stories and determining how the Prototype architecture and infrastructure would be built to support the Prototype plan. 
-
-the team determined that the work could be completed during two sprints over 10 days (five days per sprint). This Planning effort was completed within two days of receipt of the RFI and development began immediately.
-
-Scrum approach
-
-Sprints: Sprint Zero, Sprint 1, Sprint 2
-
-User-Centered Design
-
-## Managment Tools
 
 ## Logical Architecture
 
