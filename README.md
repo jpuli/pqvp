@@ -256,7 +256,7 @@ QualApps convened a multidisciplinary team of highly experienced Information Tec
 </tr>
 <tr>
 <td>Business Analyst</td>
-<td>Daniel Fok</td>
+<td><a href="https://www.linkedin.com/in/daniel-fok-5a82907a/">Daniel Fok</a></td>
 <tr>
 <td>Delivery Manager</td>
 <td><a href="https://www.linkedin.com/in/steeneric/">Eric Steen</a></td>
