@@ -72,7 +72,8 @@ Our team chose modern tools and techniques to manage this effort and to build th
 
 * Postgress -- Database 
 
-                  ![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/LogicalModel.png "DAAS Logical")
+
+<center> ![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/LogicalModel.png "DAAS Logical") </center>
 
 
 ## Approach 
