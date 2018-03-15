@@ -58,8 +58,22 @@ public class PqvpDao {
         return artiLst;
     }
 
+    public List<ArticleData> getArticlesByUser(long qry) {
+        List<ArticleData> artiLst = pqvpDb.query(PqvpSql.getArticlesByUser, new Object[]{qry}, new ArticleDataMapper());
+        return artiLst;
+    }
     public List<ArticleData> getArticlesByContent(String qry) {
         List<ArticleData> artiLst = pqvpDb.query(PqvpSql.getAllArticlesByContent, new Object[]{qry}, new ArticleDataMapper());
+        return artiLst;
+    }
+
+    public List<ArticleData> getArticlesByStatus(String qry) {
+        List<ArticleData> artiLst = pqvpDb.query(PqvpSql.getArticlesByStatus, new Object[]{qry}, new ArticleDataMapper());
+        return artiLst;
+    }
+
+    public List<ArticleData> getArticlesByCategory(long qry) {
+        List<ArticleData> artiLst = pqvpDb.query(PqvpSql.getArticlesByCategory, new Object[]{qry}, new ArticleDataMapper());
         return artiLst;
     }
 
