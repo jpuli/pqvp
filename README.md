@@ -167,7 +167,10 @@ The team used Jira to manage project activities.  Given team members' busy sched
 
 **Play 5 Structure budgets and contracts to support delivery**
 
+For this effort the team did not establish contracts or craft a budget.  We were mindful of internal costs of this effort, but saw it as a long-term investment in our firm and opportunities to serve California in doing what we do best.  
+
 **Play 6 Assign one leader and hold that person accountable**
+
 
 **Play 7 Bring in experienced teams**
 
