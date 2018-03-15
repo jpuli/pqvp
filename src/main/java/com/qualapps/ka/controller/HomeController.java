@@ -8,6 +8,7 @@ import com.qualapps.ka.data.UserProfileData;
 import com.qualapps.ka.display.Article;
 import com.qualapps.ka.display.User;
 import com.qualapps.ka.service.ArticleService;
+import com.qualapps.ka.service.UserProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -21,10 +22,14 @@ import java.util.List;
 @Controller
 public class HomeController {
   private final ArticleService articleService;
+  private final UserProfileService userService;
   private Utils utils = new Utils();
 
   @Autowired
-  public HomeController(ArticleService articleService) { this.articleService = articleService; }
+  public HomeController(ArticleService articleService, UserProfileService userService) {
+    this.articleService = articleService;
+    this.userService = userService;
+  }
 
   @GetMapping("/home")
   public String home(HttpSession session, ModelMap modelMap) {
@@ -46,7 +51,7 @@ public class HomeController {
       List<ArticleData> recentArticles = articleService.getRecentArticles();
       List<Article> articles = new ArrayList<>();
       for (ArticleData articleData : recentArticles) {
-        articles.add(new Article(articleData));
+        articles.add(new Article(articleData, userService));
       }
       modelMap.put("recentArticles", articles);
     } catch (PqvpException e) {
@@ -57,7 +62,7 @@ public class HomeController {
       List<ArticleData> popularArticles = articleService.getArticlesByViews();
       List<Article> articles = new ArrayList<>();
       for (ArticleData articleData : popularArticles) {
-        articles.add(new Article(articleData));
+        articles.add(new Article(articleData, userService));
       }
       modelMap.put("popularArticles", articles);
     } catch (PqvpException e) {
@@ -87,7 +92,7 @@ public class HomeController {
       List<ArticleData> recentArticleDataList = articleService.searchArticles(query);
       List<Article> articles = new ArrayList<>();
       for (ArticleData articleData : recentArticleDataList) {
-        articles.add(new Article(articleData));
+        articles.add(new Article(articleData, userService));
       }
       modelMap.put("results", articles);
     } catch (PqvpException e) {

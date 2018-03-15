@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head th:replace="fragments/header :: kaHeader (title='Create New Article')" />
+  <body>
+    <div th:replace="fragments/header :: signedIn (username=${user.getName()})" class="application-bar"></div>
+    <div class="container-fluid no-gutters">
+      <div class="row">
+        <div th:replace="fragments/sidebar :: signedIn (categories=${categories})" class="col-lg-2 bg-light sidebar"></div>
+        <!--Main Content -->
+        <main role="main" class="offset-lg-1 col-lg-8 no-padding">
+          <div class="container-fluid content-area">
+            <!--Back to previous page -->
+            <a class="go-back" href="javascript:history.back()" title="Return to previous page">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="feather feather-chevron-left">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </span>
+            </a>
+            <h1 class="page-title" id="pageTitle">Add New Article</h1>
+            <form method="post" action="/article_create">
+              <div class="form-group">
+                <label for="articleTitle">Title</label>
+                <input type="text" name="title" class="form-control" id="articleTitle" aria-describedby="article-title-help"
+                       placeholder="Article Title">
+                <small id="article-title-help" class="form-text text-muted">Descriptive questions help other
+                  users discover and understand your post
+                </small>
+              </div>
+              <div class="form-group">
+                <label>Type</label>
+                <div class="radio-article-type">
+                  <input class="form-check-input" type="radio" name="articleType" id="inlineRadio1"
+                         value="option1">
+                  <label class="form-check-label" for="inlineRadio1">Technical</label>
+                </div>
+                <div class="radio-article-type">
+                  <input class="form-check-input" type="radio" name="articleType" id="inlineRadio2"
+                         value="option2">
+                  <label class="form-check-label" for="inlineRadio2">Non-technical</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="articleCategories">Category</label>
+                <!--Specify categories in JS at bottom of page-->
+                <input type="text" name="category" class="form-control" id="articleCategories" placeholder="Start typing...">
+              </div>
+              <div class="form-group">
+                <label for="articleTags">Tags</label>
+                <input type="text" class="form-control" id="articleTags" data-role="tagsinput"
+                       name="tags"
+                       placeholder="Add tags" aria-describedby="article-tags-help">
+                <small id="article-tags-help" class="form-text text-muted">Tagging content helps you reach the
+                  right audience for your question
+                </small>
+              </div>
+              <div class="form-group">
+                <label for="text-area">Description</label>
+                <textarea id="text-area" name="content"></textarea>
+              </div>
+              <div class="input-group mb-3">
+                <label>Attachments</label>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="inputGroupFile01">
+                  <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="articleTags">Visibility</label>
+                <input type="text" class="form-control" id="articleVisibility" data-role="tagsinput"
+                       name="visibility"
+                       placeholder="Add visibility groups" aria-describedby="article-visibility">
+                <small id="article-visibility" class="form-text text-muted">Visibility help text goes here.
+                </small>
+              </div>
+              <div class="actions">
+                <ul>
+                  <li>
+                    <button type="button" class="btn btn-link">Cancel</button>
+                  </li>
+                  <li>
+                    <button class="btn btn-primary" type="submit" name="submit" value="Submit">Submit for
+                      approval
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+    <!-- JavaScript -->
+    <!--Bootstrap Defaults-->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/tether.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <!--Feather Icons-->
+    <script src="/js/feather.min.js"></script>
+    <!--Tags-->
+    <script src="/js/tagsinput.js"></script>
+    <!--Text editor-->
+    <link href="/css/summernote-bs4.css" rel="stylesheet">
+    <script src="/js/summernote-bs4.js"></script>
+    <script th:inline="javascript">
+      feather.replace();
+    //    Categories
+    $(function () {
+        var articleCategories = [
+            /*[# th:each="category : ${categories}" ]*/
+            "[(${category.getCatName()})]",
+            /*[/]*/
+        ];
+
+        $("#articleCategories").autocomplete({
+            source: articleCategories
+        });
+
+    });
+
+    $('#text-area').summernote({
+        height: 350,
+        toolbar: [
+            ['style', ['bold', 'italic', 'underline', 'clear']],
+            ['link', ['linkDialogShow', 'unlink']],
+            ['para', ['ul', 'ol', 'paragraph']]
+        ]
+    });
+
+
+    //change page title as user types article title
+    $('#articleTitle').keyup(function () {
+        var titleInput = this.value;
+        $('#pageTitle').html(titleInput);
+
+        if (titleInput == "") {
+            $('#pageTitle').html("Add New Article");
+        }
+    });
+
+
+    $('.checkAll').on('click', function () {
+        $(this).siblings().prop('checked', $(this).is(':checked'));
+    })
+    </script>
+  </body>
+</html>
