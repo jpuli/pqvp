@@ -262,4 +262,26 @@ public class ArticleService {
         }
         return;
     }
+
+    /**
+     * Gets article based on id
+     *
+     * @param id
+     * @return Article
+     * @throws PqvpException Article not found exception
+     */
+    public ArticleData getArticle(long id) throws PqvpException {
+        ArticleData art;
+        try {
+            art = pqvpdao.getArticles(id);
+            if (art == null) {
+                String[] params = new String[]{};
+                throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
+            }
+        } catch (Exception e) {
+            String[] params = new String[]{};
+            throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
+        }
+        return art;
+    }
 }
