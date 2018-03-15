@@ -1,7 +1,9 @@
 package com.qualapps.ka.display;
 
+import com.qualapps.ka.data.ArticleData;
 import org.ocpsoft.prettytime.PrettyTime;
 import org.thymeleaf.util.DateUtils;
+import org.thymeleaf.util.StringUtils;
 
 import java.util.Date;
 import java.util.List;
@@ -10,10 +12,21 @@ public class Article {
   private long id;
   private String title;
   private String summary;
+  private String content;
   private Date changed;
   private String changeUser;
   private String category;
   private List<String> tags;
+
+  public Article(ArticleData articleData) {
+    this.setId(articleData.getArtId());
+    this.setTitle(articleData.getArtTile());
+    this.setChanged(articleData.getChngDate());
+    this.setChangeUser(articleData.getChngUser());
+    this.setSummary(articleData.getArtContent().substring(0, 300) + "...");
+    this.setContent(articleData.getArtContent());
+    //this.setCategory(StringUtils.capitalize(pqvpdao.getCategory(articleData.getCatId()).getCatName()));
+  }
 
   public long getId() {
     return id;
@@ -39,6 +52,13 @@ public class Article {
     this.summary = summary;
   }
 
+  public String getContent() {
+    return content;
+  }
+
+  public void setContent(String content) {
+    this.content = content;
+  }
   public Date getChanged() {
     return changed;
   }

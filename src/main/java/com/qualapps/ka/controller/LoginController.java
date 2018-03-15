@@ -26,8 +26,8 @@ public class LoginController {
 
   @GetMapping("/")
   public String index(Model model, HttpSession session) {
-    Object userProfile = session.getAttribute("user");
-    if (userProfile != null && userProfile instanceof UserProfileData) {
+    Object user = session.getAttribute("user");
+    if (user != null && user instanceof User) {
       return "redirect:home";
     } else {
       model.addAttribute("users", getListAllUsers());
@@ -46,7 +46,11 @@ public class LoginController {
   @PostMapping("/login")
   public String login(HttpSession session, @RequestParam("username") String userName) {
     try {
-      UserProfileData user = service.getUserByName(userName);
+      UserProfileData userProfileData = service.getUserByName(userName);
+      User user = new User();
+      user.setName(userProfileData.getUsrName());
+      user.setId(userProfileData.getUsrProfileId());
+      user.setRole(userProfileData.getUsrRole());
       session.setAttribute("user", user);
       return "redirect:home";
     } catch (PqvpException e) {

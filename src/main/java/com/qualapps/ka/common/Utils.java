@@ -1,11 +1,23 @@
 package com.qualapps.ka.common;
 
+import com.qualapps.ka.display.User;
+
+import javax.servlet.http.HttpSession;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
 
 public class Utils {
+    public User loadCurrentUser(HttpSession session) {
+        User user = null;
+        Object sessionData = session.getAttribute("user");
+        if (sessionData != null && sessionData instanceof User) {
+            user = (User)sessionData;
+        }
+        return user;
+    }
+
 
     public PqvpError buildPqvpError(String propKey, String type, String[] params) {
         PqvpError error = new PqvpError();

@@ -1,5 +1,5 @@
 <li th:fragment="listArticleItem (articles)" th:if="${articles.size()} > 0" th:each="article : ${articles}">
-  <h4 class="article-title"><a href="article-view.html" th:text="${article.getTitle()}">13 Health Benefits of Coffee, Based on
+  <h4 class="article-title"><a th:href="'articles/'+${article.getId()}" th:text="${article.getTitle()}">13 Health Benefits of Coffee, Based on
     Science</a>
   </h4>
   <p class="article-desc" th:text="${article.getSummary()}">Ut facilisis, mauris ut condimentum

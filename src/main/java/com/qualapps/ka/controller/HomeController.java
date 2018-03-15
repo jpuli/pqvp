@@ -1,10 +1,12 @@
 package com.qualapps.ka.controller;
 
 import com.qualapps.ka.common.PqvpException;
+import com.qualapps.ka.common.Utils;
 import com.qualapps.ka.data.ArticleData;
 import com.qualapps.ka.data.CategoryData;
 import com.qualapps.ka.data.UserProfileData;
 import com.qualapps.ka.display.Article;
+import com.qualapps.ka.display.User;
 import com.qualapps.ka.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -19,13 +21,14 @@ import java.util.List;
 @Controller
 public class HomeController {
   private final ArticleService articleService;
+  private Utils utils = new Utils();
 
   @Autowired
   public HomeController(ArticleService articleService) { this.articleService = articleService; }
 
   @GetMapping("/home")
   public String home(HttpSession session, ModelMap modelMap) {
-    UserProfileData user = loadCurrentUser(session);
+    User user = utils.loadCurrentUser(session);
     if (user == null) {
       return "redirect:logout";
     }
@@ -40,15 +43,23 @@ public class HomeController {
     }
 
     try {
-      List<Article> recentArticles = prepareArticleDataForDisplay(articleService.getRecentArticles());
-      modelMap.put("recentArticles", recentArticles);
+      List<ArticleData> recentArticles = articleService.getRecentArticles();
+      List<Article> articles = new ArrayList<>();
+      for (ArticleData articleData : recentArticles) {
+        articles.add(new Article(articleData));
+      }
+      modelMap.put("recentArticles", articles);
     } catch (PqvpException e) {
       modelMap.put("recentArticles", new ArrayList<Article>());
     }
 
     try {
-      List<Article> popularArticles = prepareArticleDataForDisplay(articleService.getArticlesByRating());
-      modelMap.put("popularArticles", popularArticles);
+      List<ArticleData> popularArticles = articleService.getArticlesByViews();
+      List<Article> articles = new ArrayList<>();
+      for (ArticleData articleData : popularArticles) {
+        articles.add(new Article(articleData));
+      }
+      modelMap.put("popularArticles", articles);
     } catch (PqvpException e) {
       modelMap.put("popularArticles", new ArrayList<Article>());
     }
@@ -57,7 +68,7 @@ public class HomeController {
 
   @GetMapping("/search")
   public String search(HttpSession session, ModelMap modelMap, @RequestParam(name = "query", required = false, defaultValue = "") String query) {
-    UserProfileData user = loadCurrentUser(session);
+    User user = utils.loadCurrentUser(session);
     if (user == null) {
       return "redirect:logout";
     }
@@ -73,36 +84,17 @@ public class HomeController {
     }
 
     try {
-      List<Article> recentArticles = prepareArticleDataForDisplay(articleService.searchArticles(query));
-      modelMap.put("results", recentArticles);
+      List<ArticleData> recentArticleDataList = articleService.searchArticles(query);
+      List<Article> articles = new ArrayList<>();
+      for (ArticleData articleData : recentArticleDataList) {
+        articles.add(new Article(articleData));
+      }
+      modelMap.put("results", articles);
     } catch (PqvpException e) {
       modelMap.put("results", new ArrayList<Article>());
     }
     return "search";
   }
 
-  private UserProfileData loadCurrentUser(HttpSession session) {
-    UserProfileData user = null;
-    Object sessionData = session.getAttribute("user");
-    if (sessionData != null && sessionData instanceof UserProfileData) {
-      user = (UserProfileData)sessionData;
-    }
-    return user;
-  }
 
-
-  private List<Article> prepareArticleDataForDisplay(List<ArticleData> articleDataList) {
-    List<Article> articles = new ArrayList<>();
-    for (ArticleData articleData : articleDataList) {
-      Article article = new Article();
-      article.setId(articleData.getArtId());
-      article.setTitle(articleData.getArtTile());
-      article.setChanged(articleData.getChngDate());
-      article.setChangeUser(articleData.getChngUser());
-      article.setSummary(articleData.getArtContent().substring(0, 300) + "...");
-      //article.setCategory(StringUtils.capitalize(pqvpdao.getCategory(articleData.getCatId()).getCatName()));
-      articles.add(article);
-    }
-    return articles;
-  }
 }

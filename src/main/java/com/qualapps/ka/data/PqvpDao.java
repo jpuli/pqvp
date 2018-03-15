@@ -77,9 +77,9 @@ public class PqvpDao {
         return artiLst;
     }
 
-    public List<ArticleData> getArticles(long artiId) {
+    public ArticleData getArticles(long artiId) {
         List<ArticleData> artiLst = pqvpDb.query(PqvpSql.getArticleForId, new Object[]{artiId}, new ArticleDataMapper());
-        return artiLst;
+        return artiLst.get(0);
     }
 
     public ArticleData addArticle(ArticleData art) {
