@@ -73,6 +73,8 @@ public class PqvpSql {
 
 	public static final String getCategoryForCatId = "select cat_id, cat_name, cat_descr, change_date, change_type, change_user	from category where cat_id = ?";
 
+	public static final String getCategoryForCatName = "select cat_id, cat_name, cat_descr, change_date, change_type, change_user	from category where cat_name = ?";
+
 	public static final String addCategory = "insert into category (cat_id, cat_name, cat_descr, change_date, change_type, change_user) " +
 			"values ( ?, ?, ?, ?, ?, ? )";
 

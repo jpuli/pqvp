@@ -146,6 +146,10 @@ public class PqvpDao {
         return cat;
     }
 
+    public CategoryData getCategory(String catName) {
+        CategoryData cat = pqvpDb.queryForObject(PqvpSql.getCategoryForCatName, new Object[]{catName}, new CategoryDataMapper());
+        return cat;
+    }
     public CategoryData addCategory(CategoryData cat) {
         pqvpDb.update(PqvpSql.addCategory, cat.getCatId(), cat.getCatName(), cat.getCatDescr(), new Date(), "I", cat.getChngUser());
         return cat;
