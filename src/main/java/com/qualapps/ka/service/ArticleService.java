@@ -20,6 +20,27 @@ public class ArticleService {
     private PqvpDao pqvpdao;
 
 
+    /**
+     * Gets category by name
+     *
+     * @param name
+     * @return category
+     * @throws PqvpException Categories not found exception
+     */
+    public CategoryData getCategory(String name) throws PqvpException {
+        CategoryData cat = null;
+        try {
+            cat = pqvpdao.getCategory(name);
+            if (cat == null) {
+                String[] params = new String[]{};
+                throw new PqvpException(CATEGORIES_NOT_FOUND_EXCEPTION, params);
+            }
+        } catch (Exception e) {
+            String[] params = new String[]{};
+            throw new PqvpException(CATEGORIES_NOT_FOUND_EXCEPTION, params);
+        }
+        return cat;
+    }
 
     /**
      * Gets all categories

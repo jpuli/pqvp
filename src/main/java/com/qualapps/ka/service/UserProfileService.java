@@ -32,6 +32,17 @@ public class UserProfileService {
         return usr;
     }
 
+    public UserProfileData getUserById(long userProfileId) throws PqvpException{
+        UserProfileData usr;
+        try {
+            usr = pqvpdao.getUser(userProfileId);
+        } catch (Exception e) {
+            String[] params = new String[]{"userProfileId", Long.toString(userProfileId)};
+            throw new PqvpException(USER_NOT_FOUND_EXCEPTION, params);
+        }
+        return usr;
+    }
+
     public List<UserProfileData> getAllUsers() throws PqvpException{
         List<UserProfileData> usrs;
         try {

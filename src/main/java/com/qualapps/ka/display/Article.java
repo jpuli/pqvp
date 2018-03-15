@@ -1,6 +1,9 @@
 package com.qualapps.ka.display;
 
+import com.qualapps.ka.common.PqvpException;
 import com.qualapps.ka.data.ArticleData;
+import com.qualapps.ka.data.UserProfileData;
+import com.qualapps.ka.service.UserProfileService;
 import org.ocpsoft.prettytime.PrettyTime;
 import org.thymeleaf.util.DateUtils;
 import org.thymeleaf.util.StringUtils;
@@ -14,15 +17,22 @@ public class Article {
   private String summary;
   private String content;
   private Date changed;
-  private String changeUser;
+  private String creator;
   private String category;
   private List<String> tags;
 
-  public Article(ArticleData articleData) {
+  public Article(ArticleData articleData, UserProfileService userProfileService) {
     this.setId(articleData.getArtId());
     this.setTitle(articleData.getArtTile());
     this.setChanged(articleData.getChngDate());
-    this.setChangeUser(articleData.getChngUser());
+    long userProfileId = Long.parseLong(articleData.getArtCreator());
+    try {
+      UserProfileData user = userProfileService.getUserById(userProfileId);
+      this.setCreator(user.getUsrName());
+    } catch (PqvpException e) {
+      e.printStackTrace();
+      this.setCreator("admin");
+    }
     this.setSummary(articleData.getArtContent().substring(0, 300) + "...");
     this.setContent(articleData.getArtContent());
     //this.setCategory(StringUtils.capitalize(pqvpdao.getCategory(articleData.getCatId()).getCatName()));
@@ -72,12 +82,12 @@ public class Article {
     this.changed = changed;
   }
 
-  public String getChangeUser() {
-    return changeUser;
+  public String getCreator() {
+    return creator;
   }
 
-  public void setChangeUser(String changeUser) {
-    this.changeUser = changeUser;
+  public void setCreator(String creator) {
+    this.creator = creator;
   }
 
   public String getCategory() {

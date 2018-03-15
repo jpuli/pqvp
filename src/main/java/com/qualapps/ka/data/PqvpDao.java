@@ -23,6 +23,10 @@ public class PqvpDao {
         return usr;
     }
 
+    public UserProfileData getUser(long usrId) {
+        UserProfileData usr = pqvpDb.queryForObject(PqvpSql.getUserByUserId, new Object[]{usrId}, new UserprofileDataMapper());
+        return usr;
+    }
     public UserProfileData getUser(String usrName, String usrPwd) {
         UserProfileData usr = pqvpDb.queryForObject(PqvpSql.getUser, new Object[]{usrName, usrPwd}, new UserprofileDataMapper());
         return usr;
@@ -84,13 +88,13 @@ public class PqvpDao {
 
     public ArticleData addArticle(ArticleData art) {
         pqvpDb.update(PqvpSql.addArticle,  art.getArtTile(), art.getArtContent(), art.getArtViews(),
-                art.getArtStatus(), art.getArtRating(), art.getArtCreator(), new Date(), new Date(), "I", art.getChngUser());
+                art.getArtStatus(), art.getArtRating(), art.getArtCreator(), new Date(), art.getArtTags(), art.getArtAccess(), new Date(), "I", art.getChngUser());
         return art;
     }
 
     public ArticleData updateArticle(ArticleData art) {
         pqvpDb.update(PqvpSql.updateArticle, art.getArtTile(), art.getArtContent(), art.getArtViews(),
-                art.getArtStatus(), new Date(), "I", art.getChngUser(), art.getArtId());
+                art.getArtStatus(), art.getArtTags(), art.getArtAccess(), new Date(), "I", art.getChngUser(), art.getArtId());
         return art;
     }
 
@@ -142,6 +146,10 @@ public class PqvpDao {
         return cat;
     }
 
+    public CategoryData getCategory(String catName) {
+        CategoryData cat = pqvpDb.queryForObject(PqvpSql.getCategoryForCatName, new Object[]{catName}, new CategoryDataMapper());
+        return cat;
+    }
     public CategoryData addCategory(CategoryData cat) {
         pqvpDb.update(PqvpSql.addCategory, cat.getCatId(), cat.getCatName(), cat.getCatDescr(), new Date(), "I", cat.getChngUser());
         return cat;

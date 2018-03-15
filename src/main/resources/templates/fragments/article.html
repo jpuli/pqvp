@@ -2,13 +2,13 @@
   <h4 class="article-title"><a th:href="'articles/'+${article.getId()}" th:text="${article.getTitle()}">13 Health Benefits of Coffee, Based on
     Science</a>
   </h4>
-  <p class="article-desc" th:text="${article.getSummary()}">Ut facilisis, mauris ut condimentum
+  <p class="article-desc" th:utext="${article.getSummary()}">Ut facilisis, mauris ut condimentum
     tincidunt, libero diam imperdiet enim,. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     Vestibulum nec accumsan elit. Quisque purus felis, gravida tincidunt
     venenatis et, aliquam quis sem nec placerat...
   </p>
   <div class="article-meta">
-    <a href="#"><span class="user-info"><i data-feather="user"></i><span th:text="${article.getChangeUser()}">Tina Redsee</span></span></a>
+    <a href="#"><span class="user-info"><i data-feather="user"></i><span th:text="${article.getCreator()}">Tina Redsee</span></span></a>
     <a href="#"> <span class="clock"><i
         data-feather="clock"></i><span th:text="${article.getRelativeChanged()}">12 minutes ago</span></span></a>
     <a href="#"><span class="user-info"><i
