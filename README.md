@@ -266,6 +266,8 @@ QualApps convened a multidisciplinary team of highly experienced Information Tec
 <tr>
 </tr></tbody></table> 
 
+
+
 **Requirement C: Understood what people needed, by including people in the prototype development and design process;** 
 The QualApps Project Director and Agile Coach reviewed the working prototype statement from the RFI to better understand and deconstruct the requirements of the prototype into epics. The QualApps Project Director coalesced a team of technical professionals to discuss how the identified epics would be architected based on the RFI requirements for simplicity, ease of use and open source.
 
