@@ -83,7 +83,7 @@ public class PqvpDao {
     }
 
     public ArticleData addArticle(ArticleData art) {
-        pqvpDb.update(PqvpSql.addArticle, art.getArtId(), art.getArtTile(), art.getArtContent(), art.getArtViews(),
+        pqvpDb.update(PqvpSql.addArticle,  art.getArtTile(), art.getArtContent(), art.getArtViews(),
                 art.getArtStatus(), art.getArtRating(), art.getArtCreator(), new Date(), new Date(), "I", art.getChngUser());
         return art;
     }

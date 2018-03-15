@@ -87,9 +87,8 @@ public class PqvpDaoTest {
 
     @Test
     public void testCreateArticle() throws Exception {
-        dao.addArticle(article);
-        List<ArticleData> arts = dao.getArticles(9999);
-        assertThat(arts.get(0).getArtId() == article.getArtId());
+        ArticleData art = dao.addArticle(article);
+        assertThat(art.getArtId() != article.getArtId());
     }
 
     @Test
