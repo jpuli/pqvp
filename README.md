@@ -28,7 +28,51 @@ Our technical team chose modern tools and techniques with which they were alread
 ## Team 
 QualApps convened a multidisciplinary team of highly experienced Information Technology (IT) professionals from within our internal staffing network to develop the DAAS knowledg-sharing solution. 
 
-Roles and responsibilities
+<table>
+<thead>
+<tr>
+<th>Role (Labor Category)</th>
+<th>Team Member</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product Manager</td>
+<td>Suresh Kannan</td>
+</tr>
+<tr>
+<td>Agile Coach/Technical Architect</td>
+<td>Joe Puli</td>
+</tr>
+<tr>
+<td>Technical Architect/DevOps Engineer</td>
+<td>John Gedeon</td>
+</tr>
+<tr>
+<td>Interaction Designer/User Researcher/Usability Tester</td>
+<td>Daniel Fok</td>
+</tr>
+<tr>
+<td>Front End Web Developer</td>
+<td>John Gedeon</td>
+</tr>
+<tr>
+<td>Backend Web Developer</td>
+<td>Roberto Obando</td>
+</tr>
+<tr>
+<td>Writer/Content Designer/Content Strategist</td>
+<td>Eric Steen</td>
+</tr>
+<tr>
+<td>Business Analyst</td>
+<td>Daniel Fok</td>
+<tr>
+<td>Delivery Manager</td>
+<td>Eric Steen</td>
+</tr>
+<tr>
+</tr></tbody></table>
 
 ## Approach 
 The team adopted a Scrum-based approach to development and identified the high level scope necessary to meet the Minimal Value Plan (MVP) for the Working Prototype in a compressed, two-week time frame. Sprint planning included translating the MVP into two epics, creating high level user stories and determining how the Prototype architecture and infrastructure would be built to support the Prototype plan. 
