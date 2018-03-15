@@ -57,9 +57,13 @@ Regarding Key Questions: We considered (based on the RFI) that the primary users
 
 **Play 2 Address the whole experience, from start to finish**
 
-The team discussed the key questions for Play 2 and identified a number of common issues with knowledge-sharing platforms.  Chief among these concerns was the ability to quickly identify information that is pertinent to a user.  This discussion led to user stories supporting knowledge organization and effective use of labels. Other items discussed were mechanisms to notify users via multiple channels when a discussion thread they subscribed to was updated.  
+The team discussed the key questions for Play 2 and identified a number of common issues with knowledge-sharing platforms.  Chief among these concerns was the ability to quickly identify information pertinent to a user.  This discussion led to user stories supporting knowledge organization and effective use of labels. Other items discussed were mechanisms to notify users via multiple channels when a discussion thread they subscribed to was updated.  
 
-We discussed a couple of metrics for ways in which we could evaluate the effectiveness of the DAAS solution: after interacting with the solution over a period of time, For a list of up to six features, e.g., ability to add knowledge, modify existing knowledge artifact, comment on an artifact, find answers to questions, users would be asked to rank satisfaction with the platform by selecting up to five stars.  
+We discussed a couple of metrics for ways to evaluate the effectiveness of the DAAS solution: after interacting with the solution, users would be asked to rank satisfaction with a handful of features (e.g., ability to add knowledge, modify existing knowledge artifact, comment on an artifact, find answers to questions).  Users would assign up to five stars to rank satisfaction level. In talking to stakeholders, we determined that this option should be used sparingly to avoid undermining the user experience.   
+
+- [x] Understand the different points at which people will interact with the service – both online and in person
+- [x] Identify pain points in the current way users interact with the service
+- [x] Develop metrics that will measure [how well] the service is meeting user needs at each step of the service
 
 **Play 3 Make it simple and intuitive**
 
