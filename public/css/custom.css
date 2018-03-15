@@ -71,7 +71,7 @@ body {
 }
 
 .navbar {
-    padding: 0.75rem 1rem;
+    padding: 0.62rem 1rem;
 }
 
 .navbar-brand {
@@ -1520,9 +1520,19 @@ button.btn.btn-secondary {
     z-index: 1;
     color: #757575;
 }
+.top-search input.form-control {
+    background: #eee;
+
+}
+
+h1.section-title {
+    font-size:2em;
+    font-weight:600;
+    color:#2CA52C;
+}
 
 .top-search .form-control:focus {
-    background: red;
+    background: #f9fafb;
 
 }
 @keyframes feedback-animation {
