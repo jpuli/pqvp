@@ -14,27 +14,27 @@ public class PqvpSql {
 	public static final String getAllUsers = "select usr_profile_id, usr_name, usr_pwd, usr_role from user_profile";
 
 
-	public static final String getAllArticles = "select art_id, art_title, art_content, art_views, art_status, art_rating, change_date, change_type, change_user from article";
+	public static final String getAllArticles = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, change_date, change_type, change_user from article";
 
-	public static final String getAllArticlesByTitle = "select art_id, art_title, art_content, art_views, art_status, art_rating, change_date, change_type, change_user from article where to_tsvector(art_title) @@ to_tsquery(?);";
+	public static final String getAllArticlesByTitle = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, change_date, change_type, change_user from article where to_tsvector(art_title) @@ to_tsquery(?);";
 
-	public static final String getAllArticlesByContent = "select art_id, art_title, art_content, art_views, art_status, art_rating, change_date, change_type, change_user " +
+	public static final String getAllArticlesByContent = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, change_date, change_type, change_user " +
 			"from article where to_tsvector(art_content) @@ to_tsquery(?);";
 
-	public static final String getArticlesByRating = "select art_id, art_title, art_content, art_views, art_status, art_rating, change_date, change_type, change_user from article order by art_rating, change_date desc limit 10";
+	public static final String getArticlesByRating = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, change_date, change_type, change_user from article order by art_rating, change_date desc limit 10";
 
-	public static final String getArticlesByViews = "select art_id, art_title, art_content, art_views, art_status, art_rating, change_date, change_type, change_user from article order by art_views, change_date desc limit 10";
+	public static final String getArticlesByViews = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, change_date, change_type, change_user from article order by art_views, change_date desc limit 10";
 
-	public static final String getRecentArticles = "select art_id, art_title, art_content, art_views, art_status, art_rating, change_date, change_type, change_user from article order by change_date desc limit 10";
+	public static final String getRecentArticles = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, change_date, change_type, change_user from article order by change_date desc limit 10";
 
-	public static final String getArticleForId = "select art_id, art_title, art_content, art_views, art_status, art_rating, change_date, change_type, change_user from article where art_id = ?";
+	public static final String getArticleForId = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, change_date, change_type, change_user from article where art_id = ?";
 
 	public static final String addArticle = "insert into article ( " +
-			"art_id, art_title, art_content, art_views, art_status, art_rating, change_date, change_type, change_user ) " +
-			"values ( ?, ?, ?, ?, ?, ?, ?, ?, ? )";
+			"art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, change_date, change_type, change_user ) " +
+			"values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 	public static final String updateArticle = "update article " +
-			"set art_title=?, art_content=?, art_views=?, art_status=?, art_rating=?, change_date=?, change_type=?, change_user=? " +
+			"set art_title=?, art_content=?, art_views=?, art_status=?, art_rating=?, art_creator=?, change_date=?, change_type=?, change_user=? " +
 			"where art_id = ?";
 
 	public static final String deleteArticle = "delete from article where art_id = ?";

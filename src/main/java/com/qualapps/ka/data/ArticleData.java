@@ -13,7 +13,25 @@ public class ArticleData {
 	private String chngUser;
 	private long artRating;
 	private long catId;
-	
+	private String artCreator;
+	private Date artCreateTime;
+
+	public Date getArtCreateTime() {
+		return artCreateTime;
+	}
+
+	public void setArtCreateTime(Date artCreateTime) {
+		this.artCreateTime = artCreateTime;
+	}
+
+	public String getArtCreator() {
+		return artCreator;
+	}
+
+	public void setArtCreator(String artCreator) {
+		this.artCreator = artCreator;
+	}
+
 	public long getArtId() {
 		return artId;
 	}

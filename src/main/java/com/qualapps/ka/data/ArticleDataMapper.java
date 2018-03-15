@@ -26,6 +26,8 @@ public class ArticleDataMapper implements RowMapper<ArticleData> {
 				art.setArtTile(rs.getString("art_title"));
 				art.setArtViews(rs.getLong("art_views"));
 				art.setArtRating(rs.getLong("art_rating"));
+				art.setArtCreator(rs.getString("art_creator"));
+				art.setArtCreateTime(rs.getDate("art_create_time"));
 				art.setChngDate(rs.getDate("change_date"));
 				art.setChngType(rs.getString("change_type"));
 				art.setChngUser(rs.getString("change_user"));

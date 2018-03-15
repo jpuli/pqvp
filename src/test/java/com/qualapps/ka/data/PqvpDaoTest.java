@@ -53,6 +53,7 @@ public class PqvpDaoTest {
         article.setArtTile("New Test Article");
         article.setArtContent("this is a new article to test the ....");
         article.setArtStatus("Initial");
+        article.setArtCreator("JohnQPublic");
         article.setCatId(1);
         article.setArtViews(1);
         article.setArtRating(1);
