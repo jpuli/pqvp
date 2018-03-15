@@ -93,7 +93,7 @@ Documentation must show code flow from client UI, to JavaScript library, to REST
 database, pointing to code in the GitHub repository. 
 
 ***
-**End of Technical Approach to Building DAAS**
+*******End of Technical Approach to Building DAAS*******
 ***
 
 
