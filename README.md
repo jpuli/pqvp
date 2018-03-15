@@ -232,7 +232,7 @@ QualApps convened a multidisciplinary team of highly experienced Information Tec
 </tr>
 <tr>
 <td>Agile Coach/Technical Architect</td>
-<td><a href="https://www.linkedin.com/in/joe-puli-27ab776/">Joe Puli/a></td>
+<td><a href="https://www.linkedin.com/in/joe-puli-27ab776/">Joe Puli</a></td>
 </tr>
 <tr>
 <td>Technical Architect/DevOps Engineer</td>
@@ -240,7 +240,7 @@ QualApps convened a multidisciplinary team of highly experienced Information Tec
 </tr>
 <tr>
 <td>Interaction Designer/User Researcher/Usability Tester</td>
-<td>Daniel Fok</td>
+<td><a href="https://www.linkedin.com/in/daniel-fok-5a82907a/">Daniel Fok</a></td>
 </tr>
 <tr>
 <td>Front End Web Developer</td>
