@@ -115,9 +115,9 @@ A successful log in, will result in navigation within the website.
 # Response to RFI Requirements
 
 ## Conformance to the US Digital Services Playbook
-At the beginning of the project, for each Play the team went through each item on the checklist and reviewed and answered key questions. We found that the questions were particularly helpful in establishing a context for product development and sparking ideas about Epics and User Stories.  We made use of the checklists although in some cases the project's short timeframe made them impracticable.  For example, we did not have sufficient time to use metrics to determine how well we met user needs (Play 1) or establish and manage to a budget (Play 5).  
+For each Play the team went through each item on the checklist and reviewed and answered key questions. We found that the questions were particularly helpful in establishing a context for product development and sparking ideas about Epics and User Stories.  We made use of the checklists although in some cases the project's short timeframe made them impracticable.  For example, we did not have sufficient time to use metrics to determine how well we met user needs (Play 1) or establish and manage to a budget (Play 5).  
 
-Below, we outline how we addressed each Play in the Playbook We provide a brief narrative explaining how we addressed questions, and then a checkbox for each item in the checklist that we completed. For brevity, we sometimes abbreviate or summarize checklist items. 
+Below, we outline how we addressed each Play in the Playbook We provide a brief narrative explaining how we addressed questions, and then a checkbox for each item in the checklist that we completed or at least considered. For brevity, we sometimes abbreviate or summarize checklist items. 
 
 **Play 1 Understand what people need**
 
@@ -142,9 +142,7 @@ We discussed a couple of metrics for ways to evaluate the effectiveness of the D
 
 The team focused on developing a tool that provides an easy-to-understand flow of operations based on what users want to accomplish: search the knowledge database, search information based on categories, create knowledge content, bookmark relavant information, and contribute to existing content.  We focused on ease-of-navigation and acknowledged that furnishing multi-language capabilities would remain in the backlog given the timeframe of the project.
 
-- [x] Use a simple and flexible design style guide for the service. Use the U.S. Web Design Standards as a default
-- [x] Use the design style guide consistently for related digital services
-- [x] Give users clear information about where they are in each step of the process
+- [x] Give users clear information about where they are in each step of the process (User Story in backlog, not implemented)
 - [x] Follow accessibility best practices to ensure all people can use the service
 - [x] Provide users with a way to exit and return later to complete the process
 - [x] Use language that is familiar to the user and easy to understand
@@ -152,7 +150,20 @@ The team focused on developing a tool that provides an easy-to-understand flow o
 
 **Play 4 Build the service using agile and iterative practices**
 
-The team adopted a Scrum-based approach to development and identified a high-level scope to build a Working Prototype in a short timeframe. We identified three Sprints: Sprint 0 wherein we addressed high-level planning, product scope, product backlog and high-level user stories, development tools, and the architecture. In During this Sprint we also established our development environments.  In Sprint 1 we focused on User Stories that emphasized eas-of-use and on building a first Minimum Viable Product (MVP) furnished basic DAAS functionality.  In the final Sprint, Sprint 2, we elaborated on DAAS to increase and enhance functionality and identified User Stories that would remain in the backlog.   
+The team adopted a Scrum-based approach to development and identified a high-level scope to build a Working Prototype in a short timeframe. We identified three Sprints: Sprint 0 wherein we addressed high-level planning, product scope, product backlog and high-level user stories, development tools, and the architecture. During this Sprint we also established our development environments.  In Sprint 1 we focused on User Stories that emphasized ease-of-use and on building a first Minimum Viable Product (MVP) furnishing basic DAAS functionality.  In the final Sprint, Sprint 2, we elaborated on DAAS to increase and enhance functionality and identified User Stories that would remain in the backlog as future enhancements. 
+
+The team used Jira to manage project activities.  Given team members' busy schedules and the compressed project timeframe, we sometimes struggled to keep the Jira Sprint board up-to-date via daily Scrums. However, we did successfully manage scope using Jira and used it to track and fix defects. The development process was definitely iteritave with progressive deployments allowing team members to rapidly test and provide feedback on bugs. 
+
+- [x] Ship a functioning “minimum viable product” (MVP) that solves a core user need as soon as possible
+- [x] Run usability tests frequently to see how well the service works and identify improvements that should be made
+- [x] Ensure the individuals building the service communicate closely using techniques such as launch meetings, war rooms, daily standups, and team chat tools  (The team met daily and used tools such as Slack to communicate.)
+- [x] Keep delivery teams small and focused
+- [x] Release features and improvements multiple times
+- [x] Create a prioritized list of features and bugs, also known as the “feature backlog” and “bug backlog”
+- [x] Use a source code version control system
+- [x] Give the entire project team access to the issue tracker and version control system
+- [x] Use code reviews to ensure quality
+
 
 **Play 5 Structure budgets and contracts to support delivery**
 
