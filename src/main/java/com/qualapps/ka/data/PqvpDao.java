@@ -84,13 +84,13 @@ public class PqvpDao {
 
     public ArticleData addArticle(ArticleData art) {
         pqvpDb.update(PqvpSql.addArticle,  art.getArtTile(), art.getArtContent(), art.getArtViews(),
-                art.getArtStatus(), art.getArtRating(), art.getArtCreator(), new Date(), new Date(), "I", art.getChngUser());
+                art.getArtStatus(), art.getArtRating(), art.getArtCreator(), new Date(), art.getArtTags(), art.getArtAccess(), new Date(), "I", art.getChngUser());
         return art;
     }
 
     public ArticleData updateArticle(ArticleData art) {
         pqvpDb.update(PqvpSql.updateArticle, art.getArtTile(), art.getArtContent(), art.getArtViews(),
-                art.getArtStatus(), new Date(), "I", art.getChngUser(), art.getArtId());
+                art.getArtStatus(), art.getArtTags(), art.getArtAccess(), new Date(), "I", art.getChngUser(), art.getArtId());
         return art;
     }
 

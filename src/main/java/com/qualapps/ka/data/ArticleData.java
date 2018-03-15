@@ -15,6 +15,24 @@ public class ArticleData {
 	private long catId;
 	private String artCreator;
 	private Date artCreateTime;
+	private String artTags;
+	private String artAccess;
+
+	public String getArtAccess() {
+		return artAccess;
+	}
+
+	public void setArtAccess(String artAccess) {
+		this.artAccess = artAccess;
+	}
+
+	public String getArtTags() {
+		return artTags;
+	}
+
+	public void setArtTags(String artTags) {
+		this.artTags = artTags;
+	}
 
 	public Date getArtCreateTime() {
 		return artCreateTime;
