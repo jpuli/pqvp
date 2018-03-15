@@ -1,5 +1,6 @@
 package com.qualapps.ka.service;
 
+import com.qualapps.ka.common.PqvpConstants;
 import com.qualapps.ka.common.PqvpException;
 import com.qualapps.ka.data.ArticleData;
 import com.qualapps.ka.data.CategoryData;
@@ -17,6 +18,8 @@ public class ArticleService {
 
     @Autowired
     private PqvpDao pqvpdao;
+
+
 
     /**
      * Gets all categories
@@ -49,10 +52,17 @@ public class ArticleService {
     public ArticleData createArticle(ArticleData article) throws PqvpException {
         ArticleData art;
         try {
+            // set the status to submitted,views and ratings to 0
+            article.setArtStatus(PqvpConstants.STATUS_SUBMITTED);
+            article.setArtRating(0);
+            article.setArtViews(0);
             art = pqvpdao.addArticle(article);
             if (art == null) {
                 String[] params = new String[]{};
                 throw new PqvpException(ARTICLE_NOT_CREATED_EXCEPTION, params);
+            } else {
+                // add art-category
+                pqvpdao.addCatArt(art.getArtId(), art.getCatId());
             }
         } catch (Exception e) {
             String[] params = new String[]{};
@@ -60,6 +70,36 @@ public class ArticleService {
         }
         return art;
     }
+
+
+    /**
+     * UPdates an article
+     * @param article article to update
+     * @return updated article
+     * @throws PqvpException Article not created exception
+     */
+    public ArticleData updateArticle(ArticleData article) throws PqvpException {
+        ArticleData art;
+        try {
+            // set the status to submitted
+            article.setArtStatus(PqvpConstants.STATUS_SUBMITTED);
+            art = pqvpdao.updateArticle(article);
+            if (art == null) {
+                String[] params = new String[]{};
+                throw new PqvpException(ARTICLE_NOT_CREATED_EXCEPTION, params);
+            } else {
+                // update art-category
+                pqvpdao.updateCatArt(art.getCatId(), art.getArtId());
+            }
+        } catch (Exception e) {
+            String[] params = new String[]{};
+            throw new PqvpException(ARTICLE_NOT_CREATED_EXCEPTION, params);
+        }
+        return art;
+    }
+
+
+
 
     /**
      * Gets most recent articles
@@ -205,5 +245,21 @@ public class ArticleService {
             throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
         }
         return arts;
+    }
+
+    /**
+     *
+     * @param article the article to update
+     * @param articleVersion the new version for this article
+     * @throws PqvpException article not created exception
+     */
+    public void addArticleVersion(ArticleData article, String articleVersion) throws PqvpException {
+        try {
+            pqvpdao.addArticleVersion(article, articleVersion);
+        } catch (Exception e) {
+            String[] params = new String[]{};
+            throw new PqvpException(ARTICLE_NOT_CREATED_EXCEPTION, params);
+        }
+        return;
     }
 }
