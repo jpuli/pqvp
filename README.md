@@ -171,6 +171,13 @@ For this effort the team did not establish contracts or craft a budget.  We were
 
 **Play 6 Assign one leader and hold that person accountable**
 
+Suresh Kannan, our CEO, served as the Product Manager.  He has decision-making authority regarding the approach and scope taken for the DAAS solution. Our team worked collaboratively and looked to Mr. Kannan to ensure that the MVP met all requirements and exhibits all the features outlined within the RFI and conforms to industry standards for knowledge sharing platforms.   
+
+- [x] A product owner has been identified
+- [x] All stakeholders agree that the product owner has the authority to assign tasks and make decisions about features and technical implementation details
+- [x] The product owner has a product management background with technical experience 
+- [x] The product owner has a work plan that includes budget estimates and identifies funding sources
+
 
 **Play 7 Bring in experienced teams**
 
