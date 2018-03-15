@@ -78,6 +78,13 @@ public class PqvpDaoTest {
     }
 
     @Test
+    public void testGetUserById() throws Exception {
+        dao.addUser(user);
+        UserProfileData newUsr = dao.getUser(9999);
+        assertThat(user.getUsrRole().equals(newUsr.getUsrRole()));
+    }
+
+    @Test
     public void testGetAllUsers() throws Exception {
         dao.addUser(user);
         List<UserProfileData> usrs = dao.getUser();

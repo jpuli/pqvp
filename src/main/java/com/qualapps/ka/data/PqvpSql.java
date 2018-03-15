@@ -9,6 +9,8 @@ public class PqvpSql {
 
 	public static final String getUserByUserName = "select usr_profile_id, usr_name, usr_pwd, usr_role, usr_email from user_profile where usr_name = ?";
 
+	public static final String getUserByUserId = "select usr_profile_id, usr_name, usr_pwd, usr_role, usr_email from user_profile where usr_profile_id = ?";
+
 	public static final String getUser = "select usr_profile_id, usr_name, usr_pwd, usr_role, usr_email from user_profile where usr_name = ? and usr_pwd = ?";
 
 	public static final String getAllUsers = "select usr_profile_id, usr_name, usr_pwd, usr_role, usr_email from user_profile";

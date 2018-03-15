@@ -23,6 +23,10 @@ public class PqvpDao {
         return usr;
     }
 
+    public UserProfileData getUser(long usrId) {
+        UserProfileData usr = pqvpDb.queryForObject(PqvpSql.getUserByUserId, new Object[]{usrId}, new UserprofileDataMapper());
+        return usr;
+    }
     public UserProfileData getUser(String usrName, String usrPwd) {
         UserProfileData usr = pqvpDb.queryForObject(PqvpSql.getUser, new Object[]{usrName, usrPwd}, new UserprofileDataMapper());
         return usr;
