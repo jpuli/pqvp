@@ -232,7 +232,7 @@ QualApps convened a multidisciplinary team of highly experienced Information Tec
 </tr>
 <tr>
 <td>Agile Coach/Technical Architect</td>
-<td>Joe Puli</td>
+<td><a href="https://www.linkedin.com/in/joe-puli-27ab776/">Joe Puli/a></td>
 </tr>
 <tr>
 <td>Technical Architect/DevOps Engineer</td>
@@ -248,11 +248,11 @@ QualApps convened a multidisciplinary team of highly experienced Information Tec
 </tr>
 <tr>
 <td>Backend Web Developer</td>
-<td>Roberto Obando</td>
+<td><a href="https://www.linkedin.com/in/roberto-obando-0751562/">Roberto Obando</a></td>
 </tr>
 <tr>
 <td>Writer/Content Designer/Content Strategist</td>
-<td>Eric Steen</td>
+<td><a href="https://www.linkedin.com/in/steeneric/">Eric Steen</a></td>
 </tr>
 <tr>
 <td>Business Analyst</td>
