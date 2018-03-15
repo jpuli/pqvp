@@ -99,7 +99,7 @@ The following diagram is a **reference model** for a robust production implement
 **Documentation must show code flow from client UI, to JavaScript library, to REST service to
 database, pointing to code in the GitHub repository.**
 
-When a user first connects to the website, the user is prompted to login.  The initial web page is the login.html from the Web project which has been skinned using the standard css, uses standard images and is controlled by JavaScript. 
+When a user first connects to the website, the user is prompted to login.  The initial web page is the login.html from the Web project which has been skinned using the standard css, uses standard images, and is controlled by JavaScript. 
 
 This generated JavaScript relies on open source tools such as bootstrap to present UI changes on a page, manage interactions with the API tier, and manage page-specific application data within the browser.
 A successful log in, will result in navigation within the website. 
