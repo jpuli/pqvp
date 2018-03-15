@@ -96,8 +96,6 @@ The following diagram is a **reference model** for a robust production implement
 
 ## Code Flow
 
-![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/LogicalModel.png "DAAS Application Flow")
-
 **Documentation must show code flow from client UI, to JavaScript library, to REST service to
 database, pointing to code in the GitHub repository.**
 
@@ -105,6 +103,8 @@ When a user first connects to the website, the user is prompted to login.  The i
 
 This generated JavaScript relies on open source tools such as bootstrap to present UI changes on a page, manage interactions with the API tier, and manage page-specific application data within the browser.
 A successful log in, will result in navigation within the website. 
+
+![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/LogicalModel.png "DAAS Application Flow")
 
 
 ***
