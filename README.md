@@ -26,53 +26,7 @@ Read only Username and Password
 Our technical team chose modern tools and techniques with which they were already familiar reducing ramp up time. The team determined that the work could be completed during two sprints over 10 days (five days per sprint). This Planning effort was completed within two days of receipt of the RFI and development began immediately.
 
 ## Team 
-QualApps convened a multidisciplinary team of highly experienced Information Technology (IT) professionals from within our internal staffing network to develop the DAAS knowledg-sharing solution. 
 
-<table>
-<thead>
-<tr>
-<th>Role (Labor Category)</th>
-<th>Team Member</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Product Manager</td>
-<td>Suresh Kannan</td>
-</tr>
-<tr>
-<td>Agile Coach/Technical Architect</td>
-<td>Joe Puli</td>
-</tr>
-<tr>
-<td>Technical Architect/DevOps Engineer</td>
-<td>John Gedeon</td>
-</tr>
-<tr>
-<td>Interaction Designer/User Researcher/Usability Tester</td>
-<td>Daniel Fok</td>
-</tr>
-<tr>
-<td>Front End Web Developer</td>
-<td>John Gedeon</td>
-</tr>
-<tr>
-<td>Backend Web Developer</td>
-<td>Roberto Obando</td>
-</tr>
-<tr>
-<td>Writer/Content Designer/Content Strategist</td>
-<td>Eric Steen</td>
-</tr>
-<tr>
-<td>Business Analyst</td>
-<td>Daniel Fok</td>
-<tr>
-<td>Delivery Manager</td>
-<td>Eric Steen</td>
-</tr>
-<tr>
-</tr></tbody></table>
 
 
 ## Approach 
@@ -164,27 +118,53 @@ The README.md file should also make reference to the following:
 
 **Requirement B: Assembled a multidisciplinary and collaborative team that includes, at a minimum, five (5) of the labor categories as identified in Attachment B: PQVP AD-DS Labor Category Descriptions;**
 
-Labor Category 1. Product Manager - 
+QualApps convened a multidisciplinary team of highly experienced Information Technology (IT) professionals from within our internal staffing network to develop the DAAS knowledg-sharing solution. 
 
-Labor Category 2. Technical Architect - 
-
-Labor Category 3. Interaction Designer/User Researcher/Usability Tester - 
-
-Labor Category 4. Writer/Content Designer/Content Strategist –
-
-Labor Category 6. Front End Web Developer - 
-
-Labor Category 7. Backend Web Developer – 
-
-Labor Category 8. DevOps Engineer – 
-
-Labor Category 9. Security Engineer - 
-
-Labor Category 10. Delivery Manager – 
-
-Labor Category 11. Agile Coach – 
-
-Labor Category 12. Business Analyst – 
+<table>
+<thead>
+<tr>
+<th>Role (Labor Category)</th>
+<th>Team Member</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Product Manager</td>
+<td>Suresh Kannan</td>
+</tr>
+<tr>
+<td>Agile Coach/Technical Architect</td>
+<td>Joe Puli</td>
+</tr>
+<tr>
+<td>Technical Architect/DevOps Engineer</td>
+<td>John Gedeon</td>
+</tr>
+<tr>
+<td>Interaction Designer/User Researcher/Usability Tester</td>
+<td>Daniel Fok</td>
+</tr>
+<tr>
+<td>Front End Web Developer</td>
+<td>John Gedeon</td>
+</tr>
+<tr>
+<td>Backend Web Developer</td>
+<td>Roberto Obando</td>
+</tr>
+<tr>
+<td>Writer/Content Designer/Content Strategist</td>
+<td>Eric Steen</td>
+</tr>
+<tr>
+<td>Business Analyst</td>
+<td>Daniel Fok</td>
+<tr>
+<td>Delivery Manager</td>
+<td>Eric Steen</td>
+</tr>
+<tr>
+</tr></tbody></table> 
 
 **Requirement C: Understood what people needed, by including people in the prototype development and design process;** 
 The QualApps Project Director and Agile Coach reviewed the working prototype statement from the RFI to better understand and deconstruct the requirements of the prototype into epics. The QualApps Project Director coalesced a team of technical professionals to discuss how the identified epics would be architected based on the RFI requirements for simplicity, ease of use and open source.
