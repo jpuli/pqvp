@@ -236,7 +236,7 @@ QualApps convened a multidisciplinary team of highly experienced Information Tec
 </tr>
 <tr>
 <td>Technical Architect/DevOps Engineer</td>
-<td><a href="https://www.linkedin.com/in/john-gedeon-a65a582/">John Gedeon</a></td>]
+<td><a href="https://www.linkedin.com/in/john-gedeon-a65a582/">John Gedeon</a></td>
 </tr>
 <tr>
 <td>Interaction Designer/User Researcher/Usability Tester</td>
@@ -244,7 +244,7 @@ QualApps convened a multidisciplinary team of highly experienced Information Tec
 </tr>
 <tr>
 <td>Front End Web Developer</td>
-<td><a href="https://www.linkedin.com/in/john-gedeon-a65a582/">John Gedeon</a></td>]
+<td><a href="https://www.linkedin.com/in/john-gedeon-a65a582/">John Gedeon</a></td>
 </tr>
 <tr>
 <td>Backend Web Developer</td>
@@ -259,7 +259,7 @@ QualApps convened a multidisciplinary team of highly experienced Information Tec
 <td>Daniel Fok</td>
 <tr>
 <td>Delivery Manager</td>
-<td>Eric Steen</td>
+<td><a href="https://www.linkedin.com/in/steeneric/">Eric Steen</a></td>
 </tr>
 <tr>
 </tr></tbody></table> 
