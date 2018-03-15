@@ -232,7 +232,7 @@ x.	After receiving prototype feedback based on the role play, the team began int
 
 **Requirement I: Performed usability tests with people**
 
-**Requirement J: Used an iterative approach, where feedback informed subsequent work or versions of the prototype **
+**Requirement J: Used an iterative approach, where feedback informed subsequent work or versions of the prototype**
 
 **Requirement K: Created a prototype that works on multiple devices, and presents a responsive design** 
 
