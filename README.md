@@ -236,7 +236,7 @@ QualApps convened a multidisciplinary team of highly experienced Information Tec
 </tr>
 <tr>
 <td>Technical Architect/DevOps Engineer</td>
-<td>John Gedeon</td>
+<td>https://github.com/jpuli/pqvp/wiki/Home/_edit</td>
 </tr>
 <tr>
 <td>Interaction Designer/User Researcher/Usability Tester</td>
