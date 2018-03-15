@@ -24,9 +24,7 @@ Link to JIRA: https://qualappsinc.atlassian.net/secure/RapidBoard.jspa?rapidView
 Read only Username and Password
 
 # Technical Approach to Building DAAS
-Our team chose modern tools and techniques to manage this effort and to build the DAAS solution. The team used a "default to open" approach, leveraging many of the tools our company is familiar with thus accelerating delivery time. 
-
-We used the following tools which we've catagorized as 
+Our team chose modern tools and techniques to manage this effort and to build the DAAS solution. The team used a "default to open" approach, leveraging many of the tools our company is familiar with thus accelerating delivery time. We used the following tools which we've catagorized as 
 1) "Design-Time", meaning that we employed them for management and design activities, and 
 
 2) "Run-Time" which means that these products comprise the DAAS execution platform.
