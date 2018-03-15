@@ -2,37 +2,22 @@
 <html lang="en">
   <head th:replace="fragments/header :: kaHeader (title='Home')"/>
   <body>
-    <div th:replace="fragments/header :: signedIn (username=${user.getName()})" class="application-bar"></div>
+    <div th:replace="fragments/header :: signedInWithSearch (query=${query}, username=${user.getName()})" class="application-bar"></div>
     <!--Main Outer Container -->
     <div class="container-fluid no-gutters">
       <div class="row">
         <div th:replace="fragments/sidebar :: signedIn (categories=${categories})" class="col-lg-2 bg-light sidebar"></div>
         <!--Main Content -->
         <main role="main" class="col-lg-10 no-padding">
-          <div class="hero-area welcome no-gutters">
-            <form method="get" action="search" class="form-inline search-input offset-lg-3 offset-md-2 col-lg-6 col-md-8 col-12">
-              <i data-feather="search" class="sidebar-section-icon"></i>
-              <input class="form-control" type="search"
-                     placeholder="Search Knowledgebase"
-                     name="query"
-                     th:value="${query}"
-                     aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" hidden>Search
-              </button>
-            </form>
-          </div>
           <div class="container-fluid content-area home-split-feed">
-            <h2 class="section-title" th:text="${results.size()} + ' Search Results'">Search Results</h2>
+            <h1 class="section-title">Search results for "<span th:text="${query}">coffee</span>"</h1>
+            <p th:text="'Showing ' + ${results.size()} + ' results'">Showing 3 results</p>
+            <hr>
             <div class="row">
               <div class="col-lg-10">
-                <div class="tab-content" id="tabsContent">
-                  <div class="tab-pane fade show active" id="recent" role="tabpanel"
-                       aria-labelledby="recent-tab">
-                    <ul class="article-feed">
-                      <li th:replace="fragments/article :: listArticleItem (articles=${results})">
-                    </ul>
-                  </div>
-                </div>
+                <ul class="article-feed">
+                  <li th:replace="fragments/article :: listArticleItem (articles=${results})">
+                </ul>
               </div>
             </div>
           </div>
