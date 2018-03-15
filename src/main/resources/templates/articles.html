@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head th:replace="fragments/header :: kaHeader (title=${article.getTitle()})" />
+  <body>
+    <div th:replace="fragments/header :: signedIn (username=${user.getName()})" class="application-bar"></div>
+    <div class="container-fluid no-gutters">
+      <div class="row">
+        <div th:replace="fragments/sidebar :: signedIn (categories=${categories})" class="col-lg-2 bg-light sidebar"></div>
+        <main role="main" class="offset-lg-1 col-lg-8 no-padding">
+          <div class="container-fluid content-area">
+            <!--Back to previous page -->
+            <a class="go-back" href="javascript:history.back()" title="Return to previous page">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="feather feather-chevron-left">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </span>
+            </a>
+            <div class="article-view-header">
+              <h1 th:text="${article.getTitle()}">13 Health Benefits of Coffee, Based on Science</h1>
+              <div id="bookmark-this" data-toggle="tooltip" data-placement="bottom" class="float-right" title="Bookmark this">
+                <button class="btn btn-secondary btn-sm flex-align-center"><i class="bookmarkIcon" data-feather="bookmark"></i> Bookmark</button>
+              </div>
+              <div class="article-meta">
+                <a href="#"><span class="user-info"><i data-feather="user"></i><span th:text="${article.getChangeUser()}">Tina Redsee</span></span></a>
+                <a href="#"> <span class="clock"><i
+                    data-feather="clock"></i><span th:text="${article.getRelativeChanged()}">12 minutes ago</span></span></a>
+                <a href="#"><span class="user-info"><i
+                    data-feather="tag"></i>Health</span></a>
+              </div>
+              <div class="article-tags"><a href="#"><span class="article-tag">Coffee</span></a><a
+                  href="#"><span
+                  class="article-tag">Productivity</span></a></div>
+            </div>
+            <div class="article-content">
+              <label for="articleDescription">Description</label>
+              <div id="articleDescription" class="article-description" th:text="${article.getContent()}">
+                <p>Donec sed fringilla diam. Fusce in tincidunt justo. Vestibulum efficitur blandit consectetur.</p>
+                <p>Nunc convallis fermentum nunc, non mollis orci finibus sed. Cras vehicula mauris at mauris aliquet faucibus. Quisque convallis egestas mauris, ut ultricies mauris convallis non. Etiam quis dui mauris. Cras dignissim mollis dolor, consectetur tempor neque consectetur ac. Sed mi neque, mattis vitae magna ut, fringilla vehicula ipsum. Mauris augue lectus, varius vitae eros at, scelerisque viverra nulla. Phasellus a feugiat urna, ac fringilla augue. Sed a est fringilla, lobortis magna a, placerat nibh. Mauris mattis viverra lorem, sed accumsan nisl finibus et.</p>
+              </div>
+              <label for="articleAttachments">Attachments</label>
+              <div id="articleAttachments" class="article-attachments">
+                <ul class="attatchments">
+                  <div class="row">
+                    <a href="#"><li><span>pdf.pdf</span><span class="attachment-size">12KB</span></li></a>
+                    <a href="#"><li><span>pdf.pdf</span><span class="attachment-size">12KB</span></li></a>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="article-feedback">
+              <div class="row">
+                <div class="col-lg-6">
+                  <h3>Help improve this article</h3>
+                  <h4>Did you find this article useful?</h4>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feedback-indicators">
+                    <a class="thumbs-up" href="#/"><i data-feather="thumbs-up"></i>Yes</a><a class="thumbs-down" href="#/"><i data-feather="thumbs-down"></i>No</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </main>
+      </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="/js/popper.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/feather.min.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
