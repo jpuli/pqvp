@@ -72,6 +72,8 @@ Our team chose modern tools and techniques to manage this effort and to build th
 
 * Postgress -- Database 
 
+![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/LogicalModel.png)
+
 
 ## Approach 
 The team adopted a Scrum-based approach to development and identified the high level scope necessary to meet the Minimal Value Plan (MVP) for the Working Prototype in a compressed, two-week time frame. Sprint planning included translating the MVP into two epics, creating high level user stories and determining how the Prototype architecture and infrastructure would be built to support the Prototype plan. 
