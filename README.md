@@ -199,6 +199,40 @@ What sets QualApps apart is that it is led by technologists.  Applying technolog
 
 
 **Play 8 Choose a modern technology stack**
+The development team selected a product stack that it was familiar with to aid a quick delivery time.  We selected stat-of-the-art open source technoloies that are commonly in use and, we believe, sustainable.  These products made it easy to comply with the RFI's technical requirements.  As outlined in the Technical Response, the team used the following tools for DAAS solution:
+
+**Run-Time**
+
+* JQuery -- UI
+
+* HTML5 -- UI
+
+* Bootstrap framework -- UI
+
+* Swagger/OpenAPI -- Application
+
+* Java -- Application
+
+* Spring Boot -- Application
+
+* AWS -- Infrastructure
+
+* Linux/Docker -- Platform 
+
+* NGINX -- Web Server
+
+* Spring Boot -- Application Server
+
+* Postgres -- We selected Postgres because of its power and flexibility, its market sustainabiltiy, its broad customer base, its applicability across industries, e.g., finance, gaming, government, and our experience with it.  
+
+
+
+- [x] Choose software frameworks that are commonly used by private-sector companies creating similar services
+- [x] Whenever possible, ensure that software can be deployed on a variety of commodity hardware types
+- [x] Ensure that each project has clear, understandable instructions for setting up a local development environment, and that team members can be quickly added or removed from projects
+- [x] Consider open source software solutions at every layer of the stack
+
+
 
 **Play 9 Deploy in a flexible hosting environment**
 
@@ -265,7 +299,6 @@ QualApps convened a multidisciplinary team of highly experienced Information Tec
 </tr>
 <tr>
 </tr></tbody></table> 
-
 
 
 **Requirement C: Understood what people needed, by including people in the prototype development and design process;** 
