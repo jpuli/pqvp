@@ -85,6 +85,8 @@ Our team chose modern tools and techniques to manage this effort and to build th
 
 ## Physical Architecture
 
+The following diagram is a **reference model** for a robust production implementation – our MVP does not include clustered web, application, and database servers.  Nor have we implemented firewalls and load balancers.   DAAS does, however, reside on AWS infrastructure follwoing a traditional web-application architecture. 
+
 ![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/daas-arch-physical.png)
 
 ## Code Flow
