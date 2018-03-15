@@ -217,7 +217,7 @@ The development team selected a product stack that it was familiar with to aid a
 
 * AWS -- Infrastructure
 
-* Linux/Docker -- QualApps selected Docker because of its containerizatoin ability to rapidly stand up computing envroinments.  The use of images to package, deploy, and run apps helps us meet RFI requirements, namely providing documentation that enables others to deploy DAAS.  
+* Linux/Docker -- QualApps selected Docker because of its containerizatoin ability to rapidly stand up computing environments.  The use of images to package, deploy, and run apps helps us meet RFI requirements, namely providing instructions that enables others to deploy DAAS.  
 
 * NGINX -- The team selected the open-source NGINX because it is lightweight and very easily meets performance demands.  
 
