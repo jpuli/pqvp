@@ -46,6 +46,7 @@ public class PqvpDaoTest {
         user.setChngDate(Calendar.getInstance().getTime());
         user.setChngType("I");
         user.setChngUser("testUser");
+        user.setEmailAddress("email@example.com");
 
         // new article
         article = new ArticleData();

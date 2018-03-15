@@ -24,6 +24,7 @@ public class UserprofileDataMapper implements RowMapper<UserProfileData> {
 				usr.setUsrProfileId(rs.getLong("usr_profile_id"));
 				usr.setUsrPwd(rs.getString("usr_pwd"));
 				usr.setUsrRole(rs.getString("usr_role"));
+				usr.setEmailAddress(rs.getString("usr_email"));
 			}
 			return usr;
 		}

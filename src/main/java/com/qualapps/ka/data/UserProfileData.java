@@ -11,7 +11,16 @@ public class UserProfileData {
 	private Date chngDate;
 	private String chngType;
 	private String chngUser;
-	
+	private String emailAddress;
+
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
 	public long getUsrProfileId() {
 		return usrProfileId;
 	}

@@ -14,7 +14,7 @@ public class PqvpDao {
     JdbcTemplate pqvpDb;
 
     public UserProfileData addUser(UserProfileData usr) {
-        pqvpDb.update(PqvpSql.addUser, usr.getUsrProfileId(), usr.getUsrName(), usr.getUsrPwd(), usr.getUsrRole(), usr.getChngDate(), usr.getChngType(), usr.getChngUser());
+        pqvpDb.update(PqvpSql.addUser, usr.getUsrProfileId(), usr.getUsrName(), usr.getUsrPwd(), usr.getUsrRole(), usr.getEmailAddress(), usr.getChngDate(), usr.getChngType(), usr.getChngUser());
         return usr;
     }
 

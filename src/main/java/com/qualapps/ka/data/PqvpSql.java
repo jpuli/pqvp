@@ -3,15 +3,15 @@ package com.qualapps.ka.data;
 public class PqvpSql {
 
 	public static final String addUser = "insert into user_profile ( " +
-			"usr_profile_id, usr_name, usr_pwd, usr_role," +
+			"usr_profile_id, usr_name, usr_pwd, usr_role, usr_email," +
 			" change_date, change_type, change_user ) " +
-			"values ( ?, ?, ?, ?, ?, ?, ?)";
+			"values ( ?, ?, ?, ?, ?, ?, ?, ?)";
 
-	public static final String getUserByUserName = "select usr_profile_id, usr_name, usr_pwd, usr_role from user_profile where usr_name = ?";
+	public static final String getUserByUserName = "select usr_profile_id, usr_name, usr_pwd, usr_role, usr_email from user_profile where usr_name = ?";
 
-	public static final String getUser = "select usr_profile_id, usr_name, usr_pwd, usr_role from user_profile where usr_name = ? and usr_pwd = ?";
+	public static final String getUser = "select usr_profile_id, usr_name, usr_pwd, usr_role, usr_email from user_profile where usr_name = ? and usr_pwd = ?";
 
-	public static final String getAllUsers = "select usr_profile_id, usr_name, usr_pwd, usr_role from user_profile";
+	public static final String getAllUsers = "select usr_profile_id, usr_name, usr_pwd, usr_role, usr_email from user_profile";
 
 
 	public static final String getAllArticles = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, change_date, change_type, change_user from article";
