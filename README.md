@@ -19,18 +19,39 @@ This application is fully responsive and complies with ADA guidelines.  It is be
 **Password: Appleseed**
 
 ## Managing Product Development
-Link to JIRA
+Link to JIRA: https://qualappsinc.atlassian.net/secure/RapidBoard.jspa?rapidView=1
+
 Read only Username and Password
 
 # Technical Approach to Building DAAS
-Our technical team chose modern tools and techniques with which they were already familiar reducing ramp up time. The team determined that the work could be completed during two sprints over 10 days (five days per sprint). This Planning effort was completed within two days of receipt of the RFI and development began immediately.
+Our team chose modern tools and techniques to manage this effort and to build the solution.  As expected, are approach was "default to open".  Moreover, team members were already familiar with these tools, which reduced delivery time. We used the following tool, which we've catagorized as 1) "Design-Time", meaning that we used them to manage the effor, or 2) "Run-Time" which means that these products comprise the DAAS execution platforms.
 
-## Team 
+**Design-Time**
+
+* Jira for managing Sprints and their activities: Epics and User Stories
+
+* Jenkins for build and deploy
+
+* Dropbox for sharing files 
+
+* Slack for communication
+
+* Oracle data modeler to develop logical and physical data models
+
+* Github for source control
+
+* Visio for documentation
+
+* InDesign for UI design
+
+**Run-Time**
 
 
 
 ## Approach 
 The team adopted a Scrum-based approach to development and identified the high level scope necessary to meet the Minimal Value Plan (MVP) for the Working Prototype in a compressed, two-week time frame. Sprint planning included translating the MVP into two epics, creating high level user stories and determining how the Prototype architecture and infrastructure would be built to support the Prototype plan. 
+
+the team determined that the work could be completed during two sprints over 10 days (five days per sprint). This Planning effort was completed within two days of receipt of the RFI and development began immediately.
 
 Scrum approach
 
