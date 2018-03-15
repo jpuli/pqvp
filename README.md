@@ -217,11 +217,11 @@ The development team selected a product stack that it was familiar with to aid a
 
 * AWS -- Infrastructure
 
-* Linux/Docker -- Platform 
+* Linux/Docker -- QualApps selected Docker because of its containerizatoin ability to rapidly stand up computing envroinments.  The use of images to package, deploy, and run apps helps us meet RFI requirements, namely providing documentation that enables others to deploy DAAS.  
 
-* NGINX -- Web Server
+* NGINX -- The team selected the open-source NGINX because it is lightweight and very easily meets performance demands.  
 
-* Spring Boot -- Application Server
+* Spring Boot -- Our team is very familiar with the Spring Boot framework.  The framework simplifies configuration and enabled us tp quickly stand up web applications.  
 
 * Postgres -- We selected Postgres because of its power and flexibility, its market sustainabiltiy, its broad customer base, its applicability across industries, e.g., finance, gaming, government, and our experience with it.  
 
