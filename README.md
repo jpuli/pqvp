@@ -90,6 +90,8 @@ The following diagram is a **reference model** for a robust production implement
 
 ## Code Flow
 
+![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/LogicalModel.png "DAAS Application Flow")
+
 Documentation must show code flow from client UI, to JavaScript library, to REST service to
 database, pointing to code in the GitHub repository. 
 
@@ -100,7 +102,7 @@ Our DAAS solution architecture centralizes processing logic, isolating services 
 Services persist changes to the database via Data Access Objects (DAOs).  Our team selected PostgreSQL as a robust, open-source database.  The persistence layer pools connections and offers efficient execution of database calls.  
 Docker containers will be used to containerize software components. This operating system level virtualization will help in rapid deployment, easy portability of software components, better version control, component reuse, lightweight footprint, and low maintenance.
 
-![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/LogicalModel.png "DAAS Logical")
+
 
 
 ***
