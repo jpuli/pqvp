@@ -236,7 +236,7 @@ x.	After receiving prototype feedback based on the role play, the team began int
 
 **Requirement K: Created a prototype that works on multiple devices, and presents a responsive design** 
 
-**Requirement L: Used at least five (5) modern and open-source technologies, regardless of architectural ayer (frontend, backend, etc.)  **
+**Requirement L: Used at least five (5) modern and open-source technologies, regardless of architectural ayer (frontend, backend, etc.)**
 
 **Requirement M: Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as Service (PaaS) provider, and indicated which provider they used**
 
@@ -244,11 +244,11 @@ x.	After receiving prototype feedback based on the role play, the team began int
 
 **Requirement O: Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider**
 
-**Requirement P: Setup or used configuration management **
+**Requirement P: Setup or used configuration management**
 
-**Requirement Q: Setup or used continuous monitoring **
+**Requirement Q: Setup or used continuous monitoring**
 
-**Requirement R: Deployed their software in an open source container, such as Docker (i.e., utilized operating-system-level virtualization) **
+**Requirement R: Deployed their software in an open source container, such as Docker (i.e., utilized operating-system-level virtualization)**
 
 **Requirement S: Provided sufficient documentation to install and run their prototype on another machine**
 
