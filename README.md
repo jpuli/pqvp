@@ -181,6 +181,21 @@ Suresh Kannan, our CEO, served as the Product Manager.  He has decision-making a
 
 **Play 7 Bring in experienced teams**
 
+QualApps assembled a multidisciplanry team of experts, senior leaders in software development and delivery.  All but one of these individuals has a minimum of ten years experience; some have as much two decades of experience.  Our expertise spans numerous proprietary and open source technologies, products, and frameworks.  We have custom developed many applications and served as trusted advisors to our clients.  A sampling of our accomplishments is as follows:
+
+* For the California Public Employees' Retirement Syste, we architected and developed a robust enterprise application integration framework built in Java to integrate subsystems with the CalPERS system of record. 
+* Built and implemented a scalable and secure B2B integration solution for the California Department of Tax and Fee Amdministreation (formerly the Board of Equalization). 
+* Custom developed The Travel Request and Expense Claims (TREK) application that enables State employees to establish travel profiles, automates the approval process for travel requests, and simplifies submitting expense claims for reimbursement. The solution generates all State-required forms and uses digital signatures for approval and interfaces with multiple third-party services.  
+* For the Department of Justice, QualApps experts evaluated an existing Ruby on Rails criminal justice application and redesigned and replaced it with responsive design that improves supportability and efficiency. 
+
+What sets QualApps apart is that it is led by technologists.  Applying technology to solve business problems is not merely a vocation, but a passion.  Under "Requiement B", addressed below, we have included the project team members and a link to their LinkidIn profiles.  
+- [x] Member(s) of the team have experience building popular, high-traffic digital services
+- [x] Member(s) of the team have experience designing mobile and web applications
+- [x] Member(s) of the team have experience using automated testing frameworks
+- [x] Member(s) of the team have experience with modern development and operations (DevOps) techniques like continuous integration and continuous deployment
+- [x] Member(s) of the team have experience securing digital services
+
+
 **Play 8 Choose a modern technology stack**
 
 **Play 9 Deploy in a flexible hosting environment**
