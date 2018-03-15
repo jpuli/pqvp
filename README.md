@@ -12,9 +12,9 @@ QualApps is thankful for the opportunity to submit a rsponse to RFI# CDTâ€“PQVPâ
 
 This application is fully responsive and complies with ADA guidelines.  It is best viewed in Chrome or FireFox, but will function in Edge or IE.
 
-Username
+Username: Johnappleseed
   
-Password
+Password: Appleseed
 
 ## Managing Product Development
 Link to JIRA
