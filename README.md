@@ -81,9 +81,11 @@ Our team chose modern tools and techniques to manage this effort and to build th
 
 ## Logical Architecture
 
-LA Write-up
+![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/daas-arch-logical.png)
 
 ## Physical Architecture
+
+![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/daas-arch-physical.png)
 
 ## Code Flow
 
