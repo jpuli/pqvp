@@ -24,28 +24,50 @@ Link to JIRA: https://qualappsinc.atlassian.net/secure/RapidBoard.jspa?rapidView
 Read only Username and Password
 
 # Technical Approach to Building DAAS
-Our team chose modern tools and techniques to manage this effort and to build the solution.  As expected, are approach was "default to open".  Moreover, team members were already familiar with these tools, which reduced delivery time. We used the following tool, which we've catagorized as 1) "Design-Time", meaning that we used them to manage the effor, or 2) "Run-Time" which means that these products comprise the DAAS execution platforms.
+Our team chose modern tools and techniques to manage this effort and to build the solution.  As expected, are approach was "default to open".  Since team members were  familiar with these tools we were able to accelerate delivery time. We used the following tools which we've catagorized as 1) "Design-Time", meaning that we employed them for management and design activities, and 2) "Run-Time" which means that these products comprise the DAAS execution platform.
 
 **Design-Time**
 
-* Jira for managing Sprints and their activities: Epics and User Stories
+* Jira -- managing Sprints and their activities: Epics and User Stories
 
-* Jenkins for build and deploy
+* Jenkins -- build and deploy
 
-* Dropbox for sharing files 
+* Dropbox -- sharing files 
 
-* Slack for communication
+* Slack -- communication
 
-* Oracle data modeler to develop logical and physical data models
+* Oracle data modeler -- develop logical and physical data models
 
-* Github for source control
+* Github -- source control
 
-* Visio for documentation
+* Visio -- documentation
 
-* InDesign for UI design
+* InDesign -- UI design
+
 
 **Run-Time**
 
+* JQuery -- UI
+
+* HTML5 -- UI
+
+* Bootstrap framework -- UI
+
+* Swagger/OpenAPI -- Application
+
+* Java -- Application
+
+* Spring Boot -- Application
+
+* AWS -- Infrastructure
+
+* Linux/Docker -- Platform 
+
+* NGINX -- Web Server
+
+* Spring Boot -- Application Server
+
+* Postgress -- Database 
 
 
 ## Approach 
