@@ -76,7 +76,6 @@ Our team chose modern tools and techniques to manage this effort and to build th
 
 * Postgress -- Database 
 
-![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/LogicalModel.png "DAAS Logical")
 
 
 ## Logical Architecture
@@ -93,6 +92,16 @@ The following diagram is a **reference model** for a robust production implement
 
 Documentation must show code flow from client UI, to JavaScript library, to REST service to
 database, pointing to code in the GitHub repository. 
+
+The DAAS front end is easy to use, offering an optimal user experience.  For the UI we used JQuery, HTML5, and Bootstrap to provide a responsive, cross-platform design.  To aid user input, our web front end can dynamically retrieve values that are cached, persisted, or accessed via RESTful APIs.    RESTful APIs access common services implemented in JAVA and offer application processing logic that enable the user to view, add, or update content.  
+
+Our DAAS solution architecture centralizes processing logic, isolating services within their own resource pool to guarantee sufficient memory and processing capacity.  This architecture will allow the service to be scaled horizontally across multiple servers as the load increases. 
+
+Services persist changes to the database via Data Access Objects (DAOs).  Our team selected PostgreSQL as a robust, open-source database.  The persistence layer pools connections and offers efficient execution of database calls.  
+Docker containers will be used to containerize software components. This operating system level virtualization will help in rapid deployment, easy portability of software components, better version control, component reuse, lightweight footprint, and low maintenance.
+
+![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/LogicalModel.png "DAAS Logical")
+
 
 ***
 *******End of Technical Approach to Building DAAS*******
