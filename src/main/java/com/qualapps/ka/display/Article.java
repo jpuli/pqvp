@@ -22,12 +22,14 @@ public class Article {
   private String creator;
   private String category;
   private List<String> tags;
+  private String status;
 
   public Article(ArticleData articleData, UserProfileService userProfileService) {
     this.setId(articleData.getArtId());
     this.setTitle(articleData.getArtTile());
     this.setChanged(articleData.getChngDate());
     this.setTags(articleData.getArtTags());
+    this.setStatus(articleData.getArtStatus());
     long userProfileId = Long.parseLong(articleData.getArtCreator());
     try {
       UserProfileData user = userProfileService.getUserById(userProfileId);
@@ -113,5 +115,13 @@ public class Article {
       }
     }
     this.tags = tags;
+  }
+
+  public String getStatus() {
+    return StringUtils.capitalize(status.toLowerCase());
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
   }
 }
