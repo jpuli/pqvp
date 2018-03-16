@@ -130,7 +130,7 @@ Below, we outline how we addressed each Play in the Playbook We provide a brief 
 Regarding Key Questions: We considered (based on the RFI) that the primary users are State departments and agencies.  We thought about various applications for a knowledge sharing platform.  For example, we considered tailoring it to assist with workforce development, in particular providing a platform wherein seasoned employees and millennials could collaborate on knowledge transfer.  Another consideration was developing a knowledge-sharing platform for trouble-shooting technical issues.  In the end, we decided we could develop a feature-rich platform that would support any subject area, which could be tagged by topics. Questions helped us establish our initial backlog, e.g., "As a user I want to be able to search knowledge based on key-words/topics".  
 
 - [x] Early in the project, spend time with current and prospective users of the service
-- [x] Use a range of qualitative and quantitative research methods (This was done minimally; see survey.)
+- [x] Use a range of qualitative and quantitative research methods (This was done minimally; see <a href="https://github.com/jpuli/pqvp/blob/master/interview.md">survey</a> .)
 - [x] Test prototypes of solutions with real people
 - [x] As the digital service is being built, regularly test it
 
@@ -379,7 +379,7 @@ We conformed to the <a href="https://designsystem.digital.gov">US Web Design Sta
 
 **Requirement I: Performed usability tests with people**
 
-As part of our user-centric approach we conducted usability testing via surveys of wireframes and prototypes.  The team evaluated responses from the usability exercises and updated the product backlog.  As a result, the team created new stories.
+As part of our user-centric approach we conducted usability testing via <a href="https://github.com/jpuli/pqvp/blob/master/interview.md">surveys</a>  of wireframes and prototypes.  The team evaluated responses from the usability exercises and updated the product backlog.  As a result, the team created new stories.
 
 
 **Requirement J: Used an iterative approach, where feedback informed subsequent work or versions of the prototype**
