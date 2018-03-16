@@ -1749,3 +1749,7 @@ ul.nav.flex-column.my-account li a svg {
     margin: 0 auto;
 
 }
+
+.li-table {
+    background: white;
+}
