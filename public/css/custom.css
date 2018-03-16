@@ -1668,6 +1668,9 @@ ul.navbar-nav.ml-auto.user-info {
         border-left: #1f3559;
         color: #fff;
     }
+    .col-hidden.col-lg-6 {
+    display: none;
+}
 }
 span.user-name {
     margin-right: 0.35em;
