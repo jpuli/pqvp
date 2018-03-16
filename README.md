@@ -142,7 +142,7 @@ Regarding Key Questions: We considered (based on the RFI) that the primary users
 
 The team discussed the key questions for Play 2 and identified a number of common issues with knowledge-sharing platforms.  Chief among these concerns was the ability to quickly identify information pertinent to a user.  This discussion led to user stories supporting knowledge organization and effective use of labels. Other items discussed were mechanisms to notify users via multiple channels when a discussion thread they subscribed to was updated.  
 
-The DAAS Working Prototype sends email notifications to users upon article lifecycle events.  For example, when an admin approves an article, the individual will reveive an email that his or her submission was approved. Currently these emails are sent to qualapps.pqvp.jira@gmail.com.  The password for this account is PQVPjira. 
+The DAAS Working Prototype sends email notifications to users upon article lifecycle events.  For example, when an admin approves an article, the individual will reveive an email that his or her submission was approved. Currently these emails are sent to qualapps.pqvp.jira.read@gmail.com.  The password for this account is PQVPjira. 
 
 We discussed a couple of metrics for ways to evaluate the effectiveness of the DAAS solution: after interacting with the solution, users would be asked to rank satisfaction with a handful of features (e.g., ability to add knowledge, modify existing knowledge artifact, comment on an artifact, find answers to questions).  Users would assign up to five stars to rank satisfaction level. In talking to stakeholders, we determined that this option should be used sparingly to avoid undermining the user experience.   
 
