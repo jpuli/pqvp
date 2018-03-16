@@ -21,7 +21,9 @@ For instruction about how to use the DAAS knowledge sharing application, please 
 ## Managing Product Development
 Link to <a href="https://qualappsinc.atlassian.net/secure/RapidBoard.jspa?rapidView=1">DAAS - JIRA Project</a>.
 
-Read only Username and Password
+Read only Username and Password: qualapps.jira.read@gmail.com -- PQVPjira
+
+We exported all issues from JIRA into Excel.  The file can be found here: <a href="https://github.com/jpuli/pqvp/blob/master/JIRA%20DAAS%20Issues%202018-03-16.xlsx">JIRA Issues</a>
 
 Alternatively, you can view <a href="https://github.com/jpuli/pqvp/tree/master/jira%20screenshots">JIRA Screenshots</a> of our JIRA Project.
 
