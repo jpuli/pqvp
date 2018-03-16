@@ -69,7 +69,7 @@ public class PqvpDao {
     }
 
     public List<ArticleData> getArticlesByUser(long qry) {
-        List<ArticleData> artiLst = pqvpDb.query(PqvpSql.getArticlesByUser, new Object[]{qry}, new ArticleDataMapper());
+        List<ArticleData> artiLst = pqvpDb.query(PqvpSql.getArticlesByUser, new Object[]{Long.toString(qry)}, new ArticleDataMapper());
         return artiLst;
     }
     public List<ArticleData> getArticlesByContent(String qry) {

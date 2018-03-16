@@ -27,7 +27,7 @@ public class PqvpSql {
 
 	public static final String getArticlesByViews = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_status = 'APPROVED' order by art_views, change_date desc limit 10";
 
-	public static final String getArticlesByUser= "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_id = ? order by  change_date desc";
+	public static final String getArticlesByUser= "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_creator = ? order by  change_date desc";
 
 	public static final String getArticlesByStatusAndUser = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_status = ? and art_creator = ? order by  change_date desc";
 
