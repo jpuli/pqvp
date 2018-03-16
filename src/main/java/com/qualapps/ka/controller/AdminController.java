@@ -113,4 +113,36 @@ public class AdminController {
     modelMap.put("articles", articles);
     return "article_queue";
   }
+
+  @GetMapping("/user/submissions")
+  public String submissionQueue(HttpSession session, ModelMap modelMap) {
+    User user = utils.loadCurrentUser(session);
+    if (user == null) {
+      return "redirect:/logout";
+    } else if (!user.canCreateArticles()) {
+      return "redirect:/home";
+    }
+    modelMap.put("user", user);
+    modelMap.put("isUserSubmissionPage", true);
+    modelMap.put("pageTitle", "My Submission Queue");
+    modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
+    try {
+      List<CategoryData> categories = articleService.getCategories();
+      modelMap.put("categories", categories);
+    } catch (PqvpException e) {
+      modelMap.put("categories", new ArrayList<CategoryData>());
+    }
+    List<ArticleData> approvalRequiredArticles = new ArrayList<>();
+    try {
+      approvalRequiredArticles.addAll(articleService.getArticlesByUser(user.getId()));
+    } catch (PqvpException e) {
+      e.printStackTrace();
+    }
+    List<Article> articles = new ArrayList<>();
+    for (ArticleData articleData : approvalRequiredArticles) {
+      articles.add(new Article(articleData, userService));
+    }
+    modelMap.put("articles", articles);
+    return "article_queue";
+  }
 }
