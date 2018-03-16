@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +26,16 @@ public class LoginController {
   public LoginController(UserProfileService service) { this.service = service; }
 
   @GetMapping("/")
-  public String index(Model model, HttpSession session, @RequestParam("selectUserError") boolean selectUserError) {
+  public String index(Model model, HttpSession session,HttpServletRequest request) {
+	  Boolean selectUserError = false;
+	  
+	  String errorStr = request.getParameter("selectUserError");
+	  
+	  if(errorStr!=null && errorStr.equalsIgnoreCase("true") )
+	  {
+		  selectUserError = Boolean.TRUE;
+	  }
+	   
     Object user = session.getAttribute("user");
     if (user != null && user instanceof User) {
       return "redirect:home";
