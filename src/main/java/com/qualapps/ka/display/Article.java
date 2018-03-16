@@ -108,6 +108,21 @@ public class Article {
     return tags;
   }
 
+  public String getTagsAsString() {
+    StringBuilder tags = new StringBuilder();
+    for (int i = 0; i < this.tags.size(); i++) {
+      tags.append(this.tags.get(i));
+      if (i < (this.tags.size()-1)) {
+        tags.append(", ");
+      }
+    }
+    return tags.toString();
+  }
+
+  public void setTags(List<String> tags) {
+    this.tags = tags;
+  }
+
   public void setTags(String tagsString) {
     List<String> tags  = new ArrayList<>();
     for (String tag : tagsString.split(",") ) {

@@ -7,13 +7,16 @@
           <a class="nav-link" th:classappend="${isHomePage} ? active" href="/"><i data-feather="home" class="sidebar-section-icon"></i>Home</a>
         </li>
       </ul>
-      <h6 class="sidebar-heading px-3 mt-4 mb-1">
-        <!--<i data-feather="eye" class="sidebar-section-icon"></i>-->
-        Recently Viewed
+      <h6 th:if="${user.isAdmin()}" class="sidebar-heading px-3 mt-4 mb-1">
+        <!--<i data-feather="list" class="sidebar-section-icon"></i>-->
+        Administration
       </h6>
-      <ul class="nav flex-column recently-opened">
+      <ul th:if="${user.isAdmin()}" class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-link" href="#">Setup/Configuration of Canon APLX Printer</a>
+          <a class="nav-link" th:classappend="${isAdminQueuePage} ? active" href="/admin/queue">Approval Queue (<span class="action-count">3</span>)</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Approved by me</a>
         </li>
       </ul>
       <h6 class="sidebar-heading px-3 mt-4 mb-1">
@@ -33,10 +36,10 @@
         My Account
       </h6>
       <ul class="nav flex-column">
-        <li class="nav-item">
+        <li class="nav-item" th:if="${user.canCreateArticles()}">
           <a class="nav-link" href="/articles/new">Create New Article</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" th:if="${user.canCreateArticles()}">
           <a class="nav-link" href="#">My Submissions</a>
         </li>
         <li class="nav-item">

@@ -28,4 +28,16 @@ public class User {
   public void setRole(String role) {
     this.role = role;
   }
+
+  public boolean canCreateArticles() {
+    return (isAdmin() || isCreator());
+  }
+
+  public boolean isCreator() {
+    return (role.equals("Creator"));
+  }
+
+  public boolean isAdmin() {
+    return (role.equals("Admin"));
+  }
 }
