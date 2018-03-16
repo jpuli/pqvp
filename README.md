@@ -49,7 +49,7 @@ Our team chose modern tools and techniques to manage this effort and to build th
 
 * Visio -- documentation
 
-* InDesign -- UI design
+* Adobe XD -- UI design
 
 
 **Run-Time**
