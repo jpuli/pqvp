@@ -25,16 +25,18 @@ public class Utils {
     }
 
     public int countAdminQueue(ArticleService articleService, UserProfileService userService) {
+        List<ArticleData> approvalRequiredArticles = new ArrayList<>();
         try {
-            List<ArticleData> approvalRequiredArticles = articleService.getArticlesByStatus(PqvpConstants.STATUS_SUBMITTED);
-            List<Article> articles = new ArrayList<>();
-            for (ArticleData articleData : approvalRequiredArticles) {
-                articles.add(new Article(articleData, userService));
-            }
-            return articles.size();
+            approvalRequiredArticles.addAll(articleService.getArticlesByStatus(PqvpConstants.STATUS_SUBMITTED));
         } catch (PqvpException e) {
-          return 0;
+            // intentionally empty we assume queue is 0 if expetion is thrown
         }
+        try {
+            approvalRequiredArticles.addAll(articleService.getArticlesByStatus(PqvpConstants.STATUS_REJECTED));
+        } catch (PqvpException e) {
+            // intentionally empty we assume queue is 0 if expetion is thrown
+        }
+        return approvalRequiredArticles.size();
     }
 
 

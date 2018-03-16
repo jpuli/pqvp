@@ -107,7 +107,7 @@ public class ArticleViewController {
     try {
       ArticleData articleData = articleService.getArticle(id);
       Article article = new Article(articleData, userService);
-      modelMap.put("isAdminReview", (PqvpConstants.STATUS_SUBMITTED.equals(articleData.getArtStatus()) && user.isAdmin()));
+      modelMap.put("isAdminReview", (!PqvpConstants.STATUS_APPROVED.equals(articleData.getArtStatus()) && user.isAdmin()));
       modelMap.put("article", article);
     } catch (PqvpException e) {
       e.printStackTrace();
