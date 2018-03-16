@@ -209,12 +209,34 @@ public class ArticleService {
      * Gets Articles by User
      * @param query User Id
      * @return List of articles
-     * @throws PqvpException Articel not found exception
+     * @throws PqvpException Article not found exception
      */
     public List<ArticleData> getArticlesByUser(long query) throws PqvpException {
         List<ArticleData> arts;
         try {
             arts = pqvpdao.getArticlesByUser(query);
+            if (arts == null || arts.isEmpty()) {
+                String[] params = new String[]{};
+                throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
+            }
+        } catch (Exception e) {
+            String[] params = new String[]{};
+            throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
+        }
+        return arts;
+    }
+
+    /**
+     * GEts articles by status and user
+     * @param status article status criteria
+     * @param userId user id
+     * @return List of articles
+     * @throws PqvpException Article not found exception
+     */
+    public List<ArticleData> getArticlesByStatusAndUser(String status, long userId) throws PqvpException {
+        List<ArticleData> arts;
+        try {
+            arts = pqvpdao.getArticlesByStatusAndUser(status, userId);
             if (arts == null || arts.isEmpty()) {
                 String[] params = new String[]{};
                 throw new PqvpException(ARTICLE_NOT_FOUND_EXCEPTION, params);
