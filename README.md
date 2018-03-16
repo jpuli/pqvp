@@ -203,11 +203,11 @@ The development team selected a product stack that it was familiar with to aid a
 
 **Run-Time**
 
-* JQuery -- UI
+* JQuery -- We choose JQuery for its flexible framework and robust feature set for UI components, such as binding data to elements. 
 
-* HTML5 -- UI
+* HTML5 -- HTML5 is the latest standard for web UIs, providing features that are used extensively within this application.
 
-* Bootstrap framework -- UI
+* Bootstrap framework -- Bootstrap was chosen for its ability to build responsive UI components and features that can be easily manipulated for the project's needs. 
 
 * Swagger/OpenAPI -- Application
 
