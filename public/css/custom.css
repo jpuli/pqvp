@@ -1,3 +1,12 @@
+/* --------------------------------
+
+QualApps
+Knowledge Management Tool
+
+Global Styles
+
+-------------------------------- */
+
 @media (min-width: 1200px) {
     .container {
         max-width: 1280px;
@@ -165,7 +174,7 @@ body {
     padding: 4em 3em;
     position: relative;
     overflow: hidden;
-    background: #f8f9fa;
+    background: #fff;
     text-align: center;
     border-bottom: 1px solid #e9ebec;
 }
@@ -188,6 +197,8 @@ body {
     font-weight: 700;
     font-size: 2em;
     margin-bottom: .5em;
+    z-index: 4000;
+    position: relative;
 }
 
 .container.home-split-feed {
@@ -290,7 +301,7 @@ ul.article-feed li {
 p.article-desc {
     color: #737373;
     margin-bottom: .35em;
-    font-size: .95em;
+    font-size: .9em;
 }
 ul.article-feed li {
     border-bottom: none;
@@ -302,10 +313,6 @@ ul.article-feed li {
     margin-top: .75em;
 }
 
-ul.article-feed li:last-child {
-    border-bottom: none;
-    margin-bottom: 1em;
-}
 
 .article-type span svg {
     width: 16px;
@@ -1491,10 +1498,14 @@ button.btn.btn-secondary {
 
 .feedback-indicators a svg {
     color: #555;
-    width: 3.5em;
-    height: 1.75em;
-}
+    width: 2em;
+    vertical-align: middle;
+    height: 1.15em;
 
+}
+a.thumbs-up {
+    margin-right: 1em;
+}
 .article-feedback .card-title {
     font-weight: 600;
     text-align: center;
@@ -1506,7 +1517,7 @@ button.btn.btn-secondary {
     border-bottom: 1px solid #dfdfdf;
 }
 .feedback-indicators a.selected svg {
-    color:green;
+    color:#0874D9;
     animation:feedback-animation .5s ease;
 }
 .top-search .form-control {
@@ -1594,6 +1605,9 @@ ul.navbar-nav.ml-auto.user-info {
     .app-bar-navbar .row .col-12, .app-bar-navbar .row .col-9, .app-bar-navbar .row .col-3 {
         padding: 0;
     }
+    h4.article-title a {
+        font-size: .75em;
+    }
 }
 .mobile-user-login {
     display: none;
@@ -1649,6 +1663,11 @@ ul.navbar-nav.ml-auto.user-info {
         float: none!important;
         justify-content: center;
     }
+    .sidebar li.nav-item a.nav-link.active {
+        background: #1f3559;
+        border-left: #1f3559;
+        color: #fff;
+    }
 }
 span.user-name {
     margin-right: 0.35em;
@@ -1670,6 +1689,63 @@ svg.feather.feather-check.success {
     background-color: #ffffff!important;
 }
 a.nav-link.comingsoon {
-    color: #888888!important;
+    color: #bbbbbb!important;
     font-style: italic;
+}
+.row.svg-hero {
+    position: absolute;
+    width: 95%;
+    top: 40px;
+}
+
+.article-feedback h4 {
+    font-size: 1.25em;
+    font-weight: 400;
+}
+
+.article-feedback h3 {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.article-feedback {
+    padding: 1em;
+}
+.article-feedback .row {
+    display: flex;
+    align-items: center;
+}
+ul.nav.flex-column.my-account li a {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    padding: .5rem 1rem;
+}
+
+ul.nav.flex-column.my-account li a svg {
+    margin-right: .2em;
+    height: 19px;
+    width: 19px;
+}
+.feedback-indicators a {
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    font-size:1.25em;
+}
+
+
+.feedback-indicators a.selected {
+    color: #0874D9;
+}
+.hero-area a {
+    position: relative;
+    z-index: 100;
+    color: #0874D9;
+    background: rgba(255, 255, 255, 0.58);
+    padding: .5em;
+    display: block;
+    border-radius: .5em;
+    max-width: 500px;
+    margin: 0 auto;
+
 }
