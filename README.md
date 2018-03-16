@@ -156,7 +156,7 @@ The team focused on developing a tool that provides an easy-to-understand flow o
 
 **Play 4 Build the service using agile and iterative practices**
 
-The team adopted a Scrum-based approach to development and identified a high-level scope to build a Working Prototype in a short timeframe. We identified three Sprints: Sprint 0 wherein we addressed high-level planning, product scope, product backlog and high-level user stories, development tools, and the architecture. During this Sprint we also established our development environments and built wire-frames.  In Sprint 1 we focused on User Stories that emphasized ease-of-use and on building a first Minimum Viable Product (MVP) furnishing basic DAAS functionality.  In the final Sprint, Sprint 2, we elaborated on DAAS to increase and enhance functionality and identified User Stories that would remain in the backlog as future enhancements. 
+The team adopted a Scrum-based approach to development and identified a high-level scope to build a Working Prototype in a short timeframe. We identified three Sprints: Sprint 0 wherein we addressed high-level planning, product scope, product backlog and high-level user stories, development tools, and the architecture. During this Sprint we also established our development environments and built <a href="https://github.com/jpuli/pqvp/tree/master/docs/UI/design">wireframes</a>.  In Sprint 1 we focused on User Stories that emphasized ease-of-use and on building a first Minimum Viable Product (MVP) furnishing basic DAAS functionality.  In the final Sprint, Sprint 2, we elaborated on DAAS to increase and enhance functionality and identified User Stories that would remain in the backlog as future enhancements. 
 
 The team used Jira to manage project activities.  Given team members' busy schedules and the compressed project timeframe, we sometimes struggled to keep the Jira Sprint board up-to-date via daily Scrums. However, we did successfully manage scope using Jira and used it to track and fix defects. The development process was definitely iterative with progressive deployments allowing team members to rapidly test and provide feedback on bugs. 
 
@@ -346,7 +346,7 @@ QualApps convened a multidisciplinary team of highly experienced Information Tec
 
 The QualApps team collectively reviewed the RFI to understand product requirements. Uder the Product Director's guidance, the team discussed how the solution would be architected based on the RFI.  The team collaborated on User Stories. Our Business Analyst conducted internet-based research on knowledge-sharing concepts and application features.  The research resulted in new and refined User Stories. The team's goal was to quickly develop a simple, elegant application that meets functional needs and compliance requirements -- ADA, WCAG 2.0. 
 
-We included colleagues outside of our QualApps team to discuss basic functionality and review wireframes and mock-ups.  These same individuals also reviewed multiple iterations of the prototype and providede feedback on how we could make improvements. 
+We included colleagues outside of our QualApps team to discuss basic functionality and review <a href="https://github.com/jpuli/pqvp/tree/master/docs/UI/design">wireframes</a> and mock-ups.  These same individuals also reviewed multiple iterations of the prototype and providede feedback on how we could make improvements. 
 
 **Requirement D: Used at least a minimum of three (3) “user-centric design” techniques and/or tools**
 
@@ -356,7 +356,7 @@ Our team members also <a href="https://github.com/jpuli/pqvp/blob/master/intervi
 
 The team evaluated User Personas.  We considered various types of individuals that would interact with the system.  Since the context is a knowledge sharing platform for government employees, we considered the types of personas that might benefit from this application.  We addressed three personas: 1) Bob, the seasoned employee looking forward to transitioning into retirement, 2) Jim, the millenial just starting off in his career, and 3) Susan, the manager who is concerned about workforce development and ensuring that as employees retire and new employees move in to take their place that knowledge transfer occurs.
 
-To evaluate the initial set product features and workflow, the DAAS development team developed wireframes.  This effort helped take our unpolished ideas about the product to the next level.  It gave us insight into function, navigation, and even aesthetics.  This effort made it clear that our emphasis should be on simplicity.
+To evaluate the initial set product features and workflow, the DAAS development team developed <a href="https://github.com/jpuli/pqvp/tree/master/docs/UI/design">wireframes</a>.  This effort helped take our unpolished ideas about the product to the next level.  It gave us insight into function, navigation, and even aesthetics.  This effort made it clear that our emphasis should be on simplicity.
 
 As the prototype was developed, colleagues interacted with the system and gave us feedback on its form and function.  We also researched and usability testing.
 
@@ -379,12 +379,12 @@ We conformed to the <a href="https://designsystem.digital.gov">US Web Design Sta
 
 **Requirement I: Performed usability tests with people**
 
-As part of our user-centric approach we conducted usability testing via <a href="https://github.com/jpuli/pqvp/blob/master/interview.md">surveys</a>  of wireframes and prototypes.  The team evaluated responses from the usability exercises and updated the product backlog.  As a result, the team created new stories.
+As part of our user-centric approach we conducted usability testing via <a href="https://github.com/jpuli/pqvp/blob/master/interview.md">surveys</a>  of <a href="https://github.com/jpuli/pqvp/tree/master/docs/UI/design">wireframes</a> and prototypes.  The team evaluated responses from the usability exercises and updated the product backlog.  As a result, the team created new stories.
 
 
 **Requirement J: Used an iterative approach, where feedback informed subsequent work or versions of the prototype**
 
-From start-to-finish, the team used an interative approach.  This began by working with users to evaluate wireframes, and very soon after that, multiple iterations of the DAAS Working Prototype.  We entered features and bugs into Jira, incorporated them into Sprints, made fixes, redeployed, and retested. 
+From start-to-finish, the team used an interative approach.  This began by working with users to evaluate <a href="https://github.com/jpuli/pqvp/tree/master/docs/UI/design">wireframes</a>, and very soon after that, multiple iterations of the DAAS Working Prototype.  We entered features and bugs into Jira, incorporated them into Sprints, made fixes, redeployed, and retested. 
 
 **Requirement K: Created a prototype that works on multiple devices, and presents a responsive design** 
 
