@@ -326,7 +326,7 @@ The team used GitHub our source code management tool for daily code commits. We 
 
 **Requirement F: Used OpenAPI to document the RESTful API, and provided a link to the OpenAPI**
 
-The solution uses OpenAPI...
+The solution uses OpenAPI to document RESTful APIs. 
 
 **Requirement G: Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0**
 
@@ -347,17 +347,19 @@ Yes... we did this
 
 **Requirement M: Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as Service (PaaS) provider, and indicated which provider they used**
 
-**Requirement N: Developed automated unit tests for their code**
-Yes. using Jenkins CI pipline automate
+The QualApps team deployed the solution on Docker on AWS. 
 
+**Requirement N: Developed automated unit tests for their code**
+
+The team used Jenkins CI pipline automate unit testing. 
 
 **Requirement O: Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider**
 
-Yes. Jenkins
+The team used Jenkins server setup http://ec2-52-88-115-151.us-west-2.compute.amazonaws.com:8080/ for automated testing and CI/CD.  
 
 **Requirement P: Setup or used configuration management**
 
-Github for CM and source control
+The team used Github for CM and source control. 
 
 **Requirement Q: Setup or used continuous monitoring**
 
@@ -365,12 +367,12 @@ Does AWS have continuous montioring
 
 **Requirement R: Deployed their software in an open source container, such as Docker (i.e., utilized operating-system-level virtualization)**
 
-Used Docker
+The team used Docker version 17.12.0-ce on our deployed staging server.
 
 **Requirement S: Provided sufficient documentation to install and run their prototype on another machine**
 
+Installation instructions are found in the Install.md. 
+
 **Requirement T: Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge**
 
-Yes.  The protopye is entirely openly licensed.  Everything under MIT or GPL
-
-As stated in Requirement L the team used open-source technologies to build the DAAS Prototype, and its underlying platform utilizing tools and techniques that are either openly licensed are free of charge. Please refer to the list of tools in Requirement L above.
+The protopye is entirely openly licensed: Docker, Thymeleaf, Java, Junit, Maven, Git, JQuery, Jenkins, Docker-Compose, AWS, Postgres. 
