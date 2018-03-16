@@ -121,16 +121,13 @@ public class ArticleService {
     public void updateArticle(ArticleData article, String status) throws PqvpException {
         try {
             article.setArtStatus(status);
-            System.out.println(status);
             int rowsAffected = pqvpdao.updateArticle(article);
-            System.out.println(rowsAffected);
             if (rowsAffected < 1) {
                 String[] params = new String[]{};
                 throw new PqvpException(ARTICLE_NOT_CREATED_EXCEPTION, params);
             } else {
                 // update art-category
                 pqvpdao.updateCatArt(article.getCatId(), article.getArtId());
-                System.out.println(status);
             }
         } catch (Exception e) {
             String[] params = new String[]{};

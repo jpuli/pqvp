@@ -14,11 +14,16 @@ QualApps is thankful for the opportunity to submit a response to RFI# CDT–PQVP
 
 This application is fully responsive and complies with guidelines.  It is best viewed in Chrome or FireFox, but will function in Edge or IE. We created three users, each with a different role: Jessica (Admin), Harvey (Creator), and Mike (Viewer).  To review this web-application and evaluate the functionality, use any of these personas.  
 
+For instruction about how to use the DAAS knowledge sharing application, please see the 
+<a href="https://github.com/jpuli/pqvp/wiki/User-Roles.md">DAAS User Roles and Instructions</a>.
+
 
 ## Managing Product Development
-Link to JIRA: https://qualappsinc.atlassian.net/secure/RapidBoard.jspa?rapidView=1
+Link to <a href="https://qualappsinc.atlassian.net/secure/RapidBoard.jspa?rapidView=1">DAAS - JIRA Project</a>.
 
 Read only Username and Password
+
+Alternatively, you can view <a href="https://github.com/jpuli/pqvp/tree/master/jira%20screenshots">JIRA Screenshots</a> of our JIRA Project.
 
 # Technical Approach to Building DAAS
 The team adopted a <a href="https://github.com/jpuli/pqvp/blob/master/DAAS Agile Approach.png">Scrum-based approach</a> to develop a Working Prototype. At the beginning our effort we addressed environments, scope development, and established Epics and multiple User Stories that were addressed in three successive Sprints.  We also agreed upon User-Centered design strategies that we could employ in a compressed timeframe.  
@@ -90,9 +95,6 @@ The following diagram is a **reference model** for a robust production implement
 ![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/daas-arch-physical.png)
 
 ## Code Flow
-
-**Documentation must show code flow from client UI, to JavaScript library, to REST service to
-database, pointing to code in the GitHub repository.**
 
 The DAAS application is designed and developed using the traditional Model-View-Controller (MVC) architecture. The application consists of html pages representing the view layer and the controller layer to orchestrate the incoming HTTP requests. The service layer is used to apply business validations, query, and save data. The model layer consists of data access objects (DAOs) that interact with postgres SQL database. 
 
@@ -203,6 +205,7 @@ What sets QualApps apart is that it is led by technologists.  Applying technolog
 
 
 **Play 8 Choose a modern technology stack**
+
 The development team selected a product stack that it was familiar with to aid a quick delivery time.  We selected state-of-the-art open source technologies that are commonly in use and, we believe, sustainable.  These products made it easy to comply with the RFI's technical requirements.  As outlined in the Technical Response, the team used the following tools for DAAS solution:
 
 **Run-Time**
@@ -234,16 +237,50 @@ The development team selected a product stack that it was familiar with to aid a
 - [x] Consider open source software solutions at every layer of the stack
 
 
-
 **Play 9 Deploy in a flexible hosting environment**
+
+The team evaluated all the questions in Play 9.  Given the state of the Working Prototype, we determined that many of hte requirements did not apply at this time.  We hosted the DAAS Working Prototype on AWS.  It is deployed on Docker, making it easy to stand up new containers as needed.  Docker can be managed using a variety of tools such as Kubernetes which  provide "self-healing" capabilities should problems emerge.  While we do not anticipate large volumes of traffic, we have architected the solution that makes it easy to scale vertically and horizontally and throttle based on user demand.  
+
+- [x] Resources are provisioned on demand
+- [x] Resources scale based on real-time user demand (Future.)
+- [x] Resources are available in multiple regions
+- [x] We only pay for resources we use
+- [x] Static assets are served through a content delivery network
+- [x] Application is hosted on commodity hardware
 
 **Play 10 Automate testing and deployments**
 
+Given the tight timeline for this Working Prototyp, automated testing was limited to executing a handful of Unit Tests.  Using Jenkins, we automated builds and deploys, releasing a new product daily and occasionally even more often.  This gave us the opportunity to immediately evaluate DAAS and get feedback. Although the prototype should not expect high volumes, it was architected in a way that would make it easy to scale both vertically and horizontally. See Logical Architecture and the Physical Architecture (Reference Model) described above.  
+
+- [x] Create automated tests that verify all user-facing functionality
+- [x] Create unit and integration tests to verify modules and components
+- [x] Run tests automatically as part of the build process
+- [x] Perform deployments automatically with deployment scripts, continuous delivery services, or similar techniques
+
+
 **Play 11 Manage security and privacy through reusable processes**
+
+Our team reviewed the Description, Checklist, and Key Questions for Play 11 and determined that security and privacy would be evaluated and addressed in subsequent Epics/Sprints. Given the functionality of DAAS, an area of concern would be protecting user profiles and contact information. 
+
 
 **Play 12 Use data to drive decisions**
 
+The team considered various metrics.  We considered using JMeter to ascertain system performance.  We also had a brief discussion about using AppDyanimcs to thoroughly evaluate DAAS. However, we chose to do neither of these things given the timeframe and the fact that doing so was unneeded at this stage of the DAAS Working Prototype. The product is host on AWS Cloud and therefore takes advantage of AWS monitoring. Future Sprints would address issues of performance testing and monitoring. At this stage of the prototype, our focus was funtionality, ease-of-use, and aesthetics.  We gauged succcess in these areas based on user interaction with DAAS. 
+
+
 **Play 13 Default to open**
+
+The team's emphasis in building the DAAS Working Prototyp is to be completely open.  We used a variety of ways to collect user feedback, but the most productive was having users interact with the prototype and give use either feedback verbally or in writing.  We used OpenAPI to document our inerfaces, and we used completely open technnology and have made our code publicly available via GitHub.  
+
+- [x] Offer users a mechanism to report bugs and issues, and be responsive to these reports (Primarily we used JIRA and Slack.)
+- [x] Ensure that data from the service is explicitly in the public domain
+- [x] Catalog data in the agency’s enterprise data inventory and add any public datasets to the agency’s public data listing (Users can tag knowledge articles.)
+- [x] Ensure that we maintain the rights to all data developed by third parties in a manner that is releasable and reusable at no cost to the public
+- [x] Ensure that we maintain contractual rights to all custom software developed by third parties in a manner that is publishable and reusable at no cost
+- [x] When appropriate, publish source code of projects or components online
+- [x] When appropriate, share your development process and progress publicly
+
+
 
 
 ## RFI Requirements 
@@ -338,7 +375,7 @@ To comply with WCAG, our team used HTML5 and CSS3 technology during front end de
 
 **Requirement H: Created or used a design style guide and/or a pattern library**
 
-We conformed to the <a href="https://designsystem.digital.gov">US Web Design Standards</a>.
+We conformed to the <a href="https://designsystem.digital.gov">US Web Design Standards</a>.  The team created a basic <a href="https://github.com/jpuli/pqvp/blob/master/style%20guide/qualapps-styleguide.pdf">style guide</a>.
 
 **Requirement I: Performed usability tests with people**
 
@@ -383,7 +420,8 @@ The team used Docker version 17.12.0-ce on our deployed staging server.
 
 **Requirement S: Provided sufficient documentation to install and run their prototype on another machine**
 
-Installation instructions are found in the Install.md. 
+Installation instructions are found in the <a href="https://github.com/jpuli/pqvp/blob/master/INSTALL.md">deployment guidlines</a>.
+
 
 **Requirement T: Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge**
 
