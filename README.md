@@ -289,7 +289,7 @@ The team's emphasis in building the DAAS Working Prototyp is to be completely op
 
 Our team selected Suresh Kannan to serve as the product owner with authority and responsibility for defining product scope and verifying completeness. He was ultimately accountable for delivery of the working prototype. Mr. Kannan has 20 years of Information Technology experience in software product development, implementation, and Agile delivery.  
 
-On this effort, he worked with users to gather feedback, provided guidance on wireframes, and helped craft User Stories. He helped with backlog grooming and prioritizing Stories as high, medium, and low.  Team members were encouraged to select which User Stories they wanted to develops. At times, however, the Product Manager made assigments based on the priorities. 
+On this effort, he worked with users to gather feedback, provided guidance on <a href="https://github.com/jpuli/pqvp/tree/master/docs/UI/designwireframes"> wireframes</a>, and helped craft User Stories. He helped with backlog grooming and prioritizing Stories as high, medium, and low.  Team members were encouraged to select which User Stories they wanted to develops. At times, however, the Product Manager made assigments based on the priorities. 
 
 **Requirement B: Assembled a multidisciplinary and collaborative team that includes, at a minimum, five (5) of the labor categories as identified in Attachment B: PQVP AD-DS Labor Category Descriptions;**
 
