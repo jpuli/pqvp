@@ -248,7 +248,7 @@ The development team selected a product stack that it was familiar with to aid a
 
 **Play 13 Default to open**
 
-We used a variety of ways to collect user feedback, but the most productive was having users interact with the prototype and give use either feedback verbally or in writing.  We used OpenAPI to document our inerfaces, and we used completely open technnology and have made our code publicly available via GitHub.  
+The team's emphasis in building the DAAS Working Prototyp is to be completely open.  We used a variety of ways to collect user feedback, but the most productive was having users interact with the prototype and give use either feedback verbally or in writing.  We used OpenAPI to document our inerfaces, and we used completely open technnology and have made our code publicly available via GitHub.  
 
 - [x] Offer users a mechanism to report bugs and issues, and be responsive to these reports (Primarily we used JIRA and Slack.)
 - [x] Ensure that data from the service is explicitly in the public domain
