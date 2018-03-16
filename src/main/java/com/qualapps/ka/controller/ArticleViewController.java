@@ -8,6 +8,7 @@ import com.qualapps.ka.data.CategoryData;
 import com.qualapps.ka.display.Article;
 import com.qualapps.ka.display.User;
 import com.qualapps.ka.service.ArticleService;
+import com.qualapps.ka.service.EmailService;
 import com.qualapps.ka.service.UserProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import org.thymeleaf.util.StringUtils;
 
 import javax.servlet.http.HttpSession;
+import javax.validation.constraints.Email;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,12 +26,14 @@ import java.util.List;
 public class ArticleViewController {
   private final ArticleService articleService;
   private final UserProfileService userService;
+  private final EmailService emailService;
   private Utils utils = new Utils();
 
   @Autowired
-  public ArticleViewController(ArticleService articleService, UserProfileService userService) {
+  public ArticleViewController(ArticleService articleService, UserProfileService userService, EmailService emailService) {
     this.articleService = articleService;
     this.userService = userService;
+    this.emailService = emailService;
   }
 
   @GetMapping("/articles/new")
@@ -57,7 +61,7 @@ public class ArticleViewController {
       HttpSession session,
       @RequestParam(name="title") String title,
       @RequestParam(name="category") String category,
-      @RequestParam(name="content") String content,
+      @RequestParam(name="content", required = false, defaultValue = "") String content,
       @RequestParam(name="tags",required = false, defaultValue = "") String tags,
       @RequestParam(name="visibility",required = false, defaultValue = "") String visibility
   ) throws PqvpException {
@@ -89,6 +93,15 @@ public class ArticleViewController {
     }
 
     article = articleService.createArticle(article);
+    StringBuilder body = new StringBuilder();
+    body.append("Article #");
+    body.append(article.getArtId());
+    body.append(" [");
+    body.append(article.getArtTile());
+    body.append("] Submitted for Review By ");
+    body.append(user.getName());
+    body.append("\nhttp://daas.qualapps.com/");
+    emailService.sendTextEmail("qualapps.jira.read@gmail.com","info@qualapps.com", null, "Daas Article ["+article.getArtTile()+"] Created", body.toString());
     return "redirect:/article_success";
   }
 
