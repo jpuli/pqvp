@@ -112,12 +112,9 @@ public class ArticleService {
     /**
      * UPdates an article
      * @param article article to update
+     * @param String status
      * @throws PqvpException Article not created exception
      */
-    public void updateArticle(ArticleData article) throws PqvpException {
-       updateArticle(article, PqvpConstants.STATUS_SUBMITTED);
-    }
-
     public void updateArticle(ArticleData article, String status) throws PqvpException {
         try {
             article.setArtStatus(status);

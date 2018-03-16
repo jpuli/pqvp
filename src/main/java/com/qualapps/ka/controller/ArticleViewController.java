@@ -119,7 +119,7 @@ public class ArticleViewController {
         try {
           long currentViews = articleData.getArtViews();
           articleData.setArtViews(++currentViews);
-          articleService.updateArticle(articleData);
+          articleService.updateArticle(articleData, PqvpConstants.STATUS_APPROVED);
         } catch (PqvpException e) {
           // ignore error incrementing views to at least allow display
         }
