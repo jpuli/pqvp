@@ -7,16 +7,13 @@ http://daas.qualapps.com/
 ![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/QualApps%2C%20Inc.png)
 
 ## QualApps’ ADPQ Submission
-QualApps is thankful for the opportunity to submit a rsponse to RFI# CDT–PQVP–0118.  In a short timeframe, QualApps mobilized a multi-disciplinary team to review this RFI and rapidly respond. We are pleased with the outcome and hope that the Department of Technollogy is equally pleased with our Working Prototype and Technical Approach.  
+QualApps is thankful for the opportunity to submit a rsponse to RFI# CDT–PQVP–0118.  In a short timeframe, QualApps mobilized a multi-disciplinary team to review this RFI and rapidly respond. We are pleased with the outcome and hope that the Department of Technology is equally pleased with our Working Prototype and Technical Approach.  
 
 
 ## [Link to DAAS  Web Application ](http://daas.qualapps.com/)
 
-This application is fully responsive and complies with ADA guidelines.  It is best viewed in Chrome or FireFox, but will function in Edge or IE. We created three users, each with a different role: Janepublic (Viewer), Johnappleseed (Approver), and SaraJaneSmith (Creator).  To review this web-application and evaluate the functionlity, use the following credentials: 
+This application is fully responsive and complies with ADA guidelines.  It is best viewed in Chrome or FireFox, but will function in Edge or IE. We created three users, each with a different role: Jessica (Admin), Harvey (Creator), and Mike (Viewer).  To review this web-application and evaluate the functionlity, use any of these personas.  
 
-**Username: Johnappleseed**
-  
-**Password: Appleseed**
 
 ## Managing Product Development
 Link to JIRA: https://qualappsinc.atlassian.net/secure/RapidBoard.jspa?rapidView=1
@@ -24,7 +21,7 @@ Link to JIRA: https://qualappsinc.atlassian.net/secure/RapidBoard.jspa?rapidView
 Read only Username and Password
 
 # Technical Approach to Building DAAS
-The team adopted a Scrum-based approach to developm a Working Prototype. At the beginniing our effort we addressed environments, scope development, and established Epics and multipe User Storie that were addressed in three successive Sprints.  We also agreed upon User-Centered design strategies that we could employ in a compressed timeframe.  
+The team adopted a Scrum-based approach to developm a Working Prototype. At the beginniing our effort we addressed environments, scope development, and established Epics and multiple User Stories that were addressed in three successive Sprints.  We also agreed upon User-Centered design strategies that we could employ in a compressed timeframe.  
 
 Our team chose modern tools and techniques to manage this effort and to build the DAAS solution. The team used a "default to open" approach, leveraging many of the tools our company is familiar with thus accelerating delivery time. We used the following tools which we've catagorized as 
 1) "Design-Time", meaning that we employed them for management and design activities, and 
@@ -157,7 +154,7 @@ The team focused on developing a tool that provides an easy-to-understand flow o
 
 **Play 4 Build the service using agile and iterative practices**
 
-The team adopted a Scrum-based approach to development and identified a high-level scope to build a Working Prototype in a short timeframe. We identified three Sprints: Sprint 0 wherein we addressed high-level planning, product scope, product backlog and high-level user stories, development tools, and the architecture. During this Sprint we also established our development environments.  In Sprint 1 we focused on User Stories that emphasized ease-of-use and on building a first Minimum Viable Product (MVP) furnishing basic DAAS functionality.  In the final Sprint, Sprint 2, we elaborated on DAAS to increase and enhance functionality and identified User Stories that would remain in the backlog as future enhancements. 
+The team adopted a Scrum-based approach to development and identified a high-level scope to build a Working Prototype in a short timeframe. We identified three Sprints: Sprint 0 wherein we addressed high-level planning, product scope, product backlog and high-level user stories, development tools, and the architecture. During this Sprint we also established our development environments and built wire-frames.  In Sprint 1 we focused on User Stories that emphasized ease-of-use and on building a first Minimum Viable Product (MVP) furnishing basic DAAS functionality.  In the final Sprint, Sprint 2, we elaborated on DAAS to increase and enhance functionality and identified User Stories that would remain in the backlog as future enhancements. 
 
 The team used Jira to manage project activities.  Given team members' busy schedules and the compressed project timeframe, we sometimes struggled to keep the Jira Sprint board up-to-date via daily Scrums. However, we did successfully manage scope using Jira and used it to track and fix defects. The development process was definitely iteritave with progressive deployments allowing team members to rapidly test and provide feedback on bugs. 
 
