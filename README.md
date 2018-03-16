@@ -331,7 +331,7 @@ The team used GitHub our source code management tool for daily code commits. We 
 
 **Requirement F: Used OpenAPI to document the RESTful API, and provided a link to the OpenAPI**
 
-The solution uses OpenAPI to document RESTful APIs. 
+The solution uses OpenAPI to document RESTful APIs. <a href="http://daas.qualapps.com/swagger-ui.html">View our use of OpenAPI here. </a>.
 
 **Requirement G: Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0**
 
