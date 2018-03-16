@@ -247,7 +247,6 @@ The development team selected a product stack that it was familiar with to aid a
 
 
 ## RFI Requirements 
-The README.md file should also make reference to the following:
 
 **Requirement A: Assigned one (1) leader and gave that person authority and responsibility and held that person accountable for the quality of the prototype submitted;**
 
