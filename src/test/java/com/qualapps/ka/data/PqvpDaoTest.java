@@ -3,6 +3,7 @@ package com.qualapps.ka.data;
 
 import com.qualapps.ka.DaasApplication;
 import com.qualapps.ka.common.PqvpConstants;
+import org.assertj.core.api.Assertions;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,6 +20,7 @@ import java.util.Calendar;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringRunner.class)
 @Transactional
@@ -102,21 +104,22 @@ public class PqvpDaoTest {
     @Test
     public void testGetRecentArticles() throws Exception {
         dao.addArticle(article);
-        article.setArtId(245);
         article.setArtViews(110);
+        article.setArtStatus(PqvpConstants.STATUS_APPROVED);
         dao.addArticle(article);
         List<ArticleData> arts = dao.getRecentArticles();
-        assertThat(arts.get(0).getArtId() == 245);
+        assertTrue(arts.get(0).getArtStatus().equalsIgnoreCase(PqvpConstants.STATUS_APPROVED));
     }
 
     @Test
     public void testGetArticlesByViews() throws Exception {
+        article.setArtStatus(PqvpConstants.STATUS_SUBMITTED);
         dao.addArticle(article);
-        article.setArtId(245);
         article.setArtViews(110);
+        article.setArtStatus(PqvpConstants.STATUS_APPROVED);
         dao.addArticle(article);
         List<ArticleData> arts = dao.getArticlesByViews();
-        assertThat(arts.get(0).getArtId() == 245);
+        assertTrue(arts.get(0).getArtStatus().equalsIgnoreCase(PqvpConstants.STATUS_APPROVED));
     }
 
     @Test
@@ -127,5 +130,14 @@ public class PqvpDaoTest {
         dao.addArticle(article);
         List<ArticleData> arts = dao.getArticlesByRating();
         assertThat(arts.get(0).getArtId() == 533);
+    }
+
+    @Test
+    public void testGetArticlesByStatusAndUserId() throws Exception {
+        article.setArtStatus(PqvpConstants.STATUS_APPROVED);
+        article.setArtCreator("1");
+        dao.addArticle(article);
+        List<ArticleData> arts = dao.getArticlesByStatusAndUser(PqvpConstants.STATUS_APPROVED, 1);
+        assertTrue(arts.get(0).getArtStatus().equalsIgnoreCase(PqvpConstants.STATUS_APPROVED));
     }
 }

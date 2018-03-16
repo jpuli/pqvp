@@ -25,15 +25,17 @@ public class PqvpSql {
 
 	public static final String getArticlesByRating = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article order by art_rating, change_date desc limit 10";
 
-	public static final String getArticlesByViews = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article order by art_views, change_date desc limit 10";
+	public static final String getArticlesByViews = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_status = 'APPROVED' order by art_views, change_date desc limit 10";
 
 	public static final String getArticlesByUser= "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_id = ? order by  change_date desc";
+
+	public static final String getArticlesByStatusAndUser = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_status = ? and art_creator = ? order by  change_date desc";
 
 	public static final String getArticlesByStatus = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_status = ? order by  change_date desc";
 
 	public static final String getArticlesByCategory= "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where cat_id = ? order by  change_date desc";
 
-	public static final String getRecentArticles = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article order by change_date desc limit 10";
+	public static final String getRecentArticles = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_status = 'APPROVED' order by change_date desc limit 10";
 
 	public static final String getArticleForId = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_id = ?";
 
