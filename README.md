@@ -344,7 +344,7 @@ To comply with WCAG, our team used HTML5 and CSS3 technology during front end de
 
 **Requirement H: Created or used a design style guide and/or a pattern library**
 
-We conformed to the <a href="https://designsystem.digital.gov">US Web Design Standards</a>.
+We conformed to the <a href="https://designsystem.digital.gov">US Web Design Standards</a>.  The team created a basic <a href="https://github.com/jpuli/pqvp/blob/master/style%20guide/qualapps-styleguide.pdf">style guide</a>.
 
 **Requirement I: Performed usability tests with people**
 
