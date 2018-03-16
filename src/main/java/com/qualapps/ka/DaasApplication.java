@@ -40,6 +40,7 @@ public class DaasApplication {
                 System.out.println(beanName);
             }
 
+            System.out.println("Daas Application Ready");
         };
     }
 }
