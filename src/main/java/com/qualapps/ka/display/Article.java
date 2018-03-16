@@ -2,7 +2,9 @@ package com.qualapps.ka.display;
 
 import com.qualapps.ka.common.PqvpException;
 import com.qualapps.ka.data.ArticleData;
+import com.qualapps.ka.data.CategoryData;
 import com.qualapps.ka.data.UserProfileData;
+import com.qualapps.ka.service.ArticleService;
 import com.qualapps.ka.service.UserProfileService;
 import org.ocpsoft.prettytime.PrettyTime;
 import org.thymeleaf.util.DateUtils;
@@ -24,7 +26,7 @@ public class Article {
   private List<String> tags;
   private String status;
 
-  public Article(ArticleData articleData, UserProfileService userProfileService) {
+  public Article(ArticleData articleData, ArticleService articleService, UserProfileService userProfileService) {
     this.setId(articleData.getArtId());
     this.setTitle(articleData.getArtTile());
     this.setChanged(articleData.getChngDate());
@@ -41,7 +43,20 @@ public class Article {
     int maxForSummary = (300 > articleData.getArtContent().length()) ? articleData.getArtContent().length() : 300;
     this.setSummary(articleData.getArtContent().substring(0, maxForSummary) + "...");
     this.setContent(articleData.getArtContent());
-    //this.setCategory(StringUtils.capitalize(pqvpdao.getCategory(articleData.getCatId()).getCatName()));
+    try {
+      List<CategoryData> categories = articleService.getCategoryByArticleId(articleData.getArtId());
+      if (!categories.isEmpty()) {
+        String categoryName = categories.get(0).getCatDescr();
+        if (StringUtils.isEmptyOrWhitespace(categoryName)) {
+          this.setCategory(null);
+        } else {
+          this.setCategory(categoryName);
+        }
+      }
+    } catch (PqvpException e) {
+      e.printStackTrace();
+      this.setCategory(null);
+    }
   }
 
   public long getId() {

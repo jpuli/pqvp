@@ -45,7 +45,7 @@
                     <div class="row">
                       <div class="col-lg-3 col-xs-12"><p class="title" th:text="${article.getTitle()}">13 Health Benefits of Coffee, Based on Science</p></div>
                       <div class="col-lg-1 col-xs-12"><p class="type">Technical</p></div>
-                      <div class="col-lg-1 col-xs-12"><p class="category">Lifestyle</p></div>
+                      <div class="col-lg-1 col-xs-12"><p class="category" th:text="${article.getCategory()}">Lifestyle</p></div>
                       <div class="col-lg-2 col-xs-12"><p class="tags" th:text="${article.getTagsAsString()}">Health, Work, Productivity</p></div>
                       <div class="col-lg-2 col-xs-12"><p class="submitter" th:text="${article.getCreator()}">Tina Redsie</p></div>
                       <div class="col-lg-2 col-xs-12"><p class="date" th:text="${article.getRelativeChanged()}">02/01/2018</p></div>

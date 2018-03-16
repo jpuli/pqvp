@@ -53,7 +53,7 @@ public class HomeController {
       List<ArticleData> recentArticles = articleService.getRecentArticles();
       List<Article> articles = new ArrayList<>();
       for (ArticleData articleData : recentArticles) {
-        articles.add(new Article(articleData, userService));
+        articles.add(new Article(articleData, articleService, userService));
       }
       modelMap.put("recentArticles", articles);
     } catch (PqvpException e) {
@@ -64,7 +64,7 @@ public class HomeController {
       List<ArticleData> popularArticles = articleService.getArticlesByViews();
       List<Article> articles = new ArrayList<>();
       for (ArticleData articleData : popularArticles) {
-        articles.add(new Article(articleData, userService));
+        articles.add(new Article(articleData, articleService, userService));
       }
       modelMap.put("popularArticles", articles);
     } catch (PqvpException e) {
@@ -95,7 +95,7 @@ public class HomeController {
       List<ArticleData> recentArticleDataList = articleService.searchArticles(query);
       List<Article> articles = new ArrayList<>();
       for (ArticleData articleData : recentArticleDataList) {
-        articles.add(new Article(articleData, userService));
+        articles.add(new Article(articleData, articleService, userService));
       }
       modelMap.put("results", articles);
     } catch (PqvpException e) {

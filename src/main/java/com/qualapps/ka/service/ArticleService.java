@@ -8,6 +8,7 @@ import com.qualapps.ka.data.PqvpDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Component
@@ -40,6 +41,21 @@ public class ArticleService {
             throw new PqvpException(CATEGORIES_NOT_FOUND_EXCEPTION, params);
         }
         return cat;
+    }
+
+    public List<CategoryData> getCategoryByArticleId(long articleId) throws PqvpException {
+        List<CategoryData> cats = new ArrayList<>();
+        try {
+            cats.addAll(pqvpdao.getCatArt(articleId));
+            if (cats.isEmpty()) {
+                String[] params = new String[]{};
+                throw new PqvpException(CATEGORIES_NOT_FOUND_EXCEPTION, params);
+            }
+        } catch (Exception e) {
+            String[] params = new String[]{};
+            throw new PqvpException(CATEGORIES_NOT_FOUND_EXCEPTION, params);
+        }
+        return cats;
     }
 
     /**

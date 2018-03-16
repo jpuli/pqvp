@@ -70,8 +70,7 @@
                 <a href="#"><span class="user-info"><i data-feather="user"></i><span th:text="${article.getCreator()}">Tina Redsee</span></span></a>
                 <a href="#"> <span class="clock"><i
                     data-feather="clock"></i><span th:text="${article.getRelativeChanged()}">12 minutes ago</span></span></a>
-                <a href="#"><span class="user-info"><i
-                    data-feather="tag"></i>Health</span></a>
+                <a href="#" th:if="${article.getCategory()} != null"><span class="user-info"><i data-feather="tag"></i><span th:text="${article.getCategory()}">Health</span></span></a>
               </div>
               <div th:replace="fragments/article :: tags (tags=${article.getTags()})" class="article-tags"><a href="#"><span class="article-tag">Coffee</span></a><a
                   href="#"><span

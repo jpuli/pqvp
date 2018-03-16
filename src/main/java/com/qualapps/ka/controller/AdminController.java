@@ -108,7 +108,7 @@ public class AdminController {
     }
     List<Article> articles = new ArrayList<>();
     for (ArticleData articleData : approvalRequiredArticles) {
-      articles.add(new Article(articleData, userService));
+      articles.add(new Article(articleData, articleService, userService));
     }
     modelMap.put("articles", articles);
     return "article_queue";
@@ -140,7 +140,7 @@ public class AdminController {
     }
     List<Article> articles = new ArrayList<>();
     for (ArticleData articleData : approvalRequiredArticles) {
-      articles.add(new Article(articleData, userService));
+      articles.add(new Article(articleData, articleService, userService));
     }
     modelMap.put("articles", articles);
     return "article_queue";
