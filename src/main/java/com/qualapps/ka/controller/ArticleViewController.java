@@ -88,7 +88,25 @@ public class ArticleViewController {
     }
 
     article = articleService.createArticle(article);
-    return "redirect:/articles/" + article.getArtId();
+    return "redirect:/article_success";
+  }
+
+  @GetMapping("/article_success")
+  public String articleSuccess(HttpSession session, ModelMap modelMap) {
+    User user = utils.loadCurrentUser(session);
+    if (user == null) {
+      return "redirect:/logout";
+    }
+    modelMap.put("user", user);
+    modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
+    try {
+      List<CategoryData> categories = articleService.getCategories();
+      modelMap.put("categories", categories);
+    } catch (PqvpException e) {
+      modelMap.put("categories", new ArrayList<CategoryData>());
+    }
+
+    return "article_success";
   }
 
   @GetMapping("/articles/{id}")

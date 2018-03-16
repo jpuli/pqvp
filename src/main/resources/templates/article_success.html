@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head th:replace="fragments/header :: kaHeader (title='Home')" />
+<body>
+<div th:replace="fragments/header :: signedIn (username=${user.getName()})" class="application-bar"></div>
+<!--Main Outer Container -->
+<div class="container-fluid no-gutters">
+  <div class="row">
+    <div th:replace="fragments/sidebar :: signedIn (categories=${categories})" class="col-lg-2 bg-light sidebar"></div>
+
+    <div class="offset-lg-1 success-submitted">
+      <h1><i data-feather="check" class="success"></i><br>Success!</h1>
+      <p>You article has been submitted and sent to the approval queue.</p>
+      <a class="btn btn-primary btn-sm archiveArticle" href="/home" role="button">Return to Knowledgebase</a>
+    </div>
+  </div>
+</div>
+<!-- JavaScript -->
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script src="/js/jquery-ui.min.js"></script>
+<script src="/js/tether.min.js"></script>
+<script src="/js/popper.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<!--Feather Icons-->
+<script src="/js/feather.min.js"></script>
+
+
+<script>
+    feather.replace();
+
+    $("#bookmark-this").on('click', function() {
+        $(".bookmarkIcon").toggleClass('filled');
+    })
+
+    $(".thumbs-up").on('click', function() {
+        $(".thumbs-up").toggleClass('selected')
+    })
+</script>
+</body>
+</html>
