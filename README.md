@@ -242,6 +242,14 @@ The development team selected a product stack that it was familiar with to aid a
 
 **Play 10 Automate testing and deployments**
 
+Given the tight timeline for this Working Prototyp, automated testing was limited to executing a handful of Unit Tests.  Using Jenkins, we automated builds and deploys, releasing a new product daily and occasionally even more often.  This gave us the opportunity to immediately evaluate DAAS and get feedback. Although the prototype should not expect high volumes, it was architected in a way that would make it easy to scale both vertically and horizontally. See Logical Architecture and the Physical (Reference) Architecture.  
+
+- [x] Create automated tests that verify all user-facing functionality
+- [x] Create unit and integration tests to verify modules and components
+- [x] Run tests automatically as part of the build process
+- [x] Perform deployments automatically with deployment scripts, continuous delivery services, or similar techniques
+
+
 **Play 11 Manage security and privacy through reusable processes**
 
 Our team reviewed the Description, Checklist, and Key Questions for Play 11 and determined that security and privacy would be evaluated and addressed in subsequent Epics/Sprints. Given the functionality of DAAS, an area of concern would be protecting user profiles and contact information. 
