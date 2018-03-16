@@ -242,7 +242,7 @@ The development team selected a product stack that it was familiar with to aid a
 
 **Play 10 Automate testing and deployments**
 
-Given the tight timeline for this Working Prototyp, automated testing was limited to executing a handful of Unit Tests.  Using Jenkins, we automated builds and deploys, releasing a new product daily and occasionally even more often.  This gave us the opportunity to immediately evaluate DAAS and get feedback. Although the prototype should not expect high volumes, it was architected in a way that would make it easy to scale both vertically and horizontally. See Logical Architecture and the Physical (Reference) Architecture.  
+Given the tight timeline for this Working Prototyp, automated testing was limited to executing a handful of Unit Tests.  Using Jenkins, we automated builds and deploys, releasing a new product daily and occasionally even more often.  This gave us the opportunity to immediately evaluate DAAS and get feedback. Although the prototype should not expect high volumes, it was architected in a way that would make it easy to scale both vertically and horizontally. See Logical Architecture and the Physical Architecture (Reference Model) described above.  
 
 - [x] Create automated tests that verify all user-facing functionality
 - [x] Create unit and integration tests to verify modules and components
