@@ -39,6 +39,7 @@ public class ArticleViewController {
       return "redirect:/logout";
     }
     modelMap.put("user", user);
+    modelMap.put("isCreateNewPage", true);
     modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
     try {
       List<CategoryData> categories = articleService.getCategories();
