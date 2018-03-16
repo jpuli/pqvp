@@ -311,11 +311,19 @@ QualApps convened a multidisciplinary team of highly experienced Information Tec
 
 **Requirement C: Understood what people needed, by including people in the prototype development and design process;** 
 
-The QualApps team collectively reviewed the RFI to understand product requirements. Uder the Product Director's guidance, the QualApps  team discussed how the solution would be architected based on the RFI.  The team collaborated on User Stories. The QualApps Business Analyst conducted internet-based research on knowledge-sharing concepts and application features.  The research resulted in new and refined User Stories. The team's goal was to quickly develop a simple, elegant application that meets functional needs and compliance requirements -- ADA, WCAG 2.0. 
+The QualApps team collectively reviewed the RFI to understand product requirements. Uder the Product Director's guidance, the team discussed how the solution would be architected based on the RFI.  The team collaborated on User Stories. Our Business Analyst conducted internet-based research on knowledge-sharing concepts and application features.  The research resulted in new and refined User Stories. The team's goal was to quickly develop a simple, elegant application that meets functional needs and compliance requirements -- ADA, WCAG 2.0. 
 
 We included colleagues outside of our QualApps team to discuss basic functionality and review wireframes and mock-ups.  These same individuals also reviewed multiple iterations of the prototype and providede feedback on how we could make improvements. 
 
 **Requirement D: Used at least a minimum of three (3) “user-centric design” techniques and/or tools**
+
+The team used a number of user-centered design techniques.  To begin with, our Business Analyst conducted research on knowledg-sharing platforms.  He evaluated various platforms, look-and-feel, feedback mechanisms, moderator activity, ways to collaps comments, to name just a few features.  Findings were discussed with the team, and the Product Backlog was updated accordingly.
+
+The team also evaluated User Personas.  We considered various types of individuals that would XXXXXX 
+
+To evaluate the initial set product features and workflow, the DAAS development team developed wireframes.  This effort helped take our unpolished ideas about the product to the next level.  It gave us insight into function, navigation, and even aesthetics. 
+
+
 
 **Requirement E: Used GitHub to document code commits**
 
