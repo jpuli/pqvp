@@ -23,7 +23,7 @@ Link to <a href="https://qualappsinc.atlassian.net/secure/RapidBoard.jspa?rapidV
 
 Read only Username and Password
 
-Alternatively, you can view <a href="https://github.com/jpuli/pqvp/tree/master/jira%20screenshots"</a> of our JIRA Project.
+Alternatively, you can view <a href="https://github.com/jpuli/pqvp/tree/master/jira%20screenshots">JIRA Screenshots</a> of our JIRA Project.
 
 # Technical Approach to Building DAAS
 The team adopted a <a href="https://github.com/jpuli/pqvp/blob/master/DAAS Agile Approach.png">Scrum-based approach</a> to develop a Working Prototype. At the beginning our effort we addressed environments, scope development, and established Epics and multiple User Stories that were addressed in three successive Sprints.  We also agreed upon User-Centered design strategies that we could employ in a compressed timeframe.  
