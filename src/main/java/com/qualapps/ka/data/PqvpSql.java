@@ -33,7 +33,7 @@ public class PqvpSql {
 
 	public static final String getArticlesByStatus = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_status = ? order by  change_date desc";
 
-	public static final String getArticlesByCategory= "select a.art_id, a.art_title, a.art_content, a.art_views, a.art_status, a.art_rating, a.art_creator, a.art_create_time, a.art_tags, a.art_access, a.change_date, a.change_type, a.change_user from article a, article_category ac where ac.category_cat_id = ? and ac.article_art_id = a.art_id order by  change_date desc";
+	public static final String getArticlesByCategory= "select a.art_id, a.art_title, a.art_content, a.art_views, a.art_status, a.art_rating, a.art_creator, a.art_create_time, a.art_tags, a.art_access, a.change_date, a.change_type, a.change_user from article a, article_category ac where ac.category_cat_id = ? and ac.article_art_id = a.art_id and art_status = 'APPROVED' order by  change_date desc";
 
 	public static final String getRecentArticles = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_status = 'APPROVED' order by change_date desc limit 10";
 
