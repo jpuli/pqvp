@@ -14,7 +14,10 @@
     <a href="#"><span class="user-info"><i
         data-feather="tag"></i>Health</span></a>
   </div>
-  <div class="article-tags"><a href="#"><span class="article-tag">Coffee</span></a><a
+  <div class="article-tags" th:replace="fragments/article :: tags (tags=${article.getTags()})"><a href="#"><span class="article-tag">Coffee</span></a><a
       href="#"><span
       class="article-tag">Productivity</span></a></div>
 </li>
+<div th:fragment="tags (tags)" class="article-tags">
+  <a href="#" th:if="${tags.size()} > 0" th:each="tag : ${tags}"><span class="article-tag" th:text="${tag}">Coffee</span></a>
+</div>

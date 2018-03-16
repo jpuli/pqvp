@@ -8,6 +8,8 @@ import org.ocpsoft.prettytime.PrettyTime;
 import org.thymeleaf.util.DateUtils;
 import org.thymeleaf.util.StringUtils;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -25,6 +27,7 @@ public class Article {
     this.setId(articleData.getArtId());
     this.setTitle(articleData.getArtTile());
     this.setChanged(articleData.getChngDate());
+    this.setTags(articleData.getArtTags());
     long userProfileId = Long.parseLong(articleData.getArtCreator());
     try {
       UserProfileData user = userProfileService.getUserById(userProfileId);
@@ -102,7 +105,13 @@ public class Article {
     return tags;
   }
 
-  public void setTags(List<String> tags) {
+  public void setTags(String tagsString) {
+    List<String> tags  = new ArrayList<>();
+    for (String tag : tagsString.split(",") ) {
+      if (!StringUtils.isEmptyOrWhitespace(tag)) {
+        tags.add(tag.trim());
+      }
+    }
     this.tags = tags;
   }
 }

@@ -30,7 +30,7 @@
                 <a href="#"><span class="user-info"><i
                     data-feather="tag"></i>Health</span></a>
               </div>
-              <div class="article-tags"><a href="#"><span class="article-tag">Coffee</span></a><a
+              <div th:replace="fragments/article :: tags (tags=${article.getTags()})" class="article-tags"><a href="#"><span class="article-tag">Coffee</span></a><a
                   href="#"><span
                   class="article-tag">Productivity</span></a></div>
             </div>
