@@ -6,6 +6,8 @@ import com.qualapps.ka.data.CategoryData;
 import com.qualapps.ka.data.UserProfileData;
 import com.qualapps.ka.service.ArticleService;
 import com.qualapps.ka.service.UserProfileService;
+import org.joda.time.DateTime;
+import org.joda.time.DateTimeZone;
 import org.jsoup.Jsoup;
 import org.ocpsoft.prettytime.PrettyTime;
 import org.thymeleaf.util.DateUtils;
@@ -100,8 +102,10 @@ public class Article {
   }
 
   public String getRelativeChanged() {
+    DateTime source = new DateTime(changed);
+    DateTime utc = source.toDateTime(DateTimeZone.UTC);
     PrettyTime p = new PrettyTime();
-    return p.format(changed);
+    return p.format(utc.withZone(DateTimeZone.forID("US/Pacific")).toLocalDateTime().toDate());
   }
 
   public void setChanged(Date changed) {
