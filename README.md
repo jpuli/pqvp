@@ -244,7 +244,11 @@ The development team selected a product stack that it was familiar with to aid a
 
 **Play 11 Manage security and privacy through reusable processes**
 
+Our team reviewed the Description, Checklist, and Key Questions for Play 11 and determined that security and privacy would be evaluated and addressed in subsequent Epics/Sprints. Given the functionality of DAAS, an area of concern would be protecting user profiles and contact information. 
+
+
 **Play 12 Use data to drive decisions**
+
 The team considered various metrics.  We considered using JMeter to ascertain system performance.  We also had a brief discussion about using AppDyanimcs to thoroughly evaluate DAAS. However, we chose to do neither of these things given the timeframe and the fact that doing so was unneeded at this stage of the DAAS Working Prototype. The product is host on AWS Cloud and therefore takes advantage of AWS monitoring. Future Sprints would address issues of performance testing and monitoring. At this stage of the prototype, our focus was funtionality, ease-of-use, and aesthetics.  We gauged succcess in these areas based on user interaction with DAAS. 
 
 
