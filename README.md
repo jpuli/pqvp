@@ -368,7 +368,7 @@ The team used Jenkins CI pipline automate unit testing.
 
 **Requirement O: Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider**
 
-The team used Jenkins server setup http://ec2-52-88-115-151.us-west-2.compute.amazonaws.com:8080/ for automated testing and CI/CD.  
+The team used Jenkins server setup http://ec2-52-88-115-151.us-west-2.compute.amazonaws.com:8080/ for automated testing and CI/CD.  View our <a href="http://ec2-52-88-115-151.us-west-2.compute.amazonaws.com:8080/">US Web Design Standards</a>.
 
 **Requirement P: Setup or used configuration management**
 
