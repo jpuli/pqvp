@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Plex Font -->
+    <link rel="stylesheet" href="css/ibm-plex.css">
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+
+    <title>Knowledgebase Application - Prototype</title>
+
+</head>
+
+<body>
+<!--Application Top Bar (Includes App Name, Top User Navigation, Mobile Main Navigation)-->
+<div class="application-bar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <!--Application Name-->
+        <a class="navbar-brand" href="#"><i data-feather="book-open" class="app-icon"></i>Knowledgebase Application</a>
+
+        <!--Top Navigation-->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">John Appleseed</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Sign out</a>
+                </div>
+            </li>
+        </ul>
+
+        <!--Sidebar Navigation Control-->
+        <div class="row">
+            <div class="col-lg-12">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-side-nav"
+                        aria-controls="main-side-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+<!--Main Outer Container -->
+<div class="container-fluid no-gutters">
+    <div class="row">
+
+        <!--Left Sidebar (Includes main user menu) -->
+        <div class="col-lg-2 bg-light sidebar">
+            <nav class="collapse bd-links" id="main-side-nav">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column left-side-nav-main-items">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><i data-feather="home"
+                                                                     class="sidebar-section-icon"></i>Home</a>
+                        </li>
+
+                    </ul>
+
+                    <h6 class="sidebar-heading px-3 mt-4 mb-1">
+                        <!--<i data-feather="eye" class="sidebar-section-icon"></i>-->
+                        Recently Viewed</h6>
+                    <ul class="nav flex-column recently-opened">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Setup/Configuration of Canon APLX Printer</a>
+                        </li>
+
+                    </ul>
+                    <h6 class="sidebar-heading px-3 mt-4 mb-1">
+                        <!--<i data-feather="list" class="sidebar-section-icon"></i>-->
+                        Categories
+                    </h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">All</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Health</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Lifestyle</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Fitness</a>
+                        </li>
+                    </ul>
+                    <h6 class="sidebar-heading px-3 mt-4 mb-1">
+                        <!--<i data-feather="settings" class="sidebar-section-icon"></i>-->
+                        My Account</h6>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="add-new.html">Create New Article</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My Submissions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">My Bookmarks</a>
+                        </li>
+
+                    </ul>
+
+
+                </div>
+            </nav>
+        </div>
+
+        <!--Main Content -->
+
+        <!--Main Content -->
+        <main role="main" class="col-lg-10 no-padding">
+
+            <div class="col-lg-12 article-approval content-area">
+                <div class="container">
+                    <div class="row admin-tools">
+                        <div class="col-lg-5">
+                            <div class="row content-info">
+                                <div class="col-lg-2"><i data-feather="layout"></i></div>
+                                <div class="col-lg-10"><h4 class="col-info-heading">Manage content</h4><h3>13 Health Benefits of Coffee, Based on Science</h3></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-xs-12">
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-6"><h4 class="col-info-heading">Status</h4>
+                                    <p class="col-info-data">Published</p></div>
+                                <div class="col-lg-3 col-xs-6"><h4 class="col-info-heading">Hits</h4>
+                                    <p class="col-info-data flex-align-center"><i data-feather="bar-chart-2"></i> 1,324</p></div>
+                                <div class="col-lg-3 col-xs-6"><h4 class="col-info-heading">Rating</h4>
+                                    <p class="col-info-data flex-align-center">
+                                        <i data-feather="thumbs-up"></i> 88%
+                                    </p></div>
+                                <div class="col-lg-3 col-xs-6"><h4 class="col-info-heading">Age</h4>
+                                    <p class="col-info-data">412 days</p>
+                                </div>
+
+                            </div>
+                            <div class="row article-edit-buttons">
+                                <button class="btn btn-secondary btn-sm flex-align-center"><i data-feather="edit-2"></i> Edit</button>
+                                <button class="btn btn-secondary btn-sm flex-align-center unpublishArticle"><i data-feather="slash"></i> Unpublish</button>
+                                <button class="btn btn-secondary btn-sm flex-align-center archiveArticle"><i data-feather="archive"></i> Archive</button>
+
+
+                            </div>
+
+
+                            <div class="article-unpublish article-action hidden">
+                                <p><i data-feather="slash"></i> Unpublish Article: Are you sure?</p>
+                                <a href="#">Cancel</a>
+                                <a href="#">Yes</a>
+                            </div>
+                            <div class="article-archive article-action hidden">
+                                <p><i data-feather="archive"></i> Archive Article: Are you sure?</p>
+                                <a href="#">Cancel</a>
+                                <a href="#">Yes</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <form class="reject-article hidden">
+                        <div class="form-group col-lg-6 offset-lg-3 reject">
+                            <label for="rejectReason">Reason for rejection</label>
+                            <textarea class="form-control" id="rejectReason" rows="3"></textarea>
+                            <button class="btn btn-danger btn-sm float-right" type="submit" name="submit" value="Submit">Reject</button>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+            <div class="container-fluid edit-article">
+           
+                </div>
+
+
+            <div class="container-fluid offset-lg-1 col-lg-10 no-padding content-area">
+
+                <!--Back to previous page -->
+                <a class="go-back" href="javascript:history.back()" title="Return to previous page">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                             class="feather feather-chevron-left">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </span>
+                </a>
+
+
+                <h1 class="page-title" id="pageTitle">13 Health Benefits of Coffee, Based on Science</h1>
+
+                <form>
+                    <div class="form-group">
+                        <label for="articleTitle">Title</label>
+                        <input type="text" class="form-control" id="articleTitle" aria-describedby="article-title-help"
+                               placeholder="Article Title" value="13 Health Benefits of Coffee, Based on Science">
+                        <small id="article-title-help" class="form-text text-muted">Descriptive questions help other
+                            users discover and understand your post
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Type</label>
+
+                        <div class="radio-article-type">
+                            <input class="form-check-input" type="radio" name="articleType" id="inlineRadio1"
+                                   value="option1" checked>
+                            <label class="form-check-label" for="inlineRadio1">Technical</label>
+                        </div>
+                        <div class="radio-article-type">
+                            <input class="form-check-input" type="radio" name="articleType" id="inlineRadio2"
+                                   value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Non-technical</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="articleCategories">Category</label>
+                        <!--Specify categories in JS at bottom of page-->
+                        <input type="text" class="form-control" id="articleCategories" placeholder="Start typing..." value="Health">
+                    </div>
+                    <div class="form-group">
+                        <label for="articleTags">Tags</label>
+
+
+                        <input type="text" class="form-control" id="articleTags" data-role="tagsinput"
+                               placeholder="Add tags" aria-describedby="article-tags-help" value="Health, Fitness, Coffee, Productivity">
+                        <small id="article-tags-help" class="form-text text-muted">Tagging content helps you reach the
+                            right audience for your question
+                        </small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="text-area">Description</label>
+                        <div id="text-area"></div>
+                    </div>
+
+
+                    <div class="input-group mb-3">
+                        <label>Attachments</label>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="articleTags">Visibility</label>
+                        <!--To get tags input as comma delimited:-->
+                        <!--$("#articleVisibility").val()-->
+                        <input type="text" class="form-control" id="articleVisibility" data-role="tagsinput"
+                               placeholder="Add tags" aria-describedby="article-visibility" value="david@knowledge.org">
+                        <small id="article-visibility" class="form-text text-muted">Visibility help text goes here.
+                        </small>
+                    </div>
+
+
+                    <div class="actions">
+                        <ul>
+                            <li>
+                                <button type="button" class="btn btn-link">Cancel</button>
+                            </li>
+                            <li>
+                                <button class="btn btn-primary" type="submit" name="submit" value="Submit">Save changes</button>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                </form>
+
+
+
+        </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- JavaScript -->
+<!--Bootstrap Defaults-->
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/tether.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--Feather Icons-->
+<script src="js/feather.min.js"></script>
+<!--Tags-->
+<script src="js/tagsinput.js"></script>
+<!--Text editor-->
+<link href="css/summernote-bs4.css" rel="stylesheet">
+<script src="js/summernote-bs4.js"></script>
+
+
+<script>
+    feather.replace();
+
+    //    Categories
+    $(function () {
+        var articleCategories = [
+            "Health",
+            "How-to's",
+            "Fitness",
+            "Tips & Tricks",
+            "Food",
+            "Travel",
+        ];
+
+        $("#articleCategories").autocomplete({
+            source: articleCategories
+        });
+
+    });
+
+    $('#text-area').summernote({
+        height: 350,
+        toolbar: [
+            ['style', ['bold', 'italic', 'underline', 'clear']],
+            ['link', ['linkDialogShow', 'unlink']],
+            ['para', ['ul', 'ol', 'paragraph']]
+        ]
+    });
+    $("#text-area").summernote("code", "Donec sed fringilla diam. Fusce in tincidunt justo. Vestibulum efficitur blandit consectetur.<br><br>Nunc convallis fermentum nunc, non mollis orci finibus sed. Cras vehicula mauris at mauris aliquet faucibus. Quisque convallis egestas mauris, ut ultricies mauris convallis non. Etiam quis dui mauris. Cras dignissim mollis dolor, consectetur tempor neque consectetur ac. Sed mi neque, mattis vitae magna ut, fringilla vehicula ipsum. Mauris augue lectus, varius vitae eros at, scelerisque viverra nulla. Phasellus a feugiat urna, ac fringilla augue. Sed a est fringilla, lobortis magna a, placerat nibh. Mauris mattis viverra lorem, sed accumsan nisl finibus et.");
+
+
+    //change page title as user types article title
+    $('#articleTitle').keyup(function () {
+        var titleInput = this.value;
+        $('#pageTitle').html(titleInput);
+
+        if (titleInput == "") {
+            $('#pageTitle').html("Add New Article");
+        }
+    });
+
+
+    $('.checkAll').on('click', function () {
+        $(this).siblings().prop('checked', $(this).is(':checked'));
+    })
+    $("#bookmark-this").on('click', function() {
+        $(".bookmarkIcon").toggleClass('filled');
+    })
+
+    $("#rejectArticleBtn").on('click', function(){
+        $(".reject-article").toggleClass('hidden');
+    })
+
+    $(".archiveArticle").on('click', function(){
+        $(".article-archive").toggleClass('hidden');
+        $(".article-unpublish").addClass('hidden');
+    })
+
+    $(".unpublishArticle").on('click', function(){
+        $(".article-unpublish").toggleClass('hidden');
+        $(".article-archive").addClass('hidden');
+    })
+
+
+</script>
+
+
+</body>
+</html>
