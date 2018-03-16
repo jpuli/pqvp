@@ -319,7 +319,7 @@ We included colleagues outside of our QualApps team to discuss basic functionali
 
 The team used a number of user-centered design techniques.  To begin with, our Business Analyst conducted research on knowledg-sharing platforms.  He evaluated various platforms, look-and-feel, feedback mechanisms, moderator activity, ways to collaps comments, to name just a few features.  Findings were discussed with the team, and the Product Backlog was updated accordingly.
 
-Our team members alow interviewed colleagues that served as end users for the DAAS product.  We asked basic interview questions.
+Our team members also <a href="https://github.com/jpuli/pqvp/blob/master/interview.md">interview</a> colleagues that served as end users for the DAAS product.  We asked basic interview questions.
 
 The team also evaluated User Personas.  We considered various types of individuals that would XXXXXX 
 
