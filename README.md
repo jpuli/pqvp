@@ -384,7 +384,7 @@ The team used Docker version 17.12.0-ce on our deployed staging server.
 
 **Requirement S: Provided sufficient documentation to install and run their prototype on another machine**
 
-Installation instructions are found in the <a href="https://github.com/jpuli/pqvp/blob/master/INSTALL.md"</a>.
+Installation instructions are found in the <a href="https://github.com/jpuli/pqvp/blob/master/INSTALL.md"></a>.
 
 **Requirement T: Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge**
 
