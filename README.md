@@ -315,12 +315,6 @@ The QualApps team collectively reviewed the RFI to understand product requiremen
 
 We included colleagues outside of our QualApps team to discuss basic functionality and review wireframes and mock-ups.  These same individuals also reviewed multiple iterations of the prototype and providede feedback on how we could make improvements. 
 
-
-
-
-ix.	Once the prototype was tangible enough to produce a response, the team, including the end user, implemented role play. This included testing within our team in order to gain realistic and effective feedback for improvements.
-x.	After receiving prototype feedback based on the role play, the team began integrating the feedback into the backlog as part of the next iteration of the prototype. Some of the identified user stories were created as icebox items to demonstrate that we are taking a MVP approach.
-
 **Requirement D: Used at least a minimum of three (3) “user-centric design” techniques and/or tools**
 
 **Requirement E: Used GitHub to document code commits**
