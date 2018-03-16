@@ -339,6 +339,7 @@ To comply with WCAG, our team used HTML5 and CSS3 technology during front end de
 
 **Requirement H: Created or used a design style guide and/or a pattern library**
 
+We conformed to the <a href="https://designsystem.digital.gov">US Web Design Standards</a>.
 
 **Requirement I: Performed usability tests with people**
 
