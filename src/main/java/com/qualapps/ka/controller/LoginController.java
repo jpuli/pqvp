@@ -4,6 +4,7 @@ import com.qualapps.ka.common.PqvpException;
 import com.qualapps.ka.common.Utils;
 import com.qualapps.ka.data.UserProfileData;
 import com.qualapps.ka.display.User;
+import com.qualapps.ka.service.EmailService;
 import com.qualapps.ka.service.UserProfileService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,11 +23,15 @@ import java.util.List;
 
 @Controller
 public class LoginController {
+  private final EmailService emailService;
   private final UserProfileService service;
   private Utils utils = new Utils();
 
   @Autowired
-  public LoginController(UserProfileService service) { this.service = service; }
+  public LoginController(UserProfileService service, EmailService emailService) {
+    this.service = service;
+    this.emailService = emailService;
+  }
 
   @GetMapping("/")
   public String index(Model model, HttpSession session,HttpServletRequest request) {
@@ -68,6 +73,11 @@ public class LoginController {
       user.setId(userProfileData.getUsrProfileId());
       user.setRole(userProfileData.getUsrRole());
       session.setAttribute("user", user);
+      StringBuilder body = new StringBuilder();
+      body.append("New Sign-in to Daas Application By ");
+      body.append(user.getName());
+      body.append("\nhttp://daas.qualapps.com/");
+      emailService.sendTextEmail("qualapps.jira.read@gmail.com","info@qualapps.com", null, "New Sign-in to Daas Application By ["+user.getName()+"]", body.toString());
       return "redirect:home";
     } catch (PqvpException e) {
       e.printStackTrace();
