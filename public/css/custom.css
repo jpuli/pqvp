@@ -6,7 +6,7 @@
 
 body {
     background: #f9fafb;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .no-padding {
@@ -232,16 +232,20 @@ ul.article-feed li {
 
 .article-tag {
     padding: 3px 12px;
-    color: #172B4D;
-    background-color: #f4f4f5;
+    color: #2ca42d;
     border-radius: .5em;
     font-size: .85em;
     margin-right: 5px;
+    border: 1px solid #2CA52C;
 }
 
 .article-tag:hover {
-    background-color: #333;
-    color: white;
+    padding: 3px 12px;
+    color: #ffffff;
+    background-color: #2CA52C;
+    border-radius: .5em;
+    font-size: .85em;
+    margin-right: 5px;
 }
 
 .article-tags a {
@@ -276,7 +280,7 @@ ul.article-feed li {
 }
 
 .content-area {
-    padding: 2em 3em;
+    padding: 2.5em 3em;
 }
 
 .home-split-feed .card-body {
@@ -284,14 +288,18 @@ ul.article-feed li {
 }
 
 p.article-desc {
-    color: #5E6C84;
-    margin-bottom: .55em;
+    color: #737373;
+    margin-bottom: .35em;
+    font-size: .95em;
 }
-
 ul.article-feed li {
-    border-bottom: 1px solid #efefef;
-    padding-bottom: 1.5em;
-    padding-top: 1.5em;
+    border-bottom: none;
+    padding-bottom: .75em;
+    padding: 1.5em;
+    background: white;
+    border-radius: .5em;
+    border: 1px solid gainsboro;
+    margin-top: .75em;
 }
 
 ul.article-feed li:last-child {
@@ -314,6 +322,10 @@ h4.article-title a {
 
 h4.article-title {
     margin-bottom: .15em;
+}
+h4.article-title a:hover {
+    text-decoration: none;
+    color: #000;
 }
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
@@ -357,7 +369,7 @@ h4.article-title {
 .search-input input.form-control {
     position: relative;
     padding-left: 40px;
-    height: 2.75em;
+    height: 2.5em;
     width: 100%;
     border: none;
     -webkit-box-shadow: 0 0 1px rgba(39, 44, 49, .1), 0 3px 16px rgba(39, 44, 49, .07);
@@ -1535,8 +1547,16 @@ h1.section-title {
 
 .top-search .form-control:focus {
     background: #f9fafb;
-
 }
+.app-bar-navbar {
+    padding: .5rem 2rem;
+}
+
+ul.navbar-nav.ml-auto.user-info {
+    float: right;
+}
+
+
 @keyframes feedback-animation {
     0% {
         -webkit-transform: scale(1);
@@ -1565,4 +1585,91 @@ h1.section-title {
     label.float-label {
         line-height: 2.8em;
     }
+    .app-bar-navbar {
+        padding: .45rem .5rem;
+    }
+    .app-bar-navbar .row{
+        margin:0 auto;
+    }
+    .app-bar-navbar .row .col-12, .app-bar-navbar .row .col-9, .app-bar-navbar .row .col-3 {
+        padding: 0;
+    }
+}
+.mobile-user-login {
+    display: none;
+}
+.mobile-user-login svg {
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+}
+@media (max-width: 992px) {
+    .navbar-brand {
+        justify-content: center;
+    }
+    .user-info {
+        display: none;
+    }
+    .col-lg-2.bg-light.sidebar .bd-links {
+        background: #13233c;
+        padding: 1.5em;
+    }
+    .sidebar li.nav-item a.nav-link {
+        color: #fff;
+    }
+    .sidebar-heading {
+        color: #c5c5c5;
+    }
+    .sidebar li.nav-item a.nav-link:hover {
+        background: #1f3559;
+        border-left: #1f3559;
+        color: #fff;
+    }
+    .sidebar {
+        border-right: 0;
+    }
+    .mobile-user-login {
+        display: block;
+        background: #1f3559;
+        color: white;
+        margin: -20px;
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1em;
+    }
+    .mobile-user-login a {
+        color: white;
+        display: block;
+        font-weight: 700;
+    }
+    div#bookmark-this {
+        margin-bottom: 1em;
+        float: none!important;
+        justify-content: center;
+    }
+}
+span.user-name {
+    margin-right: 0.35em;
+}
+
+svg.feather.feather-check.success {
+    height: 3em;
+    background: #2CA52C;
+    border-radius: 50%;
+    width: 3em;
+    padding: .75em;
+    color: #ffffff;
+}
+.success-submitted {
+    text-align: center;
+    padding-top: 4em;
+}
+.bg-light {
+    background-color: #ffffff!important;
+}
+a.nav-link.comingsoon {
+    color: #888888!important;
+    font-style: italic;
 }
