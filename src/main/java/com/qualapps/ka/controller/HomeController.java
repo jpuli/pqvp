@@ -39,6 +39,7 @@ public class HomeController {
     }
 
     modelMap.put("user", user);
+    modelMap.put("isHomePage", true);
 
     try {
       List<CategoryData> categories = articleService.getCategories();
