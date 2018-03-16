@@ -115,7 +115,7 @@ public class ArticleViewController {
       e.printStackTrace();
       return "redirect:/home";
     } finally {
-      if (articleData != null) {
+      if (articleData != null && PqvpConstants.STATUS_APPROVED.equals(articleData.getArtStatus())) {
         try {
           long currentViews = articleData.getArtViews();
           articleData.setArtViews(++currentViews);
