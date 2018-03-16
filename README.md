@@ -12,7 +12,7 @@ QualApps is thankful for the opportunity to submit a response to RFI# CDT–PQVP
 
 ## [Link to DAAS  Web Application ](http://daas.qualapps.com/)
 
-This application is fully responsive and complies with ADA guidelines.  It is best viewed in Chrome or FireFox, but will function in Edge or IE. We created three users, each with a different role: Jessica (Admin), Harvey (Creator), and Mike (Viewer).  To review this web-application and evaluate the functionality, use any of these personas.  
+This application is fully responsive and complies with guidelines.  It is best viewed in Chrome or FireFox, but will function in Edge or IE. We created three users, each with a different role: Jessica (Admin), Harvey (Creator), and Mike (Viewer).  To review this web-application and evaluate the functionality, use any of these personas.  
 
 
 ## Managing Product Development
@@ -254,7 +254,9 @@ The README.md file should also make reference to the following:
 
 **Requirement A: Assigned one (1) leader and gave that person authority and responsibility and held that person accountable for the quality of the prototype submitted;**
 
-Our team selected Suresh Kannan to serve as the product owner with authority and responsibility for defining product scope and verifying completeness. He was accountable for delivery of the working prototype. Mr. Kannan has roughly 20 years of Information Technology experience in software product development, implementation, and Agile delivery.  On this effort, he worked with users to gather feedback, provided guidance on wireframes, and helped craft User Stories. He also helped with backlog grooming. 
+Our team selected Suresh Kannan to serve as the product owner with authority and responsibility for defining product scope and verifying completeness. He was ultimately accountable for delivery of the working prototype. Mr. Kannan has 20 years of Information Technology experience in software product development, implementation, and Agile delivery.  
+
+On this effort, he worked with users to gather feedback, provided guidance on wireframes, and helped craft User Stories. He helped with backlog grooming and prioritizing Stories as high, medium, and low.  Team members were encouraged to select which User Stories they wanted to develops. At times, however, the Product Manager made assigments based on the priorities. 
 
 **Requirement B: Assembled a multidisciplinary and collaborative team that includes, at a minimum, five (5) of the labor categories as identified in Attachment B: PQVP AD-DS Labor Category Descriptions;**
 
@@ -308,15 +310,14 @@ QualApps convened a multidisciplinary team of highly experienced Information Tec
 
 
 **Requirement C: Understood what people needed, by including people in the prototype development and design process;** 
-The QualApps Project Director and Agile Coach reviewed the working prototype statement from the RFI to better understand and deconstruct the requirements of the prototype into epics. The QualApps Project Director coalesced a team of technical professionals to discuss how the identified epics would be architected based on the RFI requirements for simplicity, ease of use and open source.
 
-The QualApps Project Director added additional analyst resources to the Scrum team to work with Izzie in establishing end user stories defining emergency and non-emergency notification needs.
+The QualApps team collectively reviewed the RFI to understand product requirements. Uder the Product Director's guidance, the QualApps  team discussed how the solution would be architected based on the RFI.  The team collaborated on User Stories. The QualApps Business Analyst conducted internet-based research on knowledge-sharing concepts and application features.  The research resulted in new and refined User Stories. The team's goal was to quickly develop a simple, elegant application that meets functional needs and compliance requirements -- ADA, WCAG 2.0. 
 
-The QualApps Researcher and Business analyst conducted internet-based research on the concepts for establishing an emergency notification network looking at the business needs of the individuals requesting notification as well as the technologies supporting such systems. Additional questions resulted from this research were posed to the end user to refine user stories and establish acceptance criteria.
+We included colleagues outside of our QualApps team to discuss basic functionality and review wireframes and mock-ups.  These same individuals also reviewed multiple iterations of the prototype and providede feedback on how we could make improvements. 
 
-vi.	A project was created in Jira  and the epics and user stories were added.
-vii.	The QualApps team reviewed and prioritized user stories and determined the design of the prototype using agreed upon technologies.
-viii.	Using the minimal viable product (MVP) approach, the Product Manager identified user stories belonging in backlog and assigned work to the team based on the most critical elements needed to provide a working prototype.
+
+
+
 ix.	Once the prototype was tangible enough to produce a response, the team, including the end user, implemented role play. This included testing within our team in order to gain realistic and effective feedback for improvements.
 x.	After receiving prototype feedback based on the role play, the team began integrating the feedback into the backlog as part of the next iteration of the prototype. Some of the identified user stories were created as icebox items to demonstrate that we are taking a MVP approach.
 
