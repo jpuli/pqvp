@@ -87,6 +87,7 @@ public class AdminController {
     }
     modelMap.put("user", user);
     modelMap.put("isAdminQueuePage", true);
+    modelMap.put("pageTitle", "Approval Queue");
     modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
     try {
       List<CategoryData> categories = articleService.getCategories();
@@ -110,6 +111,6 @@ public class AdminController {
       articles.add(new Article(articleData, userService));
     }
     modelMap.put("articles", articles);
-    return "admin_queue";
+    return "article_queue";
   }
 }
