@@ -16,7 +16,7 @@
           <a class="nav-link" th:classappend="${isAdminQueuePage} ? active" href="/admin/queue">Approval Queue (<span class="action-count" th:text="${adminQueueCount}">3</span>)</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Approved by me</a>
+          <a class="nav-link" th:classappend="${isApprovedByMePage} ? active" href="/admin/approved">Approved by me</a>
         </li>
       </ul>
       <h6 class="sidebar-heading px-3 mt-4 mb-1">

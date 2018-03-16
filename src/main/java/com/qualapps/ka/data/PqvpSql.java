@@ -29,7 +29,7 @@ public class PqvpSql {
 
 	public static final String getArticlesByUser= "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_creator = ? order by  change_date desc";
 
-	public static final String getArticlesByStatusAndUser = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_status = ? and art_creator = ? order by  change_date desc";
+	public static final String getArticlesByStatusAndUser = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_status = ? and change_user = ? order by  change_date desc";
 
 	public static final String getArticlesByStatus = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_status = ? order by  change_date desc";
 
