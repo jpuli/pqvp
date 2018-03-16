@@ -407,10 +407,12 @@ h1.page-title {
     font-size: .95em;
     display: inline-block;
     margin-bottom: 1em;
+    display: none;
 }
 
+
 .go-back:hover {
-    background: #EEF1F6;
+    background: #F3F2F2;
 }
 
 .go-back span {
