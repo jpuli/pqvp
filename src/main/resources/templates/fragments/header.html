@@ -6,11 +6,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" th:href="'/css/bootstrap.min.css?version='+${version}">
   <!-- Plex Font -->
-  <link rel="stylesheet" href="/css/ibm-plex.css">
+  <link rel="stylesheet" th:href="'/css/ibm-plex.css?version='+${version}">
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="/css/custom.css">
+  <link rel="stylesheet" th:href="'/css/custom.css?version='+${version}">
   <title th:text="'Knowledgebase Application - ' + ${title}">Knowledgebase Application - Prototype</title>
 </head>
 <body>

@@ -38,7 +38,8 @@ public class LoginController {
 	  {
 		  selectUserError = Boolean.TRUE;
 	  }
-	   
+
+    model.addAttribute("version", utils.getVersion());
     Object user = session.getAttribute("user");
     if (user != null && user instanceof User) {
       return "redirect:home";
@@ -54,6 +55,7 @@ public class LoginController {
     session.removeAttribute("user");
     model.addAttribute("users", getListAllUsers());
     model.addAttribute("logout", true);
+    model.addAttribute("version", utils.getVersion());
     return "index";
   }
 

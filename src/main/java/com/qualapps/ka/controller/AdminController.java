@@ -86,6 +86,7 @@ public class AdminController {
       return "redirect:/home";
     }
     modelMap.put("user", user);
+    modelMap.put("version", utils.getVersion());
     modelMap.put("isAdminQueuePage", true);
     modelMap.put("pageTitle", "Approval Queue");
     modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
@@ -123,6 +124,7 @@ public class AdminController {
       return "redirect:/home";
     }
     modelMap.put("user", user);
+    modelMap.put("version", utils.getVersion());
     modelMap.put("isApprovedByMePage", true);
     modelMap.put("pageTitle", "Approved By Me");
     modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
@@ -155,6 +157,7 @@ public class AdminController {
       return "redirect:/home";
     }
     modelMap.put("user", user);
+    modelMap.put("version", utils.getVersion());
     modelMap.put("isUserSubmissionPage", true);
     modelMap.put("pageTitle", "My Submission Queue");
     modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));

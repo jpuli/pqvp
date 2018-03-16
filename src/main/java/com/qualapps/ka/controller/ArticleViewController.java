@@ -38,6 +38,7 @@ public class ArticleViewController {
     if (user == null) {
       return "redirect:/logout";
     }
+    modelMap.put("version", utils.getVersion());
     modelMap.put("user", user);
     modelMap.put("isCreateNewPage", true);
     modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
@@ -98,6 +99,7 @@ public class ArticleViewController {
       return "redirect:/logout";
     }
     modelMap.put("user", user);
+    modelMap.put("version", utils.getVersion());
     modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
     try {
       List<CategoryData> categories = articleService.getCategories();
@@ -116,6 +118,7 @@ public class ArticleViewController {
       return "redirect:/logout";
     }
     modelMap.put("user", user);
+    modelMap.put("version", utils.getVersion());
     modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
     try {
       List<CategoryData> categories = articleService.getCategories();
