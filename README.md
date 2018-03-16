@@ -325,13 +325,20 @@ x.	After receiving prototype feedback based on the role play, the team began int
 
 **Requirement E: Used GitHub to document code commits**
 
+The team used GitHub for source control and commits. 
+
 **Requirement F: Used OpenAPI to document the RESTful API, and provided a link to the OpenAPI**
+
+The solution uses OpenAPI...
 
 **Requirement G: Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0**
 
 **Requirement H: Created or used a design style guide and/or a pattern library**
 
+
 **Requirement I: Performed usability tests with people**
+
+Yes... we did this
 
 **Requirement J: Used an iterative approach, where feedback informed subsequent work or versions of the prototype**
 
@@ -342,15 +349,29 @@ x.	After receiving prototype feedback based on the role play, the team began int
 **Requirement M: Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as Service (PaaS) provider, and indicated which provider they used**
 
 **Requirement N: Developed automated unit tests for their code**
+Yes. using Jenkins CI pipline automate
+
 
 **Requirement O: Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider**
 
+Yes. Jenkins
+
 **Requirement P: Setup or used configuration management**
+
+Github for CM and source control
 
 **Requirement Q: Setup or used continuous monitoring**
 
+Does AWS have continuous montioring
+
 **Requirement R: Deployed their software in an open source container, such as Docker (i.e., utilized operating-system-level virtualization)**
+
+Used Docker
 
 **Requirement S: Provided sufficient documentation to install and run their prototype on another machine**
 
 **Requirement T: Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge**
+
+Yes.  The protopye is entirely openly licensed.  Everything under MIT or GPL
+
+As stated in Requirement L the team used open-source technologies to build the DAAS Prototype, and its underlying platform utilizing tools and techniques that are either openly licensed are free of charge. Please refer to the list of tools in Requirement L above.
