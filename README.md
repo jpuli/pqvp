@@ -317,14 +317,15 @@ We included colleagues outside of our QualApps team to discuss basic functionali
 
 **Requirement D: Used at least a minimum of three (3) “user-centric design” techniques and/or tools**
 
-The team used a number of user-centered design techniques.  To begin with, our Business Analyst conducted research on knowledg-sharing platforms.  He evaluated various platforms, look-and-feel, feedback mechanisms, moderator activity, ways to collaps comments, to name just a few features.  Findings were discussed with the team, and the Product Backlog was updated accordingly.
+The team used a number of user-centric design techniques.  To begin with, our Business Analyst conducted research on knowledg-sharing platforms.  He evaluated various platforms, look-and-feel, feedback mechanisms, moderator activity, ways to collapse comments, to name just a few features.  Findings were discussed with the team, and the Product Backlog was updated accordingly.
 
-Our team members also <a href="https://github.com/jpuli/pqvp/blob/master/interview.md">interview</a> colleagues that served as end users for the DAAS product.  We asked basic interview questions.
+Our team members also <a href="https://github.com/jpuli/pqvp/blob/master/interview.md">interviewed</a> a colleague that served as an end user for the DAAS product.
 
-The team also evaluated User Personas.  We considered various types of individuals that would XXXXXX 
+The team evaluated User Personas.  We considered various types of individuals that would interact with the system.  Since the context is a knowledge sharing platform for government employees, we considered the types of personas that might benefit from this application.  We addressed three personas: 1) Bob, the seasoned employee looking forward to transitioning into retirement, 2) Jim, the millenial just starting off in his career, and 3) Susan, the manager who is concerned about workforce development and ensuring that as employees retire and new employees move in to take their place that knowledge transfer occurs.
 
-To evaluate the initial set product features and workflow, the DAAS development team developed wireframes.  This effort helped take our unpolished ideas about the product to the next level.  It gave us insight into function, navigation, and even aesthetics. 
+To evaluate the initial set product features and workflow, the DAAS development team developed wireframes.  This effort helped take our unpolished ideas about the product to the next level.  It gave us insight into function, navigation, and even aesthetics.  This effort made it clear that our emphasis should be on simplicity.
 
+As the prototype was developed, colleagues interacted with the system and gave us feedback on its form and function.  We also researched and considered usability testing methods.
 
 
 **Requirement E: Used GitHub to document code commits**
