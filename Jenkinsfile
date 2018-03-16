@@ -24,5 +24,11 @@ node {
     stage('Reports') {
       step([$class: 'JUnitResultArchiver', testResults: '**/surefire-reports/*.xml'])
     }
+    stage('Clean-Up') {
+      sh "docker ps -qa | xargs docker rm"
+      sh "docker images -q | xargs docker rmi"
+      sh "ssh ec2-user@ec2-54-245-38-51.us-west-2.compute.amazonaws.com docker ps -qa | xargs docker rm"
+      sh "ssh ec2-user@ec2-54-245-38-51.us-west-2.compute.amazonaws.com docker images -q | xargs docker rmi"
+    }
   }
 }
