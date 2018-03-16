@@ -1,6 +1,20 @@
 <!doctype html>
 <html lang="en">
 <head th:replace="fragments/header :: kaHeader (title='User Login')" />
+<style>
+label.error
+{
+color:red;
+font-family:verdana, Helvetica;
+}
+.asterisk_input:after {
+content:" *"; 
+color: #e32;
+position: absolute; 
+margin: 0px 0px 0px -20px; 
+font-size: xx-large; 
+padding: 0 5px 0 0; }
+</style>
 <body>
 <div class="container-fluid login">
   <div class="container">
@@ -16,18 +30,18 @@
         <h1>Knowledge Management Tool</h1>
 
         <div class="login-non-sso ">
-          <form class="form-signin float-labels" role="form" method="post" action="login">
+          <form class="form-signin float-labels" role="form" method="post" action="login" id="loginform">
             <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
             <input type="hidden" name="FWAction" value="process"/>
             <input type="hidden" name="_csrf" value="9300366cd07b0381346e71feb2071c4f"/>
 
-
+            <span class="asterisk_input">  </span> 
             <select name="username" id="loginUsername" autofocus class="form-control" aria-label="Login User Selection">
               <option value="">Select User</option>
               <option
                   th:each="user : ${users}"
                   th:value="${user.getName()}" th:text="${user.getName()} + ' (' + ${user.getRole()} + ')'"></option>
-            </select>
+            </select> 
             <label for="inputPassword" class="float-label">Password</label>
             <input type="password" id="inputPassword" class="form-control"
                    name="pass">
@@ -54,6 +68,8 @@
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/feather.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+
 <script>
     feather.replace();
     $("#loginUsername, #inputPassword").bind('input propertychange', function () {
@@ -66,6 +82,22 @@
             $(this).prev().addClass('float-true');
         }
     });
+    
+    $(function()
+    		{
+    		    $("#loginform").validate(
+    		      {
+    		        rules: 
+    		        {
+    		          username: 
+    		          {
+    		            required: true
+    		          }
+    		        }
+    		      });	
+    		});
+    
+    
 </script>
 </body>
 </html>
