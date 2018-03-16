@@ -8,6 +8,7 @@ import com.qualapps.ka.data.CategoryData;
 import com.qualapps.ka.display.Article;
 import com.qualapps.ka.display.User;
 import com.qualapps.ka.service.ArticleService;
+import com.qualapps.ka.service.EmailService;
 import com.qualapps.ka.service.UserProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,12 +26,14 @@ import java.util.List;
 public class AdminController {
   private final ArticleService articleService;
   private final UserProfileService userService;
+  private final EmailService emailService;
   private Utils utils = new Utils();
 
   @Autowired
-  public AdminController(ArticleService articleService, UserProfileService userService) {
+  public AdminController(ArticleService articleService, UserProfileService userService, EmailService emailService) {
     this.articleService = articleService;
     this.userService = userService;
+    this.emailService = emailService;
   }
 
   @PostMapping("/admin/approve")
@@ -48,6 +51,15 @@ public class AdminController {
       article.setChngDate(new Date());
       article.setChngType("U");
       articleService.updateArticle(article, PqvpConstants.STATUS_APPROVED);
+      StringBuilder body = new StringBuilder();
+      body.append("Article #");
+      body.append(article.getArtId());
+      body.append(" [");
+      body.append(article.getArtTile());
+      body.append("] Approved By ");
+      body.append(user.getName());
+      body.append("\nhttp://daas.qualapps.com/");
+      emailService.sendTextEmail("qualapps.jira.read@gmail.com","info@qualapps.com",null, "Daas Article ["+article.getArtTile()+"] Published", body.toString());
     } catch (PqvpException e) {
       e.printStackTrace();
     }
