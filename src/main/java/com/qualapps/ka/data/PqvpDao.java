@@ -124,10 +124,10 @@ public class PqvpDao {
         return art;
     }
 
-    public ArticleData updateArticle(ArticleData art) {
-        pqvpDb.update(PqvpSql.updateArticle, art.getArtTile(), art.getArtContent(), art.getArtViews(),
-                art.getArtStatus(), art.getArtTags(), art.getArtAccess(), new Date(), "I", art.getChngUser(), art.getArtId());
-        return art;
+    public int updateArticle(ArticleData art) {
+        int rowsAffected = pqvpDb.update(PqvpSql.updateArticle, art.getArtTile(), art.getArtContent(), art.getArtViews(),
+                art.getArtStatus(), art.getArtTags(), art.getArtAccess(), art.getArtRating(), "U", new Date(), art.getChngUser(), art.getArtId());
+        return rowsAffected;
     }
 
     public void deleteArticle(long artId) {

@@ -97,8 +97,20 @@ public class PqvpDaoTest {
 
     @Test
     public void testCreateArticle() throws Exception {
+        int articleCount = dao.getArticles().size();
         ArticleData art = dao.addArticle(article);
-        assertThat(art.getArtId() != article.getArtId());
+        assertThat(articleCount + 1 == dao.getArticles().size());
+    }
+
+    @Test
+    public void testUpdateArticle() throws Exception {
+        int articleCount = dao.getArticles().size();
+        ArticleData art = dao.addArticle(article);
+        assertThat(articleCount + 1 == dao.getArticles().size());
+        art.setArtStatus(PqvpConstants.STATUS_REJECTED);
+        int rows = dao.updateArticle(art);
+        assertThat(rows == 1);
+        assertThat(dao.getArticles(art.getArtId()).getArtStatus().equals(PqvpConstants.STATUS_REJECTED));
     }
 
     @Test
