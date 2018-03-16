@@ -105,15 +105,27 @@ public class ArticleViewController {
     } catch (PqvpException e) {
       modelMap.put("categories", new ArrayList<CategoryData>());
     }
+    ArticleData articleData = null;
     try {
-      ArticleData articleData = articleService.getArticle(id);
+      articleData = articleService.getArticle(id);
       Article article = new Article(articleData, articleService, userService);
       modelMap.put("isAdminReview", (!PqvpConstants.STATUS_APPROVED.equals(articleData.getArtStatus()) && user.isAdmin()));
       modelMap.put("article", article);
     } catch (PqvpException e) {
       e.printStackTrace();
       return "redirect:/home";
+    } finally {
+      if (articleData != null) {
+        try {
+          long currentViews = articleData.getArtViews();
+          articleData.setArtViews(++currentViews);
+          articleService.updateArticle(articleData);
+        } catch (PqvpException e) {
+          // ignore error incrementing views to at least allow display
+        }
+      }
     }
+
     return "articles";
   }
 }
