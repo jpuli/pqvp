@@ -6,7 +6,7 @@
 
 body {
     background: #f9fafb;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 .no-padding {
@@ -322,6 +322,10 @@ h4.article-title a {
 
 h4.article-title {
     margin-bottom: .15em;
+}
+h4.article-title a:hover {
+    text-decoration: none;
+    color: #000;
 }
 
 .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
@@ -1664,4 +1668,8 @@ svg.feather.feather-check.success {
 }
 .bg-light {
     background-color: #ffffff!important;
+}
+a.nav-link.comingsoon {
+    color: #888888!important;
+    font-style: italic;
 }
