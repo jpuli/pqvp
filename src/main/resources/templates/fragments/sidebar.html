@@ -25,10 +25,10 @@
       </h6>
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-link" href="#">All</a>
+          <a class="nav-link" href="/categories">All</a>
         </li>
         <li th:if="${categories.size()} > 0" th:each="category : ${categories}" class="nav-item">
-          <a class="nav-link" th:text="${category.getCatDescr()}" href="#">Category Name</a>
+          <a class="nav-link" th:text="${category.getCatDescr()}" th:href="'/categories/'+${category.getCatName()}">Category Name</a>
         </li>
       </ul>
       <h6 class="sidebar-heading px-3 mt-4 mb-1">
