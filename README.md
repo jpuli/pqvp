@@ -254,6 +254,8 @@ The README.md file should also make reference to the following:
 
 **Requirement A: Assigned one (1) leader and gave that person authority and responsibility and held that person accountable for the quality of the prototype submitted;**
 
+Our team selected Suresh Kannan to serve as the product owner with authority and responsibility for defining product scope and verifying completeness. He was accountable for delivery of the working prototype. Mr. Kannan has roughly 20 years of Information Technology experience in software product development, implementation, and Agile delivery.  On this effort, he worked with users to gather feedback, provided guidance on wireframes, and helped craft User Stories. He also helped with backlog grooming. 
+
 **Requirement B: Assembled a multidisciplinary and collaborative team that includes, at a minimum, five (5) of the labor categories as identified in Attachment B: PQVP AD-DS Labor Category Descriptions;**
 
 QualApps convened a multidisciplinary team of highly experienced Information Technology (IT) professionals from within our internal staffing network to develop the DAAS knowledg-sharing solution. 
