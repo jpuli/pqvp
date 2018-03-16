@@ -25,12 +25,13 @@ public class LoginController {
   public LoginController(UserProfileService service) { this.service = service; }
 
   @GetMapping("/")
-  public String index(Model model, HttpSession session) {
+  public String index(Model model, HttpSession session, @RequestParam("selectUserError") boolean selectUserError) {
     Object user = session.getAttribute("user");
     if (user != null && user instanceof User) {
       return "redirect:home";
     } else {
       model.addAttribute("users", getListAllUsers());
+      model.addAttribute("selectUserError", selectUserError);
       return "index";
     }
   }
@@ -44,7 +45,7 @@ public class LoginController {
   }
 
   @PostMapping("/login")
-  public String login(HttpSession session, @RequestParam("username") String userName) {
+  public String login(HttpSession session, @RequestParam(name = "username", required = false) String userName) {
     try {
       UserProfileData userProfileData = service.getUserByName(userName);
       User user = new User();
@@ -55,7 +56,7 @@ public class LoginController {
       return "redirect:home";
     } catch (PqvpException e) {
       e.printStackTrace();
-      return "redirect:index";
+      return "redirect:/?selectUserError=true";
     }
   }
 
