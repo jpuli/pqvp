@@ -345,13 +345,19 @@ To comply with WCAG, our team used HTML5 and CSS3 technology during front end de
 
 **Requirement I: Performed usability tests with people**
 
-Yes... we did this
+As the prototype was developed, colleagues interacted with the system and gave us feedback on its form and function.  We also researched and considered usability testing methods.
 
 **Requirement J: Used an iterative approach, where feedback informed subsequent work or versions of the prototype**
 
+From start-to-finish, the team used an interative approach.  This began by working with users to evaluate wireframes, and very soon after that, multiple iterations of the DAAS Working Prototype.  We entered features and bugs into Jira, incorporated them into Sprints, made fixes, redeployed, and retested. 
+
 **Requirement K: Created a prototype that works on multiple devices, and presents a responsive design** 
 
+Our DAAS Working Prototype runs on multiple devices and is fully responsive. 
+
 **Requirement L: Used at least five (5) modern and open-source technologies, regardless of architectural layer (frontend, backend, etc.)**
+
+As referenced in other sections of this document, the team selected multiple open source tools to develop the working prototype: JQuery, HTML5, Bootstrap, OpenAPI, Java, Spring Boot, Linux/Docker, NGINX, Postgres.  We also used a number of open source tools to design and build the solution.  
 
 **Requirement M: Deployed the prototype on an Infrastructure as a Service (IaaS) or Platform as Service (PaaS) provider, and indicated which provider they used**
 
