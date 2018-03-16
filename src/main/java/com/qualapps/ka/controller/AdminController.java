@@ -40,6 +40,7 @@ public class AdminController {
     }
     modelMap.put("user", user);
     modelMap.put("isAdminQueuePage", true);
+    modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
     try {
       List<CategoryData> categories = articleService.getCategories();
       modelMap.put("categories", categories);

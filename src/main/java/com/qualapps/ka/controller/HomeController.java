@@ -39,6 +39,7 @@ public class HomeController {
     }
 
     modelMap.put("user", user);
+    modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
     modelMap.put("isHomePage", true);
 
     try {
@@ -80,6 +81,7 @@ public class HomeController {
     }
 
     modelMap.put("user", user);
+    modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
     modelMap.put("query", query);
 
     try {

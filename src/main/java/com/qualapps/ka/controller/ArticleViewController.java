@@ -38,6 +38,7 @@ public class ArticleViewController {
       return "redirect:/logout";
     }
     modelMap.put("user", user);
+    modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
     try {
       List<CategoryData> categories = articleService.getCategories();
       modelMap.put("categories", categories);
@@ -95,6 +96,7 @@ public class ArticleViewController {
       return "redirect:/logout";
     }
     modelMap.put("user", user);
+    modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
     try {
       List<CategoryData> categories = articleService.getCategories();
       modelMap.put("categories", categories);

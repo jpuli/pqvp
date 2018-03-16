@@ -1,11 +1,17 @@
 package com.qualapps.ka.common;
 
+import com.qualapps.ka.data.ArticleData;
+import com.qualapps.ka.display.Article;
 import com.qualapps.ka.display.User;
+import com.qualapps.ka.service.ArticleService;
+import com.qualapps.ka.service.UserProfileService;
 
 import javax.servlet.http.HttpSession;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 public class Utils {
@@ -16,6 +22,19 @@ public class Utils {
             user = (User)sessionData;
         }
         return user;
+    }
+
+    public int countAdminQueue(ArticleService articleService, UserProfileService userService) {
+        try {
+            List<ArticleData> approvalRequiredArticles = articleService.getArticlesByStatus(PqvpConstants.STATUS_SUBMITTED);
+            List<Article> articles = new ArrayList<>();
+            for (ArticleData articleData : approvalRequiredArticles) {
+                articles.add(new Article(articleData, userService));
+            }
+            return articles.size();
+        } catch (PqvpException e) {
+          return 0;
+        }
     }
 
 
