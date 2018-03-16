@@ -7,12 +7,12 @@ http://daas.qualapps.com/
 ![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/QualApps%2C%20Inc.png)
 
 ## QualApps’ ADPQ Submission
-QualApps is thankful for the opportunity to submit a rsponse to RFI# CDT–PQVP–0118.  In a short timeframe, QualApps mobilized a multi-disciplinary team to review this RFI and rapidly respond. We are pleased with the outcome and hope that the Department of Technology is equally pleased with our Working Prototype and Technical Approach.  
+QualApps is thankful for the opportunity to submit a response to RFI# CDT–PQVP–0118.  In a short timeframe, QualApps mobilized a multi-disciplinary team to review this RFI and rapidly respond. We are pleased with the outcome and hope that the Department of Technology is equally pleased with our Working Prototype and Technical Approach.  
 
 
 ## [Link to DAAS  Web Application ](http://daas.qualapps.com/)
 
-This application is fully responsive and complies with ADA guidelines.  It is best viewed in Chrome or FireFox, but will function in Edge or IE. We created three users, each with a different role: Jessica (Admin), Harvey (Creator), and Mike (Viewer).  To review this web-application and evaluate the functionlity, use any of these personas.  
+This application is fully responsive and complies with ADA guidelines.  It is best viewed in Chrome or FireFox, but will function in Edge or IE. We created three users, each with a different role: Jessica (Admin), Harvey (Creator), and Mike (Viewer).  To review this web-application and evaluate the functionality, use any of these personas.  
 
 
 ## Managing Product Development
@@ -21,9 +21,9 @@ Link to JIRA: https://qualappsinc.atlassian.net/secure/RapidBoard.jspa?rapidView
 Read only Username and Password
 
 # Technical Approach to Building DAAS
-The team adopted a Scrum-based approach to developm a Working Prototype. At the beginniing our effort we addressed environments, scope development, and established Epics and multiple User Stories that were addressed in three successive Sprints.  We also agreed upon User-Centered design strategies that we could employ in a compressed timeframe.  
+The team adopted a Scrum-based approach to develop a Working Prototype. At the beginniing our effort we addressed environments, scope development, and established Epics and multiple User Stories that were addressed in three successive Sprints.  We also agreed upon User-Centered design strategies that we could employ in a compressed timeframe.  
 
-Our team chose modern tools and techniques to manage this effort and to build the DAAS solution. The team used a "default to open" approach, leveraging many of the tools our company is familiar with thus accelerating delivery time. We used the following tools which we've catagorized as 
+Our team chose modern tools and techniques to manage this effort and to build the DAAS solution. The team used a "default to open" approach, leveraging many of the tools our company is familiar with thus accelerating delivery time. We used the following tools which we've categorized as 
 1) "Design-Time", meaning that we employed them for management and design activities, and 
 
 2) "Run-Time" which means that these products comprise the DAAS execution platform.
@@ -85,7 +85,7 @@ Docker containers will be used to containerize software components. This operati
 
 ## Physical Architecture
 
-The following diagram is a **reference model** for a robust production implementation – our MVP does not include clustered web, application, and database servers.  Nor have we implemented firewalls and load balancers.   DAAS does, however, reside on AWS infrastructure follwoing a traditional web-application architecture. 
+The following diagram is a **reference model** for a robust production implementation – our MVP does not include clustered web, application, and database servers.  Nor have we implemented firewalls and load balancers.   DAAS does, however, reside on AWS infrastructure following a traditional web-application architecture. 
 
 ![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/daas-arch-physical.png)
 
@@ -144,7 +144,7 @@ We discussed a couple of metrics for ways to evaluate the effectiveness of the D
 
 **Play 3 Make it simple and intuitive**
 
-The team focused on developing a tool that provides an easy-to-understand flow of operations based on what users want to accomplish: search the knowledge database, search information based on categories, create knowledge content, bookmark relavant information, and contribute to existing content.  We focused on ease-of-navigation and acknowledged that furnishing multi-language capabilities would remain in the backlog given the timeframe of the project.
+The team focused on developing a tool that provides an easy-to-understand flow of operations based on what users want to accomplish: search the knowledge database, search information based on categories, create knowledge content, bookmark relavent information, and contribute to existing content.  We focused on ease-of-navigation and acknowledged that furnishing multi-language capabilities would remain in the backlog given the timeframe of the project.
 
 - [x] Give users clear information about where they are in each step of the process (User Story in backlog, not implemented)
 - [x] Follow accessibility best practices to ensure all people can use the service
@@ -156,7 +156,7 @@ The team focused on developing a tool that provides an easy-to-understand flow o
 
 The team adopted a Scrum-based approach to development and identified a high-level scope to build a Working Prototype in a short timeframe. We identified three Sprints: Sprint 0 wherein we addressed high-level planning, product scope, product backlog and high-level user stories, development tools, and the architecture. During this Sprint we also established our development environments and built wire-frames.  In Sprint 1 we focused on User Stories that emphasized ease-of-use and on building a first Minimum Viable Product (MVP) furnishing basic DAAS functionality.  In the final Sprint, Sprint 2, we elaborated on DAAS to increase and enhance functionality and identified User Stories that would remain in the backlog as future enhancements. 
 
-The team used Jira to manage project activities.  Given team members' busy schedules and the compressed project timeframe, we sometimes struggled to keep the Jira Sprint board up-to-date via daily Scrums. However, we did successfully manage scope using Jira and used it to track and fix defects. The development process was definitely iteritave with progressive deployments allowing team members to rapidly test and provide feedback on bugs. 
+The team used Jira to manage project activities.  Given team members' busy schedules and the compressed project timeframe, we sometimes struggled to keep the Jira Sprint board up-to-date via daily Scrums. However, we did successfully manage scope using Jira and used it to track and fix defects. The development process was definitely iterative with progressive deployments allowing team members to rapidly test and provide feedback on bugs. 
 
 - [x] Ship a functioning “minimum viable product” (MVP) that solves a core user need as soon as possible
 - [x] Run usability tests frequently to see how well the service works and identify improvements that should be made
@@ -185,15 +185,15 @@ Suresh Kannan, our CEO, served as the Product Manager.  He has decision-making a
 
 **Play 7 Bring in experienced teams**
 
-QualApps assembled a multidisciplanry team of experts, senior leaders in software development and delivery.  All but one of these individuals has a minimum of ten years experience; some have as much two decades of experience.  Our expertise spans numerous proprietary and open source technologies, products, and frameworks.  We have custom developed many applications and served as trusted advisors to our clients.  A sampling of our accomplishments is as follows:
+QualApps assembled a multidisciplinary team of experts, senior leaders in software development and delivery.  All but one of these individuals has a minimum of ten years experience; some have as much two decades of experience.  Our expertise spans numerous proprietary and open source technologies, products, and frameworks.  We have custom developed many applications and served as trusted advisors to our clients.  A sampling of our accomplishments is as follows:
 
 * For the California Public Employees' Retirement System (CalPERS), we architected and developed a robust enterprise application integration framework built in Java to integrate subsystems with the CalPERS system of record. 
-* For the California Department of Tax and Fee Amdministreation (formerly the Board of Equalization), QualApps developed and deployed a scalable and secure B2B integration solution. 
+* For the California Department of Tax and Fee Administration (formerly the Board of Equalization), QualApps developed and deployed a scalable and secure B2B integration solution. 
 * For the Department of Justice, QualApps experts evaluated an existing Ruby on Rails criminal justice application and redesigned and replaced it with responsive solution that improves supportability and efficiency. 
 * For CalPERS, QualApps custom developed The Travel Request and Expense Claims (TREK) application that enables State employees to establish travel profiles, automates the approval process for travel requests, and simplifies submitting expense claims for reimbursement. The solution generates all State-required forms and uses digital signatures for approval.  It also interfaces with multiple third-party services.  
 
 
-What sets QualApps apart is that it is led by technologists.  Applying technology to solve business problems is not merely a vocation, it is a passion.  Under "Requiement B", addressed below, we have included the project team members and a link to their LinkidIn profiles. 
+What sets QualApps apart is that it is led by technologists.  Applying technology to solve business problems is not merely a vocation, it is a passion.  Under "Requirement B", addressed below, we have included the project team members and a link to their LinkedIn profiles. 
 
 - [x] Member(s) of the team have experience building popular, high-traffic digital services
 - [x] Member(s) of the team have experience designing mobile and web applications
@@ -203,7 +203,7 @@ What sets QualApps apart is that it is led by technologists.  Applying technolog
 
 
 **Play 8 Choose a modern technology stack**
-The development team selected a product stack that it was familiar with to aid a quick delivery time.  We selected stat-of-the-art open source technoloies that are commonly in use and, we believe, sustainable.  These products made it easy to comply with the RFI's technical requirements.  As outlined in the Technical Response, the team used the following tools for DAAS solution:
+The development team selected a product stack that it was familiar with to aid a quick delivery time.  We selected state-of-the-art open source technologies that are commonly in use and, we believe, sustainable.  These products made it easy to comply with the RFI's technical requirements.  As outlined in the Technical Response, the team used the following tools for DAAS solution:
 
 **Run-Time**
 
@@ -221,13 +221,13 @@ The development team selected a product stack that it was familiar with to aid a
 
 * AWS -- Infrastructure
 
-* Linux/Docker -- QualApps selected Docker because of its containerizatoin ability to rapidly stand up computing environments.  The use of images to package, deploy, and run apps helps us meet RFI requirements, namely providing instructions that enables others to deploy DAAS.  
+* Linux/Docker -- QualApps selected Docker because of its containerization ability to rapidly stand up computing environments.  The use of images to package, deploy, and run apps helps us meet RFI requirements, namely providing instructions that enables others to deploy DAAS.  
 
 * NGINX -- The team selected the open-source NGINX because it is lightweight and very easily meets performance demands.  
 
 * Spring Boot -- Our team is very familiar with the Spring Boot framework.  The framework simplifies configuration and enabled us tp quickly stand up web applications.  
 
-* Postgres -- We selected Postgres because of its power and flexibility, its market sustainabiltiy, its broad customer base, its applicability across industries, e.g., finance, gaming, government, and our experience with it.  
+* Postgres -- We selected Postgres because of its power and flexibility, its market sustainability, its broad customer base, its applicability across industries, e.g., finance, gaming, government, and our experience with it.  
 
 
 
@@ -363,7 +363,7 @@ The team used Github for CM and source control.
 
 **Requirement Q: Setup or used continuous monitoring**
 
-Does AWS have continuous montioring
+The appliation can make use of out-of-the-box AWS monitoring. 
 
 **Requirement R: Deployed their software in an open source container, such as Docker (i.e., utilized operating-system-level virtualization)**
 
@@ -375,4 +375,4 @@ Installation instructions are found in the Install.md.
 
 **Requirement T: Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge**
 
-The protopye is entirely openly licensed: Docker, Thymeleaf, Java, Junit, Maven, Git, JQuery, Jenkins, Docker-Compose, AWS, Postgres. 
+The entire prototype is openly licensed: Docker, Thymeleaf, Java, Junit, Maven, Git, JQuery, Jenkins, Docker-Compose, AWS, Postgres. 
