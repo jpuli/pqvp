@@ -239,7 +239,7 @@ The development team selected a product stack that it was familiar with to aid a
 
 **Play 9 Deploy in a flexible hosting environment**
 
-The team evaluated all the questions in Play 9.  Given the state of the Working Prototype, we determined that many of hte requirements did not apply at this time.  We hosted the DAAS Working Prototype on AWS.  It is deployed on Docker, making it easy to stand up new containers as needed.  Docker can be managed using a variety of tools such as Kubernetes which  provide "self-healing" capabilities should problems emerge.  While we do not anticipate large volumes of traffic, we have architected the solution that makes it easy to scale vertically and horizontally and throttle based on user demand.  
+The team evaluated all the questions in Play 9.  Given the state of the Working Prototype, we determined that many of the requirements did not apply at this time.  We hosted the DAAS Working Prototype on AWS.  It is deployed on Docker, making it easy to stand up new containers as needed.  Docker can be managed using a variety of tools such as Kubernetes which  provide "self-healing" capabilities should problems emerge.  While we do not anticipate large volumes of traffic, we have architected the solution that makes it easy to scale vertically and horizontally and throttle based on user demand.  
 
 - [x] Resources are provisioned on demand
 - [x] Resources scale based on real-time user demand (Future.)
