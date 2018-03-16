@@ -1,5 +1,6 @@
 package com.qualapps.ka.controller;
 
+import com.qualapps.ka.common.PqvpConstants;
 import com.qualapps.ka.common.PqvpException;
 import com.qualapps.ka.common.Utils;
 import com.qualapps.ka.data.ArticleData;
@@ -104,7 +105,10 @@ public class ArticleViewController {
       modelMap.put("categories", new ArrayList<CategoryData>());
     }
     try {
-      modelMap.put("article", new Article(articleService.getArticle(id), userService));
+      ArticleData articleData = articleService.getArticle(id);
+      Article article = new Article(articleData, userService);
+      modelMap.put("isAdminReview", (PqvpConstants.STATUS_SUBMITTED.equals(articleData.getArtStatus()) && user.isAdmin()));
+      modelMap.put("article", article);
     } catch (PqvpException e) {
       e.printStackTrace();
       return "redirect:/home";

@@ -6,8 +6,47 @@
     <div class="container-fluid no-gutters">
       <div class="row">
         <div th:replace="fragments/sidebar :: signedIn (categories=${categories})" class="col-lg-2 bg-light sidebar"></div>
-        <main role="main" class="offset-lg-1 col-lg-8 no-padding">
-          <div class="container-fluid content-area">
+        <main role="main" class="col-lg-10 no-padding">
+          <!--Article Approval -->
+          <div th:if="${isAdminReview}" class="col-lg-12 article-approval content-area">
+            <div class="container">
+              <div class="row admin-tools">
+                <div class="col-lg-5 flex-align-center">
+                  <div class="row content-info">
+                    <div class="col-lg-2"><i data-feather="layout"></i></div>
+                    <div class="col-lg-10">
+                      <h4 class="col-info-heading">Manage content</h4>
+                      <h3 th:text="${article.getTitle()}">13 Health Benefits of Coffee, Based on Science</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <div class="row flex-align-center">
+                    <div class="col-lg-3"><h4 class="col-info-heading">Status</h4>
+                      <p class="col-info-data">Awaiting approval</p></div>
+                    <div class="col-lg-9"> <div class="approval-actions">
+                      <ul>
+                        <li>
+                          <button type="button" id="rejectArticleBtn" class="btn btn-link"><i data-feather="x"></i> Reject</button>
+                        </li>
+                        <li>
+                          <button class="btn btn-success" type="submit" name="submit" value="Submit"><i data-feather="check"></i> Approve & Publish</button>
+                        </li>
+                      </ul>
+                    </div></div>
+                  </div>
+                </div>
+              </div>
+              <form class="reject-article hidden">
+                <div class="form-group col-lg-6 offset-lg-3 reject">
+                  <label for="rejectReason">Reason for rejection</label>
+                  <textarea class="form-control" id="rejectReason" rows="3"></textarea>
+                  <button class="btn btn-danger btn-sm float-right" type="submit" name="submit" value="Submit">Reject</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="container-fluid col-lg-10 no-padding content-area">
             <!--Back to previous page -->
             <a class="go-back" href="javascript:history.back()" title="Return to previous page">
                     <span>
@@ -68,13 +107,30 @@
       </main>
       </div>
     </div>
+
     <!-- JavaScript -->
-    <script src="/js/jquery-3.2.1.slim.min.js"></script>
+    <!--Bootstrap Defaults-->
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
+    <script src="/js/tether.min.js"></script>
     <script src="/js/popper.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
+    <!--Feather Icons-->
     <script src="/js/feather.min.js"></script>
-    <script>
-      feather.replace();
-    </script>
+
+
+    <script th:inline="javascript">
+    feather.replace();
+
+    $("#bookmark-this").on('click', function() {
+        $(".bookmarkIcon").toggleClass('filled');
+    })
+
+    [# th:if="${isAdminReview}" ]
+    $("#rejectArticleBtn").on('click', function(){
+        $(".reject-article").toggleClass('hidden');
+    })
+    [/]
+</script>
   </body>
 </html>

@@ -48,9 +48,9 @@ public class AdminController {
       modelMap.put("categories", new ArrayList<CategoryData>());
     }
     try {
-      List<ArticleData> popularArticles = articleService.getArticlesByStatus(PqvpConstants.STATUS_SUBMITTED);
+      List<ArticleData> approvalRequiredArticles = articleService.getArticlesByStatus(PqvpConstants.STATUS_SUBMITTED);
       List<Article> articles = new ArrayList<>();
-      for (ArticleData articleData : popularArticles) {
+      for (ArticleData articleData : approvalRequiredArticles) {
         articles.add(new Article(articleData, userService));
       }
       modelMap.put("articles", articles);
