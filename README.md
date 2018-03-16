@@ -2,7 +2,6 @@
 # Request for Information (RFI) # CDT–PQVP–0118 
 # Pre-Qualified Vendor Pool for Agile Development – Digital Services
 
-http://daas.qualapps.com/
 
 ![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/QualApps,Inc.png)
 
