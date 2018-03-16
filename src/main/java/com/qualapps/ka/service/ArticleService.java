@@ -62,7 +62,7 @@ public class ArticleService {
                 throw new PqvpException(ARTICLE_NOT_CREATED_EXCEPTION, params);
             } else {
                 // add art-category
-                pqvpdao.addCatArt(art.getArtId(), art.getCatId());
+                // pqvpdao.addCatArt(art.getArtId(), art.getCatId());
             }
         } catch (Exception e) {
             String[] params = new String[]{};
@@ -89,7 +89,7 @@ public class ArticleService {
                 throw new PqvpException(ARTICLE_NOT_CREATED_EXCEPTION, params);
             } else {
                 // update art-category
-                pqvpdao.updateCatArt(art.getCatId(), art.getArtId());
+                // pqvpdao.updateCatArt(art.getCatId(), art.getArtId());
             }
         } catch (Exception e) {
             String[] params = new String[]{};

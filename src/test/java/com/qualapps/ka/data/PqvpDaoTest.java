@@ -50,14 +50,15 @@ public class PqvpDaoTest {
 
         // new article
         article = new ArticleData();
-        article.setArtId(9999);
+        // article.setArtId();
         article.setArtTile("New Test Article");
         article.setArtContent("this is a new article to test the ....");
-        article.setArtStatus("Initial");
-        article.setArtCreator("JohnQPublic");
-        article.setCatId(1);
         article.setArtViews(1);
+        article.setArtStatus("SUBMITTED");
         article.setArtRating(1);
+        article.setArtCreator("JohnQPublic");
+        article.setArtCreateTime(Calendar.getInstance().getTime());
+        //article.setCatId(1);
         article.setChngDate(Calendar.getInstance().getTime());
         article.setChngType("I");
         article.setChngUser("testUser");
@@ -87,9 +88,9 @@ public class PqvpDaoTest {
 
     @Test
     public void testCreateArticle() throws Exception {
-        dao.addArticle(article);
-        List<ArticleData> arts = dao.getArticles(9999);
-        assertThat(arts.get(0).getArtId() == article.getArtId());
+        ArticleData newArt = dao.addArticle(article);
+        System.out.println(newArt.getArtId());
+        assertThat(newArt.getArtId() > 1);
     }
 
     @Test

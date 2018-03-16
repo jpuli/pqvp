@@ -83,9 +83,10 @@ public class PqvpDao {
     }
 
     public ArticleData addArticle(ArticleData art) {
-        pqvpDb.update(PqvpSql.addArticle, art.getArtId(), art.getArtTile(), art.getArtContent(), art.getArtViews(),
-                art.getArtStatus(), art.getArtRating(), art.getArtCreator(), new Date(), new Date(), "I", art.getChngUser());
-        return art;
+//        int s = pqvpDb.query(PqvpSql.articleNextVal, new Object[]);
+        ArticleData newArt = pqvpDb.queryForObject(PqvpSql.addArticle,  new Object[] {art.getArtTile(), art.getArtContent(), art.getArtViews(),
+                art.getArtStatus(), art.getArtRating(), art.getArtCreator(), new Date(), new Date(), "I", art.getChngUser()},new ArticleDataMapper());
+        return newArt;
     }
 
     public ArticleData updateArticle(ArticleData art) {

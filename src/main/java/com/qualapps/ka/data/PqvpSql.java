@@ -36,8 +36,9 @@ public class PqvpSql {
 	public static final String getArticleForId = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, change_date, change_type, change_user from article where art_id = ?";
 
 	public static final String addArticle = "insert into article ( " +
-			"art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, change_date, change_type, change_user ) " +
-			"values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			"art_title, art_content, art_views, art_status, art_rating, art_creator, " +
+			"art_create_time, change_date, change_type, change_user ) " +
+			"values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) returning *";
 
 	public static final String updateArticle = "update article " +
 			"set art_title=?, art_content=?, art_views=?, art_status=?, art_rating=?, art_creator=?, change_date=?, change_type=?, change_user=? " +
@@ -96,4 +97,5 @@ public class PqvpSql {
 			"art_ver, change_date, change_type, change_user, art_id, art_title, art_content ) " +
 			"values ( ?, ?, ?, ?, ?, ?, ?)";
 
+	public static final String articleNextVal = "SELECT nextval('article.\"art_arti_seq\"')";
 }
