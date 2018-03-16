@@ -21,7 +21,7 @@ Link to JIRA: https://qualappsinc.atlassian.net/secure/RapidBoard.jspa?rapidView
 Read only Username and Password
 
 # Technical Approach to Building DAAS
-The team adopted a Scrum-based approach to develop a Working Prototype. At the beginniing our effort we addressed environments, scope development, and established Epics and multiple User Stories that were addressed in three successive Sprints.  We also agreed upon User-Centered design strategies that we could employ in a compressed timeframe.  
+The team adopted a <a href="https://github.com/jpuli/pqvp/blob/master/DAAS Agile Approach.png">Scrum-based approach</a> to develop a Working Prototype. At the beginniing our effort we addressed environments, scope development, and established Epics and multiple User Stories that were addressed in three successive Sprints.  We also agreed upon User-Centered design strategies that we could employ in a compressed timeframe.  
 
 Our team chose modern tools and techniques to manage this effort and to build the DAAS solution. The team used a "default to open" approach, leveraging many of the tools our company is familiar with thus accelerating delivery time. We used the following tools which we've categorized as 
 1) "Design-Time", meaning that we employed them for management and design activities, and 
