@@ -27,7 +27,7 @@ public class PqvpSql {
 
 	public static final String getArticlesByViews = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_status = 'APPROVED' order by art_views, change_date desc limit 10";
 
-	public static final String getArticlesByUser= "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_id = ? order by  change_date desc";
+	public static final String getArticlesByUser= "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_creator = ? order by  change_date desc";
 
 	public static final String getArticlesByStatusAndUser = "select art_id, art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user from article where art_status = ? and art_creator = ? order by  change_date desc";
 
@@ -44,7 +44,7 @@ public class PqvpSql {
 			"values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) returning art_id";
 
 	public static final String updateArticle = "update article " +
-			"set art_title=?, art_content=?, art_views=?, art_status=?, art_rating=?, art_creator=?, art_tags=?, art_access=?, change_date=?, change_type=?, change_user=? " +
+			"set art_title=?, art_content=?, art_views=?, art_status=?, art_tags=?, art_access=?, art_rating=?, change_type=?, change_date=?, change_user=? " +
 			"where art_id = ?";
 
 	public static final String deleteArticle = "delete from article where art_id = ?";

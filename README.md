@@ -247,7 +247,6 @@ The development team selected a product stack that it was familiar with to aid a
 
 
 ## RFI Requirements 
-The README.md file should also make reference to the following:
 
 **Requirement A: Assigned one (1) leader and gave that person authority and responsibility and held that person accountable for the quality of the prototype submitted;**
 
@@ -322,7 +321,7 @@ The team evaluated User Personas.  We considered various types of individuals th
 
 To evaluate the initial set product features and workflow, the DAAS development team developed wireframes.  This effort helped take our unpolished ideas about the product to the next level.  It gave us insight into function, navigation, and even aesthetics.  This effort made it clear that our emphasis should be on simplicity.
 
-As the prototype was developed, colleagues interacted with the system and gave us feedback on its form and function.  We also researched and considered usability testing methods.
+As the prototype was developed, colleagues interacted with the system and gave us feedback on its form and function.  We also researched and usability testing.
 
 
 **Requirement E: Used GitHub to document code commits**
@@ -331,7 +330,7 @@ The team used GitHub our source code management tool for daily code commits. We 
 
 **Requirement F: Used OpenAPI to document the RESTful API, and provided a link to the OpenAPI**
 
-The solution uses OpenAPI to document RESTful APIs. 
+The solution uses OpenAPI to document RESTful APIs. <a href="http://daas.qualapps.com/swagger-ui.html">View our use of OpenAPI here. </a>
 
 **Requirement G: Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0**
 
@@ -339,10 +338,12 @@ To comply with WCAG, our team used HTML5 and CSS3 technology during front end de
 
 **Requirement H: Created or used a design style guide and/or a pattern library**
 
+We conformed to the <a href="https://designsystem.digital.gov">US Web Design Standards</a>.
 
 **Requirement I: Performed usability tests with people**
 
-As the prototype was developed, colleagues interacted with the system and gave us feedback on its form and function.  We also researched and considered usability testing methods.
+As part of our user-centric approach we conducted usability testing via surveys of wireframes and prototypes.  The team evaluated responses from the usability exercises and updated the product backlog.  As a result, the team created new stories.
+
 
 **Requirement J: Used an iterative approach, where feedback informed subsequent work or versions of the prototype**
 
@@ -366,7 +367,7 @@ The team used Jenkins CI pipline automate unit testing.
 
 **Requirement O: Setup or used a continuous integration system to automate the running of tests and continuously deployed their code to their IaaS or PaaS provider**
 
-The team used Jenkins server setup http://ec2-52-88-115-151.us-west-2.compute.amazonaws.com:8080/ for automated testing and CI/CD.  
+The team used Jenkins server automated testing and CI/CD.  View our <a href="http://ec2-52-88-115-151.us-west-2.compute.amazonaws.com:8080/">Jenkins Server</a> here.
 
 **Requirement P: Setup or used configuration management**
 

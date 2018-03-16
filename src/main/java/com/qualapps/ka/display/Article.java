@@ -22,12 +22,14 @@ public class Article {
   private String creator;
   private String category;
   private List<String> tags;
+  private String status;
 
   public Article(ArticleData articleData, UserProfileService userProfileService) {
     this.setId(articleData.getArtId());
     this.setTitle(articleData.getArtTile());
     this.setChanged(articleData.getChngDate());
     this.setTags(articleData.getArtTags());
+    this.setStatus(articleData.getArtStatus());
     long userProfileId = Long.parseLong(articleData.getArtCreator());
     try {
       UserProfileData user = userProfileService.getUserById(userProfileId);
@@ -36,7 +38,8 @@ public class Article {
       e.printStackTrace();
       this.setCreator("admin");
     }
-    this.setSummary(articleData.getArtContent().substring(0, 300) + "...");
+    int maxForSummary = (300 > articleData.getArtContent().length()) ? articleData.getArtContent().length() : 300;
+    this.setSummary(articleData.getArtContent().substring(0, maxForSummary) + "...");
     this.setContent(articleData.getArtContent());
     //this.setCategory(StringUtils.capitalize(pqvpdao.getCategory(articleData.getCatId()).getCatName()));
   }
@@ -105,6 +108,21 @@ public class Article {
     return tags;
   }
 
+  public String getTagsAsString() {
+    StringBuilder tags = new StringBuilder();
+    for (int i = 0; i < this.tags.size(); i++) {
+      tags.append(this.tags.get(i));
+      if (i < (this.tags.size()-1)) {
+        tags.append(", ");
+      }
+    }
+    return tags.toString();
+  }
+
+  public void setTags(List<String> tags) {
+    this.tags = tags;
+  }
+
   public void setTags(String tagsString) {
     List<String> tags  = new ArrayList<>();
     for (String tag : tagsString.split(",") ) {
@@ -113,5 +131,13 @@ public class Article {
       }
     }
     this.tags = tags;
+  }
+
+  public String getStatus() {
+    return StringUtils.capitalize(status.toLowerCase());
+  }
+
+  public void setStatus(String status) {
+    this.status = status;
   }
 }
