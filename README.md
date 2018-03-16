@@ -322,7 +322,7 @@ The team evaluated User Personas.  We considered various types of individuals th
 
 To evaluate the initial set product features and workflow, the DAAS development team developed wireframes.  This effort helped take our unpolished ideas about the product to the next level.  It gave us insight into function, navigation, and even aesthetics.  This effort made it clear that our emphasis should be on simplicity.
 
-As the prototype was developed, colleagues interacted with the system and gave us feedback on its form and function.  We also researched and considered usability testing methods.
+As the prototype was developed, colleagues interacted with the system and gave us feedback on its form and function.  We also researched and usability testing.
 
 
 **Requirement E: Used GitHub to document code commits**
@@ -342,7 +342,8 @@ To comply with WCAG, our team used HTML5 and CSS3 technology during front end de
 
 **Requirement I: Performed usability tests with people**
 
-As the prototype was developed, colleagues interacted with the system and gave us feedback on its form and function.  We also researched and considered usability testing methods.
+As part of our user-centric approach we conducted usability testing via surveys of wireframes and prototypes.  The team evaluated responses from the usability exercises and updated the product backlog.  As a result, the team created new stories.
+
 
 **Requirement J: Used an iterative approach, where feedback informed subsequent work or versions of the prototype**
 
