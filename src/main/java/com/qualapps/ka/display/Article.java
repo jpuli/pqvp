@@ -38,7 +38,8 @@ public class Article {
       e.printStackTrace();
       this.setCreator("admin");
     }
-    this.setSummary(articleData.getArtContent().substring(0, 300) + "...");
+    int maxForSummary = (300 > articleData.getArtContent().length()) ? articleData.getArtContent().length() : 300;
+    this.setSummary(articleData.getArtContent().substring(0, maxForSummary) + "...");
     this.setContent(articleData.getArtContent());
     //this.setCategory(StringUtils.capitalize(pqvpdao.getCategory(articleData.getCatId()).getCatName()));
   }
