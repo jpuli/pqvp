@@ -38,6 +38,7 @@ public class CategoryController {
       return "redirect:/logout";
     }
     modelMap.put("user", user);
+    modelMap.put("version", utils.getVersion());
     modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
     modelMap.put("categoryDescription", "All");
     try {
@@ -68,6 +69,7 @@ public class CategoryController {
       return "redirect:/logout";
     }
     modelMap.put("user", user);
+    modelMap.put("version", utils.getVersion());
     modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
     try {
       List<CategoryData> categories = articleService.getCategories();

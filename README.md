@@ -2,9 +2,8 @@
 # Request for Information (RFI) # CDT–PQVP–0118 
 # Pre-Qualified Vendor Pool for Agile Development – Digital Services
 
-http://daas.qualapps.com/
 
-![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/QualApps%2C%20Inc.png)
+![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/QualApps,Inc.png)
 
 ## QualApps’ ADPQ Submission
 QualApps is thankful for the opportunity to submit a response to RFI# CDT–PQVP–0118.  In a short timeframe, QualApps mobilized a multi-disciplinary team to review this RFI and rapidly respond. We are pleased with the outcome and hope that the Department of Technology is equally pleased with our Working Prototype and Technical Approach.  
@@ -21,7 +20,12 @@ For instruction about how to use the DAAS knowledge sharing application, please 
 ## Managing Product Development
 Link to <a href="https://qualappsinc.atlassian.net/secure/RapidBoard.jspa?rapidView=1">DAAS - JIRA Project</a>.
 
-Read only Username and Password
+Read only Username and Password: 
+
+* User: qualapps.jira.read@gmail.com
+* Password: PQVPjira
+
+We exported all issues from JIRA into Excel.  The file can be found here: <a href="https://github.com/jpuli/pqvp/blob/master/JIRA%20DAAS%20Issues%202018-03-16.xlsx">JIRA Issues</a>
 
 Alternatively, you can view <a href="https://github.com/jpuli/pqvp/tree/master/jira%20screenshots">JIRA Screenshots</a> of our JIRA Project.
 
@@ -137,6 +141,8 @@ Regarding Key Questions: We considered (based on the RFI) that the primary users
 **Play 2 Address the whole experience, from start to finish**
 
 The team discussed the key questions for Play 2 and identified a number of common issues with knowledge-sharing platforms.  Chief among these concerns was the ability to quickly identify information pertinent to a user.  This discussion led to user stories supporting knowledge organization and effective use of labels. Other items discussed were mechanisms to notify users via multiple channels when a discussion thread they subscribed to was updated.  
+
+The DAAS Working Prototype sends email notifications to users upon article lifecycle events.  For example, when an admin approves an article, the individual will reveive an email that his or her submission was approved. Currently these emails are sent to qualapps.pqvp.jira@gmail.com.  The password for this account is PQVPjira. 
 
 We discussed a couple of metrics for ways to evaluate the effectiveness of the DAAS solution: after interacting with the solution, users would be asked to rank satisfaction with a handful of features (e.g., ability to add knowledge, modify existing knowledge artifact, comment on an artifact, find answers to questions).  Users would assign up to five stars to rank satisfaction level. In talking to stakeholders, we determined that this option should be used sparingly to avoid undermining the user experience.   
 
@@ -260,7 +266,7 @@ Given the tight timeline for this Working Prototype, automated testing was limit
 
 **Play 11 Manage security and privacy through reusable processes**
 
-Our team reviewed the Description, Checklist, and Key Questions for Play 11 and determined that security and privacy would be evaluated and addressed in subsequent Epics/Sprints. Given the functionality of DAAS, an area of concern would be protecting user profiles and contact information. The application is accessed via HTTPS, providing a secure commmunication channel for the Working Prototype.  The planned physical environment expects the use of firewalls as depicted in our reference model above. 
+Our team reviewed the Description, Checklist, and Key Questions for Play 11 and determined that security and privacy would be evaluated and addressed in subsequent Epics/Sprints. Given the functionality of DAAS, an area of concern would be protecting user profiles and contact information. In future Sprints, the application cam be exclusively accessed via HTTPS, providing a secure commmunication channel for the Working Prototype.  The planned physical environment expects the use of firewalls as depicted in our reference model above. 
 
 
 **Play 12 Use data to drive decisions**

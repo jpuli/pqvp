@@ -15,6 +15,10 @@ import java.util.List;
 import java.util.Properties;
 
 public class Utils {
+    public String getVersion() {
+      return "1.0";
+    }
+
     public User loadCurrentUser(HttpSession session) {
         User user = null;
         Object sessionData = session.getAttribute("user");

@@ -120,15 +120,18 @@
                     <h6 class="sidebar-heading px-3 mt-4 mb-1">
                         <!--<i data-feather="settings" class="sidebar-section-icon"></i>-->
                         My Account</h6>
-                    <ul class="nav flex-column">
+                    <ul class="nav flex-column my-account">
                         <li class="nav-item">
-                            <a class="nav-link" href="add-new.html">Create New Article</a>
+                            <a class="nav-link" href="add-new.html"><i data-feather="plus-circle"
+                                                                       class="sidebar-section-icon"></i>Create New Article</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">My Submissions</a>
+                            <a class="nav-link" href="#"><i data-feather="file-text"
+                                                            class="sidebar-section-icon"></i>My Submissions</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">My Bookmarks</a>
+                            <a class="nav-link" href="#"><i data-feather="bookmark"
+                                                            class="sidebar-section-icon"></i>My Bookmarks</a>
                         </li>
 
                     </ul>
@@ -201,14 +204,6 @@
                     </div>
                 </div>
                 <div class="article-feedback">
-                    <!--<div class="card">-->
-                        <!--<div class="card-title">Did you find this article helpful?</div>-->
-                        <!--<div class="card-body"><div class="feedback-indicators">-->
-                            <!--<a class="thumbs-up" href="#/"><i data-feather="thumbs-up"></i></a><a class="thumbs-down" href="#/"><i data-feather="thumbs-down"></i></a>-->
-                        <!--</div>-->
-                            <!--<button class="btn btn-secondary btn-sm flex-align-center archiveArticle"><i data-feather="edit"></i>Provide additional feedback</button></div>-->
-                    <!--</div>-->
-
                     <div class="row">
                         <div class="col-lg-6">
                             <h3>Help improve this article</h3>
@@ -259,6 +254,11 @@
 
     $(".thumbs-up").on('click', function() {
         $(".thumbs-up").toggleClass('selected')
+        $(".thumbs-down").removeClass('selected')
+    })
+    $(".thumbs-down").on('click', function() {
+        $(".thumbs-down").toggleClass('selected')
+        $(".thumbs-up").removeClass('selected')
     })
 </script>
 
