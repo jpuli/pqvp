@@ -54,11 +54,11 @@ public class ArticleViewController {
   @PostMapping("/article_create")
   public String createArticle(
       HttpSession session,
-      @RequestParam("title") String title,
-      @RequestParam("category") String category,
-      @RequestParam("content") String content,
-      @RequestParam("tags") String tags,
-      @RequestParam("visibility") String visibility
+      @RequestParam(name="title") String title,
+      @RequestParam(name="category") String category,
+      @RequestParam(name="content") String content,
+      @RequestParam(name="tags",required = false, defaultValue = "") String tags,
+      @RequestParam(name="visibility",required = false, defaultValue = "") String visibility
   ) throws PqvpException {
     User user = utils.loadCurrentUser(session);
     if (user == null) {
