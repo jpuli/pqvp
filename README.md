@@ -213,13 +213,11 @@ The development team selected a product stack that it was familiar with to aid a
 
 * Bootstrap framework -- Bootstrap was chosen for its ability to build responsive UI components and features that can be easily manipulated for the project's needs. 
 
-* Swagger/OpenAPI -- Application
+* OpenAPI -- The RFI requires the use of OpenAPI. We used this tool to document APIs.  
 
-* Java -- Application
+* Java -- We selected Java because it is a robust language that performs well and runs on any platform.  Our team members are expert Java programmers with many years of experience with this language. 
 
-* Spring Boot -- Application
-
-* AWS -- Infrastructure
+* AWS -- This platform made the most sense given the rest of the product stack and RFI requiremnts. 
 
 * Linux/Docker -- QualApps selected Docker because of its containerization ability to rapidly stand up computing environments.  The use of images to package, deploy, and run apps helps us meet RFI requirements, namely providing instructions that enables others to deploy DAAS.  
 
@@ -228,7 +226,6 @@ The development team selected a product stack that it was familiar with to aid a
 * Spring Boot -- Our team is very familiar with the Spring Boot framework.  The framework simplifies configuration and enabled us tp quickly stand up web applications.  
 
 * Postgres -- We selected Postgres because of its power and flexibility, its market sustainability, its broad customer base, its applicability across industries, e.g., finance, gaming, government, and our experience with it.  
-
 
 
 - [x] Choose software frameworks that are commonly used by private-sector companies creating similar services
