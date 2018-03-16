@@ -30,15 +30,19 @@
                           <button type="button" id="rejectArticleBtn" class="btn btn-link"><i data-feather="x"></i> Reject</button>
                         </li>
                         <li>
-                          <button class="btn btn-success" type="submit" name="submit" value="Submit"><i data-feather="check"></i> Approve & Publish</button>
+                          <form method="post" action="/admin/approve" class="approve-article">
+                            <input type="hidden" name="id" th:value="${article.getId()}" />
+                            <button class="btn btn-success" type="submit" name="submit" value="Submit"><i data-feather="check"></i> Approve & Publish</button>
+                          </form>
                         </li>
                       </ul>
                     </div></div>
                   </div>
                 </div>
               </div>
-              <form class="reject-article hidden">
+              <form method="post" action="/admin/reject" class="reject-article hidden">
                 <div class="form-group col-lg-6 offset-lg-3 reject">
+                  <input type="hidden" name="id" th:value="${article.getId()}" />
                   <label for="rejectReason">Reason for rejection</label>
                   <textarea class="form-control" id="rejectReason" rows="3"></textarea>
                   <button class="btn btn-danger btn-sm float-right" type="submit" name="submit" value="Submit">Reject</button>

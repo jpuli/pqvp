@@ -13,9 +13,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -30,8 +33,52 @@ public class AdminController {
     this.userService = userService;
   }
 
+  @PostMapping("/admin/approve")
+  public String approveArticle(HttpSession session, @RequestParam("id") long articleId) {
+    User user = utils.loadCurrentUser(session);
+    if (user == null) {
+      return "redirect:/logout";
+    } else if (!user.isAdmin()) {
+      return "redirect:/home";
+    }
+
+    try {
+      ArticleData article = articleService.getArticle(articleId);
+      article.setChngUser(Long.toString(user.getId()));
+      article.setChngDate(new Date());
+      article.setChngType("U");
+      articleService.updateArticle(article, PqvpConstants.STATUS_APPROVED);
+    } catch (PqvpException e) {
+      e.printStackTrace();
+    }
+
+    return "redirect:/articles/" + articleId;
+  }
+
+  @PostMapping("/admin/reject")
+  public String rejectArticle(HttpSession session, @RequestParam("id") long articleId) {
+    User user = utils.loadCurrentUser(session);
+    if (user == null) {
+      return "redirect:/logout";
+    } else if (!user.isAdmin()) {
+      return "redirect:/home";
+    }
+
+    try {
+      ArticleData article = articleService.getArticle(articleId);
+      article.setChngUser(Long.toString(user.getId()));
+      article.setChngDate(new Date());
+      article.setChngType("U");
+      articleService.updateArticle(article, PqvpConstants.STATUS_REJECTED);
+    } catch (PqvpException e) {
+      e.printStackTrace();
+    }
+
+    return "redirect:/articles/" + articleId;
+  }
+
   @GetMapping("/admin/queue")
-  public String approval_queue(HttpSession session, ModelMap modelMap) {
+  public String approvalQueue(HttpSession session, ModelMap modelMap) {
     User user = utils.loadCurrentUser(session);
     if (user == null) {
       return "redirect:/logout";
@@ -47,16 +94,22 @@ public class AdminController {
     } catch (PqvpException e) {
       modelMap.put("categories", new ArrayList<CategoryData>());
     }
+    List<ArticleData> approvalRequiredArticles = new ArrayList<>();
     try {
-      List<ArticleData> approvalRequiredArticles = articleService.getArticlesByStatus(PqvpConstants.STATUS_SUBMITTED);
-      List<Article> articles = new ArrayList<>();
-      for (ArticleData articleData : approvalRequiredArticles) {
-        articles.add(new Article(articleData, userService));
-      }
-      modelMap.put("articles", articles);
+      approvalRequiredArticles.addAll(articleService.getArticlesByStatus(PqvpConstants.STATUS_SUBMITTED));
     } catch (PqvpException e) {
-      modelMap.put("articles", new ArrayList<Article>());
+      e.printStackTrace();
     }
+    try {
+      approvalRequiredArticles.addAll(articleService.getArticlesByStatus(PqvpConstants.STATUS_REJECTED));
+    } catch (PqvpException e) {
+      e.printStackTrace();
+    }
+    List<Article> articles = new ArrayList<>();
+    for (ArticleData articleData : approvalRequiredArticles) {
+      articles.add(new Article(articleData, userService));
+    }
+    modelMap.put("articles", articles);
     return "admin_queue";
   }
 }

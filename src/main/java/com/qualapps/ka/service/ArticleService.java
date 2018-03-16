@@ -96,31 +96,31 @@ public class ArticleService {
     /**
      * UPdates an article
      * @param article article to update
-     * @return updated article
      * @throws PqvpException Article not created exception
      */
-    public ArticleData updateArticle(ArticleData article) throws PqvpException {
-        ArticleData art;
+    public void updateArticle(ArticleData article) throws PqvpException {
+       updateArticle(article, PqvpConstants.STATUS_SUBMITTED);
+    }
+
+    public void updateArticle(ArticleData article, String status) throws PqvpException {
         try {
-            // set the status to submitted
-            article.setArtStatus(PqvpConstants.STATUS_SUBMITTED);
-            art = pqvpdao.updateArticle(article);
-            if (art == null) {
+            article.setArtStatus(status);
+            System.out.println(status);
+            int rowsAffected = pqvpdao.updateArticle(article);
+            System.out.println(rowsAffected);
+            if (rowsAffected < 1) {
                 String[] params = new String[]{};
                 throw new PqvpException(ARTICLE_NOT_CREATED_EXCEPTION, params);
             } else {
                 // update art-category
-                pqvpdao.updateCatArt(art.getCatId(), art.getArtId());
+                pqvpdao.updateCatArt(article.getCatId(), article.getArtId());
+                System.out.println(status);
             }
         } catch (Exception e) {
             String[] params = new String[]{};
             throw new PqvpException(ARTICLE_NOT_CREATED_EXCEPTION, params);
         }
-        return art;
     }
-
-
-
 
     /**
      * Gets most recent articles
