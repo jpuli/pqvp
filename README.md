@@ -19,7 +19,7 @@ For instruction about how to use the DAAS knowledge sharing application, please 
 
 
 ## Managing Product Development
-Link to JIRA: https://qualappsinc.atlassian.net/secure/RapidBoard.jspa?rapidView=1
+Link to <a href="https://qualappsinc.atlassian.net/secure/RapidBoard.jspa?rapidView=1">DAAS - JIRA Project</a>.
 
 Read only Username and Password
 
