@@ -9,16 +9,20 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
 import java.util.Arrays;
 
 @Configuration
+@EnableSwagger2
 @ComponentScan(basePackages = {"com.qualapps.ka.data",
         "com.qualapps.ka.common",
         "com.qualapps.ka.controller",
-//        "com.qualapps.pqvp",
+       "com.qualapps.ka",
         "com.qualapps.ka.service"})
 @SpringBootApplication
 @EnableAutoConfiguration
+
 public class DaasApplication {
     public static void main(String[] args) {
         SpringApplication.run(DaasApplication.class, args);
