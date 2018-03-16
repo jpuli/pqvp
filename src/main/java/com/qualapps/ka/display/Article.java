@@ -6,6 +6,7 @@ import com.qualapps.ka.data.CategoryData;
 import com.qualapps.ka.data.UserProfileData;
 import com.qualapps.ka.service.ArticleService;
 import com.qualapps.ka.service.UserProfileService;
+import org.jsoup.Jsoup;
 import org.ocpsoft.prettytime.PrettyTime;
 import org.thymeleaf.util.DateUtils;
 import org.thymeleaf.util.StringUtils;
@@ -40,8 +41,12 @@ public class Article {
       e.printStackTrace();
       this.setCreator("admin");
     }
-    int maxForSummary = (300 > articleData.getArtContent().length()) ? articleData.getArtContent().length() : 300;
-    this.setSummary(articleData.getArtContent().substring(0, maxForSummary) + "...");
+    String contentWithoutTags = Jsoup.parse(articleData.getArtContent()).text();
+    if (300 < contentWithoutTags.length()) {
+      this.setSummary(contentWithoutTags.substring(0, 300) + "...");
+    } else {
+      this.setSummary(contentWithoutTags);
+    }
     this.setContent(articleData.getArtContent());
     try {
       List<CategoryData> categories = articleService.getCategoryByArticleId(articleData.getArtId());
