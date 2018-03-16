@@ -250,7 +250,7 @@ The team evaluated all the questions in Play 9.  Given the state of the Working 
 
 **Play 10 Automate testing and deployments**
 
-Given the tight timeline for this Working Prototyp, automated testing was limited to executing a handful of Unit Tests.  Using Jenkins, we automated builds and deploys, releasing a new product daily and occasionally even more often.  This gave us the opportunity to immediately evaluate DAAS and get feedback. Although the prototype should not expect high volumes, it was architected in a way that would make it easy to scale both vertically and horizontally. See Logical Architecture and the Physical Architecture (Reference Model) described above.  
+Given the tight timeline for this Working Prototype, automated testing was limited to executing a handful of Unit Tests.  Using Jenkins, we automated builds and deploys, releasing a new product daily and occasionally even more often.  This gave us the opportunity to immediately evaluate DAAS and get feedback. Although the prototype should not expect high volumes, it was architected in a way that would make it easy to scale both vertically and horizontally. See Logical Architecture and the Physical Architecture (Reference Model) described above.  
 
 - [x] Create automated tests that verify all user-facing functionality
 - [x] Create unit and integration tests to verify modules and components
@@ -260,12 +260,12 @@ Given the tight timeline for this Working Prototyp, automated testing was limite
 
 **Play 11 Manage security and privacy through reusable processes**
 
-Our team reviewed the Description, Checklist, and Key Questions for Play 11 and determined that security and privacy would be evaluated and addressed in subsequent Epics/Sprints. Given the functionality of DAAS, an area of concern would be protecting user profiles and contact information. 
+Our team reviewed the Description, Checklist, and Key Questions for Play 11 and determined that security and privacy would be evaluated and addressed in subsequent Epics/Sprints. Given the functionality of DAAS, an area of concern would be protecting user profiles and contact information. The application is accessed via HTTPS, providing a secure commmunication channel for the Working Prototype.  The planned physical environment expects the use of firewalls as depicted in our reference model above. 
 
 
 **Play 12 Use data to drive decisions**
 
-The team considered various metrics.  We considered using JMeter to ascertain system performance.  We also had a brief discussion about using AppDyanimcs to thoroughly evaluate DAAS. However, we chose to do neither of these things given the timeframe and the fact that doing so was unneeded at this stage of the DAAS Working Prototype. The product is host on AWS Cloud and therefore takes advantage of AWS monitoring. Future Sprints would address issues of performance testing and monitoring. At this stage of the prototype, our focus was funtionality, ease-of-use, and aesthetics.  We gauged succcess in these areas based on user interaction with DAAS. 
+The team considered various metrics.  We considered using JMeter to ascertain system performance.  We also had a brief discussion about using AppDyanimcs to thoroughly evaluate DAAS. However, we chose to do neither of these things given the timeframe and the fact that doing so was unneeded at this stage of the DAAS Working Prototype. The product is host on AWS Cloud and therefore takes advantage of AWS monitoring. Future Sprints would address issues of performance testing and monitoring. At this stage of the prototype, our focus was funtionality, ease-of-use, and aesthetics.  We gauged succcess in these areas based on user interaction with DAAS. The team created user stories for metrics, which can be found in the backlog. 
 
 
 **Play 13 Default to open**
