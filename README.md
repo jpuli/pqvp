@@ -265,7 +265,7 @@ Given the tight timeline for this Working Prototype, automated testing was limit
 
 **Play 11 Manage security and privacy through reusable processes**
 
-Our team reviewed the Description, Checklist, and Key Questions for Play 11 and determined that security and privacy would be evaluated and addressed in subsequent Epics/Sprints. Given the functionality of DAAS, an area of concern would be protecting user profiles and contact information. The application is accessed via HTTPS, providing a secure commmunication channel for the Working Prototype.  The planned physical environment expects the use of firewalls as depicted in our reference model above. 
+Our team reviewed the Description, Checklist, and Key Questions for Play 11 and determined that security and privacy would be evaluated and addressed in subsequent Epics/Sprints. Given the functionality of DAAS, an area of concern would be protecting user profiles and contact information. In future Sprints, the application cam be exclusively accessed via HTTPS, providing a secure commmunication channel for the Working Prototype.  The planned physical environment expects the use of firewalls as depicted in our reference model above. 
 
 
 **Play 12 Use data to drive decisions**
