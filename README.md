@@ -14,6 +14,9 @@ QualApps is thankful for the opportunity to submit a response to RFI# CDT–PQVP
 
 This application is fully responsive and complies with guidelines.  It is best viewed in Chrome or FireFox, but will function in Edge or IE. We created three users, each with a different role: Jessica (Admin), Harvey (Creator), and Mike (Viewer).  To review this web-application and evaluate the functionality, use any of these personas.  
 
+For instruction about how to use the DAAS knowledge sharing application, please see the 
+<a href="https://github.com/jpuli/pqvp/wiki/User-Roles.md">DAAS User Roles and Instructions</a>.
+
 
 ## Managing Product Development
 Link to JIRA: https://qualappsinc.atlassian.net/secure/RapidBoard.jspa?rapidView=1
