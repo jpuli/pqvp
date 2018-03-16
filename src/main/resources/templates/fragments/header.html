@@ -16,80 +16,108 @@
 <body>
 <!--Application Top Bar (Includes App Name, Top User Navigation, Mobile Main Navigation)-->
 <div th:fragment="signedInWithSearch (query, username)" class="application-bar">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <!--Application Name-->
-    <a class="navbar-brand" href="/home"><i data-feather="book-open" class="app-icon"></i>Knowledgebase Application</a>
-    <!--Top Search-->
-    <form method="get" action="/search" class="form-inline search-input col-lg-4 mx-auto top-search">
-      <i data-feather="search" class="sidebar-section-icon"></i>
-      <input class="form-control mr-sm-2" name="query" type="search" placeholder="Search" aria-label="Search" th:value="${query}">
-      <button class="btn" hidden type="submit">Search</button>
-    </form>
-    <!--Top Navigation-->
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item dropdown">
-        <a th:text="${username}"
-           class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-           aria-haspopup="true" aria-expanded="false">User</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/logout">Sign out</a>
-        </div>
-      </li>
-    </ul>
-    <!--Sidebar Navigation Control-->
+  <nav class="app-bar-navbar navbar-expand-lg navbar-dark bg-dark container-fluid">
     <div class="row">
-      <div class="col-lg-12">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-side-nav"
-                aria-controls="main-side-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <div class="col-12 col-lg-3">
+        <!--Application Name-->
+        <a class="navbar-brand" href="/home"><i data-feather="book-open" class="app-icon"></i>Knowledgebase Application</a>
+      </div>
+      <div class="col-9 col-lg-6">
+        <!--Top Search-->
+        <form method="get" action="/search" class="form-inline search-input col-lg-8 mx-auto top-search">
+          <i data-feather="search" class="sidebar-section-icon"></i>
+          <input class="form-control mr-sm-2" name="query" type="search" placeholder="Search" aria-label="Search" th:value="${query}">
+          <button class="btn" hidden type="submit">Search</button>
+        </form>
+      </div>
+      <div class="col-3 col-lg-3">
+        <!--Top Navigation-->
+        <ul class="navbar-nav ml-auto user-info">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false" th:text="${username}">John Appleseed</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/logout">Sign out</a>
+            </div>
+          </li>
+        </ul>
+        <!--Sidebar Navigation Control-->
+        <div class="row">
+          <div class="col-lg-12">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-side-nav"
+                    aria-controls="main-side-nav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
 </div>
 <!--Application Top Bar (Includes App Name, Top User Navigation, Mobile Main Navigation)-->
 <div th:fragment="signedIn (username)" class="application-bar">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <!--Application Name-->
-    <a class="navbar-brand" href="#"><i data-feather="book-open" class="app-icon"></i>Knowledgebase Application</a>
-    <!--Top Navigation-->
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item dropdown">
-        <a th:text="${username}"
-           class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-           aria-haspopup="true" aria-expanded="false">User</a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/logout">Sign out</a>
-        </div>
-      </li>
-    </ul>
-    <!--Sidebar Navigation Control-->
+  <nav class="app-bar-navbar navbar-expand-lg navbar-dark bg-dark container-fluid">
     <div class="row">
-      <div class="col-lg-12">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-side-nav"
-                aria-controls="main-side-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <div class="col-12 col-lg-3">
+        <!--Application Name-->
+        <a class="navbar-brand" href="/home"><i data-feather="book-open" class="app-icon"></i>Knowledgebase Application</a>
+      </div>
+      <div class="col-9 col-lg-6">
+        <!--Top Search-->
+        <form method="get" action="/search" class="form-inline search-input col-lg-8 mx-auto top-search">
+          <i data-feather="search" class="sidebar-section-icon"></i>
+          <input class="form-control mr-sm-2" name="query" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn" hidden type="submit">Search</button>
+        </form>
+      </div>
+      <div class="col-3 col-lg-3">
+        <!--Top Navigation-->
+        <ul class="navbar-nav ml-auto user-info">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false" th:text="${username}">John Appleseed</a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/logout">Sign out</a>
+            </div>
+          </li>
+        </ul>
+        <!--Sidebar Navigation Control-->
+        <div class="row">
+          <div class="col-lg-12">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-side-nav"
+                    aria-controls="main-side-nav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
 </div>
 <!--Application Top Bar (Includes App Name, Top User Navigation, Mobile Main Navigation)-->
 <div th:fragment="notSignedIn" class="application-bar">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <!--Application Name-->
-    <a class="navbar-brand" href="#"><i data-feather="book-open" class="app-icon"></i>Knowledgebase Application</a>
-    <!--Top Navigation-->
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item dropdown"></li>
-    </ul>
-    <!--Sidebar Navigation Control-->
+  <nav class="app-bar-navbar navbar-expand-lg navbar-dark bg-dark container-fluid">
     <div class="row">
-      <div class="col-lg-12">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-side-nav"
-                aria-controls="main-side-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+      <div class="col-12 col-lg-3">
+        <!--Application Name-->
+        <a class="navbar-brand" href="/home"><i data-feather="book-open" class="app-icon"></i>Knowledgebase Application</a>
+      </div>
+      <div class="col-9 col-lg-6">
+      </div>
+      <div class="col-3 col-lg-3">
+        <!--Top Navigation-->
+        <ul class="navbar-nav ml-auto user-info">
+          <li class="nav-item dropdown"></li>
+        </ul>
+        <!--Sidebar Navigation Control-->
+        <div class="row">
+          <div class="col-lg-12">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-side-nav"
+                    aria-controls="main-side-nav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </nav>
