@@ -39,6 +39,8 @@ public class HomeController {
     }
 
     modelMap.put("user", user);
+    modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
+    modelMap.put("isHomePage", true);
 
     try {
       List<CategoryData> categories = articleService.getCategories();
@@ -79,6 +81,7 @@ public class HomeController {
     }
 
     modelMap.put("user", user);
+    modelMap.put("adminQueueCount", utils.countAdminQueue(articleService, userService));
     modelMap.put("query", query);
 
     try {

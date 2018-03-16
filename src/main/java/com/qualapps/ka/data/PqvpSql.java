@@ -44,7 +44,7 @@ public class PqvpSql {
 			"values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) returning art_id";
 
 	public static final String updateArticle = "update article " +
-			"set art_title=?, art_content=?, art_views=?, art_status=?, art_rating=?, art_creator=?, art_tags=?, art_access=?, change_date=?, change_type=?, change_user=? " +
+			"set art_title=?, art_content=?, art_views=?, art_status=?, art_tags=?, art_access=?, art_rating=?, change_type=?, change_date=?, change_user=? " +
 			"where art_id = ?";
 
 	public static final String deleteArticle = "delete from article where art_id = ?";
