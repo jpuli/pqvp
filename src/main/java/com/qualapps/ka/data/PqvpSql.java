@@ -39,7 +39,7 @@ public class PqvpSql {
 
 	public static final String addArticle = "insert into article ( " +
 			"art_title, art_content, art_views, art_status, art_rating, art_creator, art_create_time, art_tags, art_access, change_date, change_type, change_user ) " +
-			"values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+			"values ( ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) returning art_id";
 
 	public static final String updateArticle = "update article " +
 			"set art_title=?, art_content=?, art_views=?, art_status=?, art_rating=?, art_creator=?, art_tags=?, art_access=?, change_date=?, change_type=?, change_user=? " +

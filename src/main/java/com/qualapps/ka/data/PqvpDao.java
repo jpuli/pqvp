@@ -2,8 +2,14 @@ package com.qualapps.ka.data;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.PreparedStatementCreator;
+import org.springframework.jdbc.support.GeneratedKeyHolder;
 import org.springframework.stereotype.Component;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Date;
 import java.util.List;
 
@@ -87,8 +93,29 @@ public class PqvpDao {
     }
 
     public ArticleData addArticle(ArticleData art) {
-        pqvpDb.update(PqvpSql.addArticle,  art.getArtTile(), art.getArtContent(), art.getArtViews(),
-                art.getArtStatus(), art.getArtRating(), art.getArtCreator(), new Date(), art.getArtTags(), art.getArtAccess(), new Date(), "I", art.getChngUser());
+        GeneratedKeyHolder holder = new GeneratedKeyHolder();
+        pqvpDb.update(new PreparedStatementCreator() {
+            @Override
+            public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
+                PreparedStatement statement = con.prepareStatement(PqvpSql.addArticle, Statement.RETURN_GENERATED_KEYS);
+                statement.setString(1, art.getArtTile());
+                statement.setString(2, art.getArtContent());
+                statement.setLong(3, art.getArtViews());
+                statement.setString(4, art.getArtStatus());
+                statement.setLong(5, art.getArtRating());
+                statement.setString(6, art.getArtCreator());
+                statement.setDate(7, new java.sql.Date(new Date().getTime()));
+                statement.setString(8, art.getArtTags());
+                statement.setString(9, art.getArtAccess());
+                statement.setDate(10, new java.sql.Date(new Date().getTime()));
+                statement.setString(11, "I");
+                statement.setString(12, art.getChngUser());
+                return statement;
+            }
+        }, holder);
+
+        long primaryKey = holder.getKey().longValue();
+        art.setArtId(primaryKey);
         return art;
     }
 

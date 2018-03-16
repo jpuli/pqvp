@@ -2,6 +2,7 @@ package com.qualapps.ka.data;
 
 
 import com.qualapps.ka.DaasApplication;
+import com.qualapps.ka.common.PqvpConstants;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -53,7 +54,7 @@ public class PqvpDaoTest {
         article.setArtId(9999);
         article.setArtTile("New Test Article");
         article.setArtContent("this is a new article to test the ....");
-        article.setArtStatus("Initial");
+        article.setArtStatus(PqvpConstants.STATUS_APPROVED);
         article.setArtCreator("JohnQPublic");
         article.setCatId(1);
         article.setArtViews(1);
