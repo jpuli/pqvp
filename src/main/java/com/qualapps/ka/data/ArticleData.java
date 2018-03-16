@@ -11,7 +11,7 @@ public class ArticleData {
 	private Date chngDate;
 	private String chngType;
 	private String chngUser;
-	private long artRating;
+	private int artRating;
 	private long catId;
 	private String artCreator;
 	private Date artCreateTime;
@@ -101,7 +101,7 @@ public class ArticleData {
 	public long getArtRating() {
 		return artRating;
 	}
-	public void setArtRating(long artRating) {
+	public void setArtRating(int artRating) {
 		this.artRating = artRating;
 	}
 	public long getCatId() {
