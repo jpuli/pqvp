@@ -58,7 +58,7 @@ Our team chose modern tools and techniques to manage this effort and to build th
 
 * Bootstrap framework -- UI
 
-* Swagger/OpenAPI -- Application
+* OpenAPI -- Application
 
 * Java -- Application
 
@@ -325,7 +325,7 @@ x.	After receiving prototype feedback based on the role play, the team began int
 
 **Requirement E: Used GitHub to document code commits**
 
-**Requirement F: Used Swagger to document the RESTful API, and provided a link to the Swagger API**
+**Requirement F: Used OpenAPI to document the RESTful API, and provided a link to the OpenAPI**
 
 **Requirement G: Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0**
 
