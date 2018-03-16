@@ -97,10 +97,17 @@ The following diagram is a **reference model** for a robust production implement
 **Documentation must show code flow from client UI, to JavaScript library, to REST service to
 database, pointing to code in the GitHub repository.**
 
-When a user first connects to the website, the user is prompted to login via static html pages with bootstrap UI components and JavaScript, JQuery, and custom and custom JavaScript libraries.  The initial web page is the login.html from the Web project which has been skinned using the standard css, uses standard images, and is controlled by JavaScript. 
+The DAAS application is designed and developed using the traditional Model-View-Controller (MVC) architecture. The application consists of html pages representing the view layer and the controller layer to orchestrate the incoming HTTP requests. The service layer is used to apply business validations, query, and save data. The model layer consists of data access objects (DAOs) that interact with postgres SQL database. 
 
-This generated JavaScript relies on open source tools such as bootstrap to present UI changes on a page, manage interactions with the API tier, and manage page-specific application data within the browser.
-A successful log in, will result in navigation within the website. 
+When a user first connects to the website, the user is prompted to login via responsive static HTML5 pages with Bootstrap UI components. All user login requests are routed to a loginController. A loginService layer object will authenticate the user and apply business validations.  Upon successful authentication, the loginController redirects the user to a homeController. A home page related to a service layer component will use the corresponding DAO layer to query the user specific home page information and forward the request to the home page HTML template. The application uses Thymeleaf HTML template engine to interpret outgoing HTML template responses, interpreting template tags to generate the user's home HTML page.  
+
+The application is architected to operate and service HTTP user request in two modes.  
+
+1) REST API mode: the application exposes REST API services via RESTControllers to service HTTP requests (PUT, GET, POST, DELETE) and sends back JSON response data.  The DAAS application will use the REST API to integrate seamlessly and securely with Third-Party applications.
+
+2) MVC mode:  the application will service HTTP requests using RouteControllers that use the service layer components to service the request and forward requests to a template engine to serve static html pages.
+
+The DAAS solution uses common service layer components in both modes to serve user requests and provide an optimal user experience.
 
 ![QualApps, Inc.](https://github.com/jpuli/pqvp/blob/master/LogicalModel.png "DAAS Application Flow")
 
