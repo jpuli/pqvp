@@ -203,6 +203,7 @@ What sets QualApps apart is that it is led by technologists.  Applying technolog
 
 
 **Play 8 Choose a modern technology stack**
+
 The development team selected a product stack that it was familiar with to aid a quick delivery time.  We selected state-of-the-art open source technologies that are commonly in use and, we believe, sustainable.  These products made it easy to comply with the RFI's technical requirements.  As outlined in the Technical Response, the team used the following tools for DAAS solution:
 
 **Run-Time**
@@ -383,7 +384,7 @@ The team used Docker version 17.12.0-ce on our deployed staging server.
 
 **Requirement S: Provided sufficient documentation to install and run their prototype on another machine**
 
-Installation instructions are found in the Install.md. 
+Installation instructions are found in the Install.md. <a href="https://github.com/jpuli/pqvp/blob/master/Install.md">Install.md</a>
 
 **Requirement T: Prototype and underlying platforms used to create and run the prototype are openly licensed and free of charge**
 
