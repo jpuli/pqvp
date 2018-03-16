@@ -322,13 +322,15 @@ x.	After receiving prototype feedback based on the role play, the team began int
 
 **Requirement E: Used GitHub to document code commits**
 
-The team used GitHub for source control and commits. 
+The team used GitHub our source code management tool for daily code commits. We also used GitHub for storing documents related to the prototype.
 
 **Requirement F: Used OpenAPI to document the RESTful API, and provided a link to the OpenAPI**
 
 The solution uses OpenAPI...
 
 **Requirement G: Complied with Section 508 of the Americans with Disabilities Act and WCAG 2.0**
+
+To comply with WCAG, our team used HTML5 and CSS3 technology during front end development. Once built, the code was tested against the W3 standard site. This methodology supports compliance with Section 508 of the Americans with Disabilities Act. 
 
 **Requirement H: Created or used a design style guide and/or a pattern library**
 
